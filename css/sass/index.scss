@@ -1,0 +1,7 @@
+@use './extensions';
+header{
+    background:url(images/)
+}
+div.container{
+    @extend %flex;
+}
