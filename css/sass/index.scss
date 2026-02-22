@@ -1,7 +1,8 @@
 @use './extensions';
+.text{
+        align-self:center;
+        @extend %text;
+    }
 header{
-    background:url(images/)
-}
-div.container{
-    @extend %flex;
+    @extend %header;
 }

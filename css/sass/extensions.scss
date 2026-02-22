@@ -1,4 +1,27 @@
-%flex{
+%flex-between{
     display:flex;
     justify-content:space-between;
+}
+%flex-start{
+    display:flex;
+}
+%text{
+    font-family: "PT Sans Caption", sans-serif;
+    font-size:medium;
+}
+%header{
+    .nav{
+    @extend %flex-between;
+        & .links{
+        align-self:center;
+        @extend %flex-between;
+            & li{
+            list-style:none;
+                & a{
+                @extend %text;
+                text-decoration: none;
+                }
+            }       
+         }
+     }
 }

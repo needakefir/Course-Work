@@ -3,7 +3,7 @@ header .nav .links, header .nav {
   justify-content: space-between;
 }
 
-.text, header .nav .links li a {
+header .nav .links li a {
   font-family: "PT Sans Caption", sans-serif;
   font-size: medium;
 }
@@ -18,8 +18,4 @@ header .nav .links li a {
   text-decoration: none;
 }
 
-.text {
-  align-self: center;
-}
-
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=about.css.map */
