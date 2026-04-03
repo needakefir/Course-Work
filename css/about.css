@@ -1,21 +1,42 @@
-header .nav .links, header .nav {
+header .nav .links, header .nav, header {
   display: flex;
   justify-content: space-between;
 }
 
-header .nav .links li a {
-  font-family: "PT Sans Caption", sans-serif;
-  font-size: medium;
+.text, header .nav .links li a {
+  font-family: "RussianRail GPro";
 }
 
+span.red {
+  color: red;
+}
+
+body {
+  background-color: black;
+}
+
+header .text {
+  letter-spacing: 5px;
+}
+header {
+  background-color: black;
+}
 header .nav .links {
-  align-self: center;
+  gap: 50px;
 }
 header .nav .links li {
   list-style: none;
 }
 header .nav .links li a {
   text-decoration: none;
+}
+
+@font-face {
+  font-family: "RussianRail GPro";
+  src: url(../fonts/RussianRail_G_Pro_Regular_0.otf) format(opentype);
+}
+.text {
+  align-self: center;
 }
 
 /*# sourceMappingURL=about.css.map */

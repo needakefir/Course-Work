@@ -2,3 +2,7 @@
 header{
     @extend %header;
 }
+.text{
+    @extend %text;
+    align-self:center;
+}

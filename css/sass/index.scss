@@ -6,3 +6,28 @@
 header{
     @extend %header;
 }
+.main{
+    display:grid;
+    grid-template-columns:1fr 4fr;
+    align-items:center;
+    background-color: black;
+    & .left{
+        & .text{
+            font-size:3em;
+        }
+        & button{
+            align-self:center;
+            border-radius: 50px/50px;
+            background-color: red;
+            padding:5% 10%;
+            & .text{
+                font-size:25px;
+                color: white;
+            }
+        }
+    }
+    & .right>img{
+        width:100%;
+        height:88vh;
+    }
+}

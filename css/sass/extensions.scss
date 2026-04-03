@@ -6,15 +6,25 @@
     display:flex;
 }
 %text{
-    font-family: "PT Sans Caption", sans-serif;
-    font-size:medium;
+    font-family: "RussianRail GPro";
+}
+span.red{
+    color:red;
+}
+body{
+    background-color: black;
 }
 %header{
+    @extend %flex-between;
+    & .text{
+        letter-spacing: 5px;
+    }
+    background-color: black;
     .nav{
     @extend %flex-between;
         & .links{
-        align-self:center;
         @extend %flex-between;
+        gap:50px;
             & li{
             list-style:none;
                 & a{
@@ -24,4 +34,8 @@
             }       
          }
      }
+}
+@font-face {
+    font-family: "RussianRail GPro";
+    src: url(../fonts/RussianRail_G_Pro_Regular_0.otf) format(opentype);
 }
