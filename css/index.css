@@ -1,10 +1,6 @@
-header .nav .links, header .nav, header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.text, header .nav .links li a {
+.text, footer .logotext .after, footer .social-networks .social-network .name {
   font-family: "RussianRail GPro";
+  color: white;
 }
 
 span.red {
@@ -15,28 +11,13 @@ body {
   background-color: black;
 }
 
-header .text {
-  letter-spacing: 5px;
-}
-header {
-  background-color: black;
-}
-header .nav .links {
-  gap: 50px;
-}
-header .nav .links li {
-  list-style: none;
-}
-header .nav .links li a {
-  text-decoration: none;
-}
-
 @font-face {
   font-family: "RussianRail GPro";
   src: url(../fonts/RussianRail_G_Pro_Regular_0.otf) format(opentype);
 }
 .text {
   align-self: center;
+  text-align: center;
 }
 
 .main {
@@ -49,6 +30,7 @@ header .nav .links li a {
   font-size: 3em;
 }
 .main .left button {
+  border: 0px;
   align-self: center;
   border-radius: 50px/50px;
   background-color: red;
@@ -61,6 +43,34 @@ header .nav .links li a {
 .main .right > img {
   width: 100%;
   height: 88vh;
+}
+
+footer .logotext > .text {
+  font-size: 2em;
+  letter-spacing: 15%;
+  text-align: center;
+}
+footer .logotext .after {
+  color: darkgray;
+  font-size: 0.7em;
+  text-align: center;
+}
+footer .social-networks > .text {
+  font-size: 1.5em;
+  margin-bottom: 5%;
+}
+footer .social-networks .social-network {
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: center;
+}
+footer .social-networks .social-network img {
+  margin-right: 2%;
+  height: 39px;
+  width: 39px;
+}
+footer .social-networks .social-network .name {
+  font-size: 1.5em;
 }
 
 /*# sourceMappingURL=index.css.map */

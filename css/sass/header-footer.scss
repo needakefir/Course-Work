@@ -1,0 +1,28 @@
+@use './extensions';
+header{
+    @include extensions.flex-mixin(space-between);
+    & .text{
+        letter-spacing: 5px;
+    }
+    background-color: black;
+    .nav{
+   @include extensions.flex-mixin(space-between);
+        & .links{
+       @include extensions.flex-mixin(space-between);
+        gap:50px;
+            & li{
+            list-style:none;
+                & a{
+                @extend %text;
+                text-decoration: none;
+                color:white;
+                }
+            }       
+         }
+     }
+}
+footer{
+    display:grid;
+    grid-template-columns:1fr 1.5fr 1fr;
+
+}

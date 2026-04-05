@@ -1,12 +1,11 @@
-%flex-between{
+@mixin flex-mixin($content)
+{
     display:flex;
-    justify-content:space-between;
-}
-%flex-start{
-    display:flex;
+    justify-content: $content;
 }
 %text{
     font-family: "RussianRail GPro";
+    color:white;
 }
 span.red{
     color:red;
@@ -14,27 +13,7 @@ span.red{
 body{
     background-color: black;
 }
-%header{
-    @extend %flex-between;
-    & .text{
-        letter-spacing: 5px;
-    }
-    background-color: black;
-    .nav{
-    @extend %flex-between;
-        & .links{
-        @extend %flex-between;
-        gap:50px;
-            & li{
-            list-style:none;
-                & a{
-                @extend %text;
-                text-decoration: none;
-                }
-            }       
-         }
-     }
-}
+
 @font-face {
     font-family: "RussianRail GPro";
     src: url(../fonts/RussianRail_G_Pro_Regular_0.otf) format(opentype);
