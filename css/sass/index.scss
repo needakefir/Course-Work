@@ -6,16 +6,18 @@
     }
 .main{
     display:grid;
+    width:100%;
+    height:89vh;
     grid-template-columns:1fr 4fr;
-    align-items:center;
     background-color: black;
     & .left{
+        @include extensions.flex-mixin(center);
+        flex-direction: column;
         & .text{
-            font-size:3em;
+            font-size:2.5em;
         }
         & button{
             border:0px;
-            align-self:center;
             border-radius: 50px/50px;
             background-color: red;
             padding:5% 10%;
@@ -27,41 +29,6 @@
     }
     & .right>img{
         width:100%;
-        height:88vh;
-    }
-}
-footer{
-    & .logotext{
-        &>.text{
-            font-size:2em;
-            letter-spacing: 15%;
-            text-align:center;
-        }
-        & .after{
-             @extend %text;
-             color:darkgray;
-            font-size:0.7em;
-            text-align:center;
-        }
-    }
-    & .social-networks{
-        &>.text {
-            font-size:1.5em;
-            margin-bottom:5%;
-        }
-        & .social-network{
-            margin-bottom:5%;
-           @include extensions.flex-mixin(center);
-           & img{
-            margin-right:2%;
-            height:39px;
-            width:39px;
-           } 
-           & .name{
-                @extend %text;
-                font-size:1.5em;
-
-            }
-        }
+        height:89vh;
     }
 }

@@ -1,0 +1,5 @@
+@use 'extensions';
+.text{
+    @extend %text;
+    align-self:center;
+}

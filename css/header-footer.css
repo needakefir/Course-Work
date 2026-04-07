@@ -1,4 +1,4 @@
-header .nav .links li a {
+header .nav .links li a, footer .logotext .after, footer .social-networks .social-network .name {
   font-family: "RussianRail GPro";
   color: white;
 }
@@ -32,7 +32,7 @@ header .nav {
 header .nav .links {
   display: flex;
   justify-content: space-between;
-  gap: 50px;
+  gap: 5vw;
 }
 header .nav .links li {
   list-style: none;
@@ -44,7 +44,57 @@ header .nav .links li a {
 
 footer {
   display: grid;
-  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-columns: 1fr 1.5fr 1.5fr;
+  margin-top: 5%;
+}
+footer .logotext {
+  align-self: center;
+}
+footer .logotext > .text {
+  font-size: 2em;
+  letter-spacing: 15%;
+  text-align: center;
+}
+footer .logotext .after {
+  color: darkgray;
+  font-size: 0.7em;
+  text-align: center;
+}
+footer .social-networks > .text {
+  font-size: 1.2em;
+  margin-bottom: 5%;
+}
+footer .social-networks .social-network {
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+}
+footer .social-networks .social-network img {
+  margin-right: 2%;
+  height: 39px;
+  width: 39px;
+}
+footer .social-networks .social-network .name {
+  font-size: 1.3em;
+}
+footer .contact-information > .text {
+  font-size: 1.2em;
+  margin-bottom: 5%;
+}
+footer .contact-information .contact {
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: start;
+}
+footer .contact-information .contact img {
+  margin-right: 2%;
+  height: 39px;
+  width: 39px;
+}
+footer .contact-information .contact #phone {
+  height: 78px;
+  width: 78px;
 }
 
 /*# sourceMappingURL=header-footer.css.map */

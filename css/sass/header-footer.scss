@@ -9,7 +9,7 @@ header{
    @include extensions.flex-mixin(space-between);
         & .links{
        @include extensions.flex-mixin(space-between);
-        gap:50px;
+        gap:5vw;
             & li{
             list-style:none;
                 & a{
@@ -23,6 +23,59 @@ header{
 }
 footer{
     display:grid;
-    grid-template-columns:1fr 1.5fr 1fr;
-
+    grid-template-columns:1fr 1.5fr 1.5fr;
+    margin-top:5%;
+    & .logotext{
+        align-self:center;
+        &>.text{
+            font-size:2em;
+            letter-spacing: 15%;
+            text-align:center;
+        }
+        & .after{
+             @extend %text;
+             color:darkgray;
+            font-size:0.7em;
+            text-align:center;
+        }
+    }
+    & .social-networks{
+        &>.text {
+            font-size:1.2em;
+            margin-bottom:5%;
+        }
+        & .social-network{
+            margin-bottom:5%;
+           @include extensions.flex-mixin(center);
+           align-self:flex-start;
+           & img{
+            margin-right:2%;
+            height:39px;
+            width:39px;
+           } 
+           & .name{
+                @extend %text;
+                font-size:1.3em;
+            }
+        }
+    }
+    & .contact-information{
+        &>.text {
+            font-size:1.2em;
+            margin-bottom:5%;
+        }
+        & .contact{
+            margin-bottom:5%;
+            @include extensions.flex-mixin(start);
+            & img{
+                margin-right:2%;
+                height:39px;
+                width:39px;
+           } 
+           & #phone{
+            height:78px;
+            width:78px;
+           }
+        }
+    }
 }

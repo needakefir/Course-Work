@@ -1,0 +1,22 @@
+.text {
+  font-family: "RussianRail GPro";
+  color: white;
+}
+
+span.red {
+  color: red;
+}
+
+body {
+  background-color: black;
+}
+
+@font-face {
+  font-family: "RussianRail GPro";
+  src: url(../fonts/RussianRail_G_Pro_Regular_0.otf) format(opentype);
+}
+.text {
+  align-self: center;
+}
+
+/*# sourceMappingURL=reviews.css.map */

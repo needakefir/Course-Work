@@ -1,4 +1,4 @@
-.text, footer .logotext .after, footer .social-networks .social-network .name {
+.text {
   font-family: "RussianRail GPro";
   color: white;
 }
@@ -22,16 +22,21 @@ body {
 
 .main {
   display: grid;
+  width: 100%;
+  height: 89vh;
   grid-template-columns: 1fr 4fr;
-  align-items: center;
   background-color: black;
 }
+.main .left {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 .main .left .text {
-  font-size: 3em;
+  font-size: 2.5em;
 }
 .main .left button {
   border: 0px;
-  align-self: center;
   border-radius: 50px/50px;
   background-color: red;
   padding: 5% 10%;
@@ -42,35 +47,7 @@ body {
 }
 .main .right > img {
   width: 100%;
-  height: 88vh;
-}
-
-footer .logotext > .text {
-  font-size: 2em;
-  letter-spacing: 15%;
-  text-align: center;
-}
-footer .logotext .after {
-  color: darkgray;
-  font-size: 0.7em;
-  text-align: center;
-}
-footer .social-networks > .text {
-  font-size: 1.5em;
-  margin-bottom: 5%;
-}
-footer .social-networks .social-network {
-  margin-bottom: 5%;
-  display: flex;
-  justify-content: center;
-}
-footer .social-networks .social-network img {
-  margin-right: 2%;
-  height: 39px;
-  width: 39px;
-}
-footer .social-networks .social-network .name {
-  font-size: 1.5em;
+  height: 89vh;
 }
 
 /*# sourceMappingURL=index.css.map */
