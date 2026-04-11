@@ -32,3 +32,39 @@
         height:89vh;
     }
 }
+.training{
+    @include extensions.flex-mixin(center);
+    flex-direction: column;
+    & .offers-containter{
+    @include extensions.flex-mixin(space-evenly);
+    & .item-offer
+    {
+        background-color:rgba(77,70,70,0.63);
+        @include extensions.flex-mixin(center);
+        border-radius: 50px/50px;
+        flex-direction: column;
+        align-items:center;
+        & img{
+            gap:50px;
+            display:block;
+            border-radius: 50px/50px;
+            width:150px;
+            height:100px;  
+        }
+        & .text{
+            text-align:center;
+            @extend %text;
+        }
+        & button{
+            border:0px;
+            border-radius: 50px/50px;
+            background-color: red;
+            padding:5% 10%;
+            & .text{
+                font-size:25px;
+                color: white;
+            }
+        }
+    }
+}
+}

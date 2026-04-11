@@ -61,6 +61,7 @@ footer .logotext .after {
   text-align: center;
 }
 footer .social-networks > .text {
+  text-align: center;
   font-size: 1.2em;
   margin-bottom: 5%;
 }
@@ -68,7 +69,6 @@ footer .social-networks .social-network {
   margin-bottom: 5%;
   display: flex;
   justify-content: center;
-  align-self: flex-start;
 }
 footer .social-networks .social-network img {
   margin-right: 2%;
@@ -79,6 +79,7 @@ footer .social-networks .social-network .name {
   font-size: 1.3em;
 }
 footer .contact-information > .text {
+  text-align: left;
   font-size: 1.2em;
   margin-bottom: 5%;
 }
@@ -91,10 +92,6 @@ footer .contact-information .contact img {
   margin-right: 2%;
   height: 39px;
   width: 39px;
-}
-footer .contact-information .contact #phone {
-  height: 78px;
-  width: 78px;
 }
 
 /*# sourceMappingURL=header-footer.css.map */

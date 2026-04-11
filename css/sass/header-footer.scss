@@ -41,13 +41,13 @@ footer{
     }
     & .social-networks{
         &>.text {
+            text-align:center;
             font-size:1.2em;
             margin-bottom:5%;
         }
         & .social-network{
             margin-bottom:5%;
            @include extensions.flex-mixin(center);
-           align-self:flex-start;
            & img{
             margin-right:2%;
             height:39px;
@@ -61,6 +61,7 @@ footer{
     }
     & .contact-information{
         &>.text {
+            text-align:left;
             font-size:1.2em;
             margin-bottom:5%;
         }
@@ -72,10 +73,6 @@ footer{
                 height:39px;
                 width:39px;
            } 
-           & #phone{
-            height:78px;
-            width:78px;
-           }
         }
     }
 }

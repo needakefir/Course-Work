@@ -1,4 +1,4 @@
-.text {
+.text, .training .offers-containter .item-offer .text {
   font-family: "RussianRail GPro";
   color: white;
 }
@@ -48,6 +48,44 @@ body {
 .main .right > img {
   width: 100%;
   height: 89vh;
+}
+
+.training {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.training .offers-containter {
+  display: flex;
+  justify-content: space-evenly;
+}
+.training .offers-containter .item-offer {
+  background-color: rgba(77, 70, 70, 0.63);
+  display: flex;
+  justify-content: center;
+  border-radius: 50px/50px;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.training .offers-containter .item-offer img {
+  display: block;
+  border-radius: 50px/50px;
+  width: 150px;
+  height: 100px;
+}
+.training .offers-containter .item-offer .text {
+  text-align: center;
+}
+.training .offers-containter .item-offer button {
+  border: 0px;
+  border-radius: 50px/50px;
+  background-color: red;
+  padding: 5% 10%;
+}
+.training .offers-containter .item-offer button .text {
+  font-size: 25px;
+  color: white;
 }
 
 /*# sourceMappingURL=index.css.map */
