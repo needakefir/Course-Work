@@ -1,4 +1,4 @@
-.text, .training .offers-containter .item-offer .text {
+.text, .main .left button, .training .offers-containter .item-offer .text, .training .offers-containter .item-offer button, .prices .head, .prices .after-head, .prices .container .item-card .card-header, .prices .container .item-card .card-main .description-text .text, .prices .container .item-card .card-footer {
   font-family: "RussianRail GPro";
   color: white;
 }
@@ -23,36 +23,45 @@ body {
 .main {
   display: grid;
   width: 100%;
-  height: 89vh;
+  height: 100vh;
   grid-template-columns: 1fr 4fr;
   background-color: black;
 }
 .main .left {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 .main .left .text {
-  font-size: 2.5em;
+  font-size: 45px;
 }
 .main .left button {
   border: 0px;
+  font-size: 1.5em;
   border-radius: 50px/50px;
   background-color: red;
   padding: 5% 10%;
 }
 .main .left button .text {
-  font-size: 25px;
+  font-size: 1.2em;
   color: white;
 }
 .main .right > img {
   width: 100%;
-  height: 89vh;
+  height: 100vh;
 }
 
 .training {
   display: flex;
   justify-content: center;
+}
+.training > .text {
+  margin-bottom: 5%;
+  font-size: 4em;
+  margin-top: 5%;
+}
+.training {
   flex-direction: column;
 }
 .training .offers-containter {
@@ -60,32 +69,122 @@ body {
   justify-content: space-evenly;
 }
 .training .offers-containter .item-offer {
-  background-color: rgba(77, 70, 70, 0.63);
   display: flex;
   justify-content: center;
-  border-radius: 50px/50px;
+  flex: 0 0 18vw;
+  background-color: rgba(77, 70, 70, 0.63);
+  border-radius: 50px;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 4vh;
 }
 .training .offers-containter .item-offer img {
-  display: block;
-  border-radius: 50px/50px;
-  width: 150px;
-  height: 100px;
+  margin-top: 2.5%;
+  border-radius: 20%;
+  width: 270px;
+  height: 150px;
 }
 .training .offers-containter .item-offer .text {
-  text-align: center;
+  font-size: 2.3em;
 }
 .training .offers-containter .item-offer button {
-  border: 0px;
+  font-size: 1.5em;
+  border: 0;
   border-radius: 50px/50px;
   background-color: red;
   padding: 5% 10%;
+  margin-bottom: 2.5%;
 }
 .training .offers-containter .item-offer button .text {
-  font-size: 25px;
+  font-size: 2em;
   color: white;
 }
 
-/*# sourceMappingURL=index.css.map */
+.interier {
+  background-color: rgba(77, 70, 70, 0.2);
+}
+.interier > .text {
+  margin-bottom: 5%;
+  font-size: 4em;
+  margin-top: 5%;
+}
+.interier .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.interier .container .part {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vh;
+}
+.interier .container .part img {
+  border-radius: 5%;
+  width: 75%;
+  height: 45vh;
+}
+
+.prices {
+  background: url("../../res/back/Prices.png");
+}
+.prices .head {
+  text-align: center;
+  font-size: 4em;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+.prices .after-head {
+  text-align: center;
+  font-size: 3em;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+.prices .container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.prices .container .item-card {
+  width: 20vw;
+}
+.prices .container .item-card .card-header {
+  padding: 4% 0%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: red;
+  border-bottom: 3px solid white;
+}
+.prices .container .item-card .card-header .text {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.7em;
+  margin: 0;
+}
+.prices .container .item-card .card-main {
+  background-color: rgba(77, 70, 70, 0.96);
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 25vh;
+}
+.prices .container .item-card .card-main .description-text {
+  display: flex;
+  justify-content: start;
+}
+.prices .container .item-card .card-main .description-text img {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+.prices .container .item-card .card-main .description-text .text {
+  text-align: start;
+}
+.prices .container .item-card .card-footer {
+  border-top: 3px solid white;
+  background-color: red;
+  text-align: center;
+  font-size: 2.5em;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}/*# sourceMappingURL=index.css.map */

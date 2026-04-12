@@ -3,68 +3,172 @@
         align-self:center;
         text-align:center;
         @extend %text;
-    }
+}
 .main{
     display:grid;
     width:100%;
-    height:89vh;
+    height:100vh;
     grid-template-columns:1fr 4fr;
     background-color: black;
     & .left{
         @include extensions.flex-mixin(center);
-        flex-direction: column;
+        align-items:center;
+        flex-direction:column;
         & .text{
-            font-size:2.5em;
+            font-size:45px;
+
         }
         & button{
             border:0px;
+            @extend %text;
+            font-size:1.5em;
             border-radius: 50px/50px;
             background-color: red;
             padding:5% 10%;
             & .text{
-                font-size:25px;
+                font-size:1.2em;    
                 color: white;
             }
         }
     }
     & .right>img{
         width:100%;
-        height:89vh;
+        height:100vh;
     }
 }
 .training{
     @include extensions.flex-mixin(center);
+    & > .text{
+        margin-bottom: 5%;
+        font-size:4em;
+        margin-top:5%;
+    }
     flex-direction: column;
     & .offers-containter{
-    @include extensions.flex-mixin(space-evenly);
-    & .item-offer
-    {
-        background-color:rgba(77,70,70,0.63);
-        @include extensions.flex-mixin(center);
-        border-radius: 50px/50px;
-        flex-direction: column;
-        align-items:center;
-        & img{
-            gap:50px;
-            display:block;
-            border-radius: 50px/50px;
-            width:150px;
-            height:100px;  
-        }
-        & .text{
-            text-align:center;
-            @extend %text;
-        }
-        & button{
-            border:0px;
-            border-radius: 50px/50px;
-            background-color: red;
-            padding:5% 10%;
+        @include extensions.flex-mixin(space-evenly);
+        & .item-offer
+        {
+            @include extensions.flex-mixin(center);
+            flex:0 0 18vw;
+            background-color:rgba(77,70,70,0.63);
+            border-radius: 50px;
+            flex-direction: column;
+            align-items: center;
+            gap:4vh;
+            & img{
+                margin-top:2.5%;
+                border-radius: 20%;
+                width:270px;
+                height:150px;
+            }
             & .text{
-                font-size:25px;
-                color: white;
+                @extend %text;
+                font-size:2.3em;
+            }
+            & button{
+                @extend %text;
+                font-size:1.5em;
+                border:0;
+                border-radius: 50px/50px;
+                background-color: red;
+                padding:5% 10%;
+                margin-bottom: 2.5%;
+                & .text{
+                    font-size:2em;
+                    color: white;
+                }
             }
         }
     }
 }
+.interier{
+    background-color:rgba(77,70,70,0.2);
+     & > .text{
+        margin-bottom: 5%;
+        font-size:4em;
+        margin-top:5%;
+    }
+    & .container{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        & .part{
+            @include extensions.flex-mixin(center);
+            flex-direction: column;
+            align-items: center;
+            gap:5vh;
+            & img{
+                border-radius:5%;
+                width:75%;
+                height:45vh;
+            }
+        }
+    }
+}
+.prices
+{
+    background:url("../../res/back/Prices.png");
+    & .head{
+        @extend %text;
+        text-align:center;
+        font-size:4em;
+        margin-top:5%;
+        margin-bottom:10%;
+    }
+    & .after-head{
+        @extend %text;
+        text-align:center;
+        font-size:3em;
+        margin-top:5%;
+        margin-bottom:10%;
+    }
+    & .container{
+        @include extensions.flex-mixin(space-evenly);
+        & .item-card{
+            width:20vw;
+            & .card-header{
+                padding:4% 0%;
+                border-top-left-radius: 50%; 
+                border-top-right-radius: 50%; 
+                @extend %text;
+                text-align:center;
+                font-size:1.5em;
+                background-color: red;
+                border-bottom:3px solid white;
+                & .text{
+                    color:rgba(255,255,255,0.75);
+                    font-size:0.7em;
+                    margin:0;
+                }
+            }
+            & .card-main{
+                background-color:rgba(77,70,70,0.96);
+                @include extensions.flex-mixin(space-evenly);
+                flex-direction: column;
+                height:25vh;
+                & .description-text
+                {
+                    @include extensions.flex-mixin(start);
+                    & img{
+                    display:inline-block;
+                    width:30px;
+                    height:30px;
+                    }
+                    & .text{
+                        text-align:start;
+                    @extend %text;
+                    }
+                }
+
+            }
+            & .card-footer{
+                border-top:3px solid white;
+                background-color: red;
+                @extend %text;
+                text-align:center;
+                font-size:2.5em;
+                border-bottom-left-radius: 50%;
+                border-bottom-right-radius: 50%;
+            }
+        }
+    }
 }

@@ -2,6 +2,7 @@
 header{
     @include extensions.flex-mixin(space-between);
     & .text{
+        font-size:36px;
         letter-spacing: 5px;
     }
     background-color: black;
@@ -15,12 +16,14 @@ header{
                 & a{
                 @extend %text;
                 text-decoration: none;
+                font-size:1.3em;
                 color:white;
                 }
             }       
          }
      }
 }
+// FIXME: LAYOUT ON NOTEBOOK WITH RESOLUTION HIGHER 1280x720
 footer{
     display:grid;
     grid-template-columns:1fr 1.5fr 1.5fr;
@@ -40,7 +43,7 @@ footer{
         }
     }
     & .social-networks{
-        &>.text {
+        & >.text {
             text-align:center;
             font-size:1.2em;
             margin-bottom:5%;
@@ -60,7 +63,7 @@ footer{
         }
     }
     & .contact-information{
-        &>.text {
+        & >.text {
             text-align:left;
             font-size:1.2em;
             margin-bottom:5%;
