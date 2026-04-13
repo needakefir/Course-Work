@@ -126,9 +126,9 @@
         & .item-card{
             width:20vw;
             & .card-header{
+                align-items:center;
+                height:10vh;
                 padding:4% 0%;
-                border-top-left-radius: 50%; 
-                border-top-right-radius: 50%; 
                 @extend %text;
                 text-align:center;
                 font-size:1.5em;
@@ -141,10 +141,10 @@
                 }
             }
             & .card-main{
+                height:35vh;
                 background-color:rgba(77,70,70,0.96);
                 @include extensions.flex-mixin(space-evenly);
                 flex-direction: column;
-                height:25vh;
                 & .description-text
                 {
                     @include extensions.flex-mixin(start);
@@ -156,6 +156,7 @@
                     & .text{
                         text-align:start;
                     @extend %text;
+                    font-size:0.8em;
                     }
                 }
 
@@ -166,8 +167,6 @@
                 @extend %text;
                 text-align:center;
                 font-size:2.5em;
-                border-bottom-left-radius: 50%;
-                border-bottom-right-radius: 50%;
             }
         }
     }

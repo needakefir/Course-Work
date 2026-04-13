@@ -148,9 +148,9 @@ body {
   width: 20vw;
 }
 .prices .container .item-card .card-header {
+  align-items: center;
+  height: 10vh;
   padding: 4% 0%;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
   text-align: center;
   font-size: 1.5em;
   background-color: red;
@@ -162,11 +162,11 @@ body {
   margin: 0;
 }
 .prices .container .item-card .card-main {
+  height: 35vh;
   background-color: rgba(77, 70, 70, 0.96);
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  height: 25vh;
 }
 .prices .container .item-card .card-main .description-text {
   display: flex;
@@ -179,12 +179,13 @@ body {
 }
 .prices .container .item-card .card-main .description-text .text {
   text-align: start;
+  font-size: 0.8em;
 }
 .prices .container .item-card .card-footer {
   border-top: 3px solid white;
   background-color: red;
   text-align: center;
   font-size: 2.5em;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */
