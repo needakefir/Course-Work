@@ -1,5 +1,176 @@
 @use 'extensions';
 .text{
     @extend %text;
-    align-self:center;
+    text-align:center;
+}
+main{
+    & .main{
+        @include extensions.flex-mixin(center);
+        flex-direction: column;
+        height:100vh;
+        width:100%;
+        background:url("../../res/back/Header.png");
+        & .main-text{
+        margin-top:0;
+        @extend %text;
+        text-align:center;
+        font-size:9em;
+        }
+        & .advantages-list{
+            align-self:flex-end;
+            @include extensions.flex-mixin(space-between);
+          & .advantage-item
+          {
+            @extend %text;
+            font-size:3em;
+            text-align:center;
+          }  
+        }
+    }
+    & .about{
+        height:100vh;
+        padding:5% 0%;
+        background:url("../../res/interier/interier4.jpg");
+        & .why-text{
+        margin:0%;
+        @extend %text;
+        text-align:center;
+        font-size:5em;
+        }
+        & .container
+        {
+            margin-top:5%;
+            @include extensions.flex-mixin(space-evenly);
+            flex-wrap:wrap;
+            & .item-card{
+
+                width:25vw;
+                height:33vh;
+                border-bottom:10px solid red;
+                @include extensions.flex-mixin(start);
+                flex-direction: column;
+                & .num{
+                    padding:5% 2.5% 5% 2.5%;
+                    @extend %text;
+                    align-self:flex-end;
+                    background-color:rgba(255,255,255,0.1);
+                }
+                & .main-text{
+                    margin:0% 5%;
+                    & .head{
+                    margin-top:0;
+                    @extend %text;
+                    font-size:2em;
+                }
+                & .text{
+                    @extend %text;
+                    text-align:left;
+                    font-size:1.2em;
+                }
+                }
+            }
+            & #num6{
+                margin-top:5%;
+                background: url("../../res/photos-card/card6.png");
+            }
+            & #num5{
+                margin-top:5%;
+                background: url("../../res/photos-card/card5.png");
+            }
+            & #num4{
+                margin-top:5%;
+                background: url("../../res/photos-card/card4.png");
+            }
+            & #num3{
+                background: url("../../res/photos-card/card3.png");
+            }
+            & #num2{
+                background: url("../../res/photos-card/card2.png");
+            }
+            & #num1{
+                background: url("../../res/photos-card/card1.png");
+            }
+
+        }
+    }
+    & .trainers{
+        padding:2.5% 0% 0% 0%;
+        height:80vh;
+        background:url("../../res/back/back2.png");
+        & .text{
+            margin-top:0;
+            font-size:5em;
+        }
+        & .container{
+            margin:auto;
+            @include extensions.flex-mixin(space-evenly);
+            & .item{
+                @include extensions.flex-mixin(flex-end);
+                flex-direction: column;
+                width: 317px;
+                height:400px;
+                & .main-text-container{
+                    width:80%;
+                    margin:0% 10%;
+                    & .name{
+                        @extend %text;
+                        font-size: 1.2em;
+                    }
+                    & .stage{
+                        @extend %text;
+                        font-size: 1em;
+                    }
+                }
+                & button{
+                    border-radius:50px/50px;
+                    margin:5% 10%;
+                    background-color: red;
+                    border:0;
+                    @extend %text;
+                    font-size:1.5em;
+                    padding:5% 2.5%;
+                    visibility: hidden;
+                }
+                & .line{
+                    width:80%;
+                    margin:0% 10%;
+                    background-color: red;
+                    height:1.25%;
+                    visibility: hidden;
+                }
+            }
+            & .item:hover{
+                & button{
+                    visibility: visible;
+                }
+                & .line{
+                    visibility:visible;
+                }
+            }
+            & #trainer1{
+                background:linear-gradient(rgba(200,10,44,0) 15%,
+                rgba(200,10,44,0.3) 85%,
+                rgba(200,10,44,0.5) 100%),url(../../res/trainers/trainer1.png)
+                ;
+            }          
+            & #trainer2{
+                background:linear-gradient(rgba(200,10,44,0) 15%,
+                rgba(200,10,44,0.3) 85%,
+                rgba(200,10,44,0.5) 100%),url(../../res/trainers/trainer2.png)
+                ;
+            }          
+            & #trainer3{
+                background:linear-gradient(rgba(200,10,44,0) 15%,
+                rgba(200,10,44,0.3) 85%,
+                rgba(200,10,44,0.5) 100%),url(../../res/trainers/trainer3.png)
+                ;
+            }          
+            & #trainer4{
+                background:linear-gradient(rgba(200,10,44,0) 15%,
+                rgba(200,10,44,0.3) 85%,
+                rgba(200,10,44,0.5) 100%),url(../../res/trainers/trainer4.png)
+                ;
+            }          
+        }
+    }
 }

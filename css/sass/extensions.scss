@@ -1,7 +1,7 @@
-@mixin flex-mixin($content)
+@mixin flex-mixin($content-alignment)
 {
     display:flex;
-    justify-content: $content;
+    justify-content: $content-alignment;
 }
 %text{
     font-family: "RussianRail GPro";

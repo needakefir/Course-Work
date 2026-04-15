@@ -1,4 +1,4 @@
-.text {
+.text, main .main .main-text, main .main .advantages-list .advantage-item, main .about .why-text, main .about .container .item-card .num, main .about .container .item-card .main-text .head, main .about .container .item-card .main-text .text, main .trainers .container .item .main-text-container .name, main .trainers .container .item .main-text-container .stage, main .trainers .container .item button {
   font-family: "RussianRail GPro";
   color: white;
 }
@@ -16,7 +16,154 @@ body {
   src: url(../fonts/RussianRail_G_Pro_Regular_0.otf) format(opentype);
 }
 .text {
-  align-self: center;
+  text-align: center;
 }
 
-/*# sourceMappingURL=about.css.map */
+main .main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background: url("../../res/back/Header.png");
+}
+main .main .main-text {
+  margin-top: 0;
+  text-align: center;
+  font-size: 9em;
+}
+main .main .advantages-list {
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+}
+main .main .advantages-list .advantage-item {
+  font-size: 3em;
+  text-align: center;
+}
+main .about {
+  height: 100vh;
+  padding: 5% 0%;
+  background: url("../../res/interier/interier4.jpg");
+}
+main .about .why-text {
+  margin: 0%;
+  text-align: center;
+  font-size: 5em;
+}
+main .about .container {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+main .about .container .item-card {
+  width: 25vw;
+  height: 33vh;
+  border-bottom: 10px solid red;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+main .about .container .item-card .num {
+  padding: 5% 2.5% 5% 2.5%;
+  align-self: flex-end;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+main .about .container .item-card .main-text {
+  margin: 0% 5%;
+}
+main .about .container .item-card .main-text .head {
+  margin-top: 0;
+  font-size: 2em;
+}
+main .about .container .item-card .main-text .text {
+  text-align: left;
+  font-size: 1.2em;
+}
+main .about .container #num6 {
+  margin-top: 5%;
+  background: url("../../res/photos-card/card6.png");
+}
+main .about .container #num5 {
+  margin-top: 5%;
+  background: url("../../res/photos-card/card5.png");
+}
+main .about .container #num4 {
+  margin-top: 5%;
+  background: url("../../res/photos-card/card4.png");
+}
+main .about .container #num3 {
+  background: url("../../res/photos-card/card3.png");
+}
+main .about .container #num2 {
+  background: url("../../res/photos-card/card2.png");
+}
+main .about .container #num1 {
+  background: url("../../res/photos-card/card1.png");
+}
+main .trainers {
+  padding: 2.5% 0% 0% 0%;
+  height: 80vh;
+  background: url("../../res/back/back2.png");
+}
+main .trainers .text {
+  margin-top: 0;
+  font-size: 5em;
+}
+main .trainers .container {
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+main .trainers .container .item {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 317px;
+  height: 400px;
+}
+main .trainers .container .item .main-text-container {
+  width: 80%;
+  margin: 0% 10%;
+}
+main .trainers .container .item .main-text-container .name {
+  font-size: 1.2em;
+}
+main .trainers .container .item .main-text-container .stage {
+  font-size: 1em;
+}
+main .trainers .container .item button {
+  border-radius: 50px/50px;
+  margin: 5% 10%;
+  background-color: red;
+  border: 0;
+  font-size: 1.5em;
+  padding: 5% 2.5%;
+  visibility: hidden;
+}
+main .trainers .container .item .line {
+  width: 80%;
+  margin: 0% 10%;
+  background-color: red;
+  height: 1.25%;
+  visibility: hidden;
+}
+main .trainers .container .item:hover button {
+  visibility: visible;
+}
+main .trainers .container .item:hover .line {
+  visibility: visible;
+}
+main .trainers .container #trainer1 {
+  background: linear-gradient(rgba(200, 10, 44, 0) 15%, rgba(200, 10, 44, 0.3) 85%, rgba(200, 10, 44, 0.5) 100%), url(../../res/trainers/trainer1.png);
+}
+main .trainers .container #trainer2 {
+  background: linear-gradient(rgba(200, 10, 44, 0) 15%, rgba(200, 10, 44, 0.3) 85%, rgba(200, 10, 44, 0.5) 100%), url(../../res/trainers/trainer2.png);
+}
+main .trainers .container #trainer3 {
+  background: linear-gradient(rgba(200, 10, 44, 0) 15%, rgba(200, 10, 44, 0.3) 85%, rgba(200, 10, 44, 0.5) 100%), url(../../res/trainers/trainer3.png);
+}
+main .trainers .container #trainer4 {
+  background: linear-gradient(rgba(200, 10, 44, 0) 15%, rgba(200, 10, 44, 0.3) 85%, rgba(200, 10, 44, 0.5) 100%), url(../../res/trainers/trainer4.png);
+}/*# sourceMappingURL=about.css.map */

@@ -1,4 +1,4 @@
-header .nav .links li a, footer .logotext .after, footer .social-networks .social-network .name {
+header .nav .links li a, footer .logotext .after, footer .social-networks .social-network .name, footer .contact-information .contact .text, footer .end {
   font-family: "RussianRail GPro";
   color: white;
 }
@@ -47,7 +47,7 @@ header .nav .links li a {
 footer {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1.5fr;
-  margin-top: 5%;
+  margin-top: 2.5%;
 }
 footer .logotext {
   align-self: center;
@@ -95,5 +95,11 @@ footer .contact-information .contact img {
   height: 39px;
   width: 39px;
 }
-
-/*# sourceMappingURL=header-footer.css.map */
+footer .contact-information .contact .text {
+  font-size: 1.2em;
+}
+footer .end {
+  grid-column: 1/4;
+  text-align: center;
+  font-size: 1.5em;
+}/*# sourceMappingURL=header-footer.css.map */

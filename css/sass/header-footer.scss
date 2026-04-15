@@ -23,11 +23,10 @@ header{
          }
      }
 }
-// FIXME: LAYOUT ON NOTEBOOK WITH RESOLUTION HIGHER 1280x720
 footer{
     display:grid;
     grid-template-columns:1fr 1.5fr 1.5fr;
-    margin-top:5%;
+    margin-top:2.5%;
     & .logotext{
         align-self:center;
         &>.text{
@@ -76,6 +75,16 @@ footer{
                 height:39px;
                 width:39px;
            } 
+           & .text{
+            @extend %text;
+            font-size:1.2em;
+           }
         }
+    }
+    & .end{
+        grid-column:1/4;
+        text-align:center;
+        font-size:1.5em;
+        @extend %text;
     }
 }
