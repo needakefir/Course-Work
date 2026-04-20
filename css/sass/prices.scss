@@ -3,3 +3,74 @@
     @extend %text;
     align-self:center;
 }
+main{
+ & .prices
+{
+    background:url("../../res/back/Prices.png");
+    & .head{
+        @extend %text;
+        text-align:center;
+        font-size:4em;
+        margin-bottom:5%;
+    }
+    & .after-head{
+        @extend %text;
+        text-align:center;
+        font-size:3em;
+        margin-top:5%;
+        margin-bottom:5%;
+    }
+    & .container{
+        @include extensions.flex-mixin(space-evenly);
+        & .item-card{
+            width:20vw;
+            & .card-header{
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px;
+                height:10vh;
+                padding:4% 0%;
+                @extend %text;
+                text-align:center;
+                font-size:1.5em;
+                background-color: red;
+                border-bottom:3px solid white;
+                & .text{
+                    color:rgba(255,255,255,0.75);
+                    font-size:0.7em;
+                    margin:0;
+                }
+            }
+            & .card-main{
+                height:35vh;
+                background-color:rgba(77,70,70,0.96);
+                @include extensions.flex-mixin(space-evenly);
+                flex-direction: column;
+                & .description-text
+                {
+                    @include extensions.flex-mixin(start);
+                    & img{
+                    display:inline-block;
+                    width:30px;
+                    height:30px;
+                    }
+                    & .text{
+                        text-align:start;
+                    @extend %text;
+                    font-size:0.9em;
+                    }
+                }
+
+            }
+            & .card-footer{
+                border-top:3px solid white;
+                background-color: red;
+                @extend %text;
+                text-align:center;
+                font-size:2.5em;
+                border-bottom-left-radius: 50px;
+                border-bottom-right-radius: 50px;
+            }
+        }
+    }
+}
+}

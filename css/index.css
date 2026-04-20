@@ -1,4 +1,4 @@
-.text, .main .left button, .training .offers-containter .item-offer .text, .training .offers-containter .item-offer button, .prices .head, .prices .after-head, .prices .container .item-card .card-header, .prices .container .item-card .card-main .description-text .text, .prices .container .item-card .card-footer {
+.text, main .main .left button, main .training .offers-containter .item-offer .text, main .training .offers-containter .item-offer button, main .form-offer .offer-form .label-form input, main .form-offer .offer-form button {
   font-family: "RussianRail GPro";
   color: white;
 }
@@ -20,55 +20,55 @@ body {
   text-align: center;
 }
 
-.main {
+main .main {
   display: grid;
   width: 100%;
   height: 100vh;
   grid-template-columns: 1fr 4fr;
   background-color: black;
 }
-.main .left {
+main .main .left {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.main .left .text {
+main .main .left .text {
   font-size: 45px;
+  margin: 0;
 }
-.main .left button {
+main .main .left button {
   border: 0px;
   font-size: 1.5em;
   border-radius: 50px/50px;
   background-color: red;
   padding: 5% 10%;
 }
-.main .left button .text {
+main .main .left button .text {
   font-size: 1.2em;
   color: white;
 }
-.main .right > img {
+main .main .right > img {
   width: 100%;
   height: 100vh;
 }
-
-.training {
+main .training {
   display: flex;
   justify-content: center;
 }
-.training > .text {
+main .training > .text {
   margin-bottom: 5%;
   font-size: 4em;
   margin-top: 5%;
 }
-.training {
+main .training {
   flex-direction: column;
 }
-.training .offers-containter {
+main .training .offers-containter {
   display: flex;
   justify-content: space-evenly;
 }
-.training .offers-containter .item-offer {
+main .training .offers-containter .item-offer {
   display: flex;
   justify-content: center;
   flex: 0 0 18vw;
@@ -78,16 +78,16 @@ body {
   align-items: center;
   gap: 4vh;
 }
-.training .offers-containter .item-offer img {
+main .training .offers-containter .item-offer img {
   margin-top: 2.5%;
-  border-radius: 20%;
+  border-radius: 25px;
   width: 270px;
-  height: 150px;
+  height: 180px;
 }
-.training .offers-containter .item-offer .text {
+main .training .offers-containter .item-offer .text {
   font-size: 2.3em;
 }
-.training .offers-containter .item-offer button {
+main .training .offers-containter .item-offer button {
   font-size: 1.5em;
   border: 0;
   border-radius: 50px/50px;
@@ -95,97 +95,86 @@ body {
   padding: 5% 10%;
   margin-bottom: 2.5%;
 }
-.training .offers-containter .item-offer button .text {
+main .training .offers-containter .item-offer button .text {
   font-size: 2em;
   color: white;
 }
-
-.interier {
+main .interier {
   padding: 5% 0 0 0;
   background-color: rgba(77, 70, 70, 0.2);
 }
-.interier > .text {
+main .interier > .text {
   margin: 0 0 5% 0;
   font-size: 4em;
 }
-.interier .container {
+main .interier .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.interier .container .part {
+main .interier .container .part {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   gap: 5vh;
 }
-.interier .container .part img {
+main .interier .container .part img {
   border-radius: 5%;
   width: 75%;
   height: 45vh;
 }
-
-.prices {
-  background: url("../../res/back/Prices.png");
+main .form-offer {
+  background: url("../../res/back/back3.png");
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 3fr 4fr;
 }
-.prices .head {
-  text-align: center;
-  font-size: 4em;
-  margin-bottom: 5%;
-}
-.prices .after-head {
-  text-align: center;
-  font-size: 3em;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-.prices .container {
+main .form-offer .offer-texts {
   display: flex;
-  justify-content: space-evenly;
-}
-.prices .container .item-card {
-  width: 20vw;
-}
-.prices .container .item-card .card-header {
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  height: 10vh;
-  padding: 4% 0%;
-  text-align: center;
-  font-size: 1.5em;
-  background-color: red;
-  border-bottom: 3px solid white;
-}
-.prices .container .item-card .card-header .text {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.7em;
-  margin: 0;
-}
-.prices .container .item-card .card-main {
-  height: 35vh;
-  background-color: rgba(77, 70, 70, 0.96);
-  display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: column;
 }
-.prices .container .item-card .card-main .description-text {
+main .form-offer .offer-texts .text {
+  font-size: 1.6em;
+}
+main .form-offer .offer-form {
+  height: 60vh;
+  width: 80%;
+  margin: 0% 10%;
+  align-self: center;
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 10%;
 }
-.prices .container .item-card .card-main .description-text img {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
+main .form-offer .offer-form .text {
+  font-size: 2em;
+  margin-top: 0;
 }
-.prices .container .item-card .card-main .description-text .text {
-  text-align: start;
-  font-size: 0.9em;
+main .form-offer .offer-form .label-form {
+  width: 80%;
 }
-.prices .container .item-card .card-footer {
-  border-top: 3px solid white;
-  background-color: red;
-  text-align: center;
-  font-size: 2.5em;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+main .form-offer .offer-form .label-form .text {
+  text-align: left;
+}
+main .form-offer .offer-form .label-form input {
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  font-size: 1.2em;
+}
+main .form-offer .offer-form .label-form input:focus {
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+}
+main .form-offer .offer-form button {
+  background-color: rgb(200, 10, 44);
+  font-size: 1.5em;
+  padding: 3% 10%;
+  border: 0;
+  border-radius: 50px/50px;
 }/*# sourceMappingURL=index.css.map */
