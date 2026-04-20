@@ -72,10 +72,10 @@ main .training .offers-containter .item-offer {
   display: flex;
   justify-content: center;
   flex: 0 0 18vw;
-  background-color: rgba(77, 70, 70, 0.63);
-  border-radius: 50px;
   flex-direction: column;
   align-items: center;
+  background-color: rgba(77, 70, 70, 0.63);
+  border-radius: 50px;
   gap: 4vh;
 }
 main .training .offers-containter .item-offer img {
@@ -128,6 +128,7 @@ main .form-offer {
   height: 90vh;
   display: grid;
   grid-template-columns: 3fr 4fr;
+  place-items: center;
 }
 main .form-offer .offer-texts {
   display: flex;
@@ -135,19 +136,17 @@ main .form-offer .offer-texts {
   flex-direction: column;
 }
 main .form-offer .offer-texts .text {
-  font-size: 1.6em;
+  font-size: 2em;
 }
 main .form-offer .offer-form {
-  height: 60vh;
-  width: 80%;
-  margin: 0% 10%;
-  align-self: center;
-  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  gap: 10%;
+  height: 65vh;
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.4);
+  gap: 5%;
 }
 main .form-offer .offer-form .text {
   font-size: 2em;
@@ -157,6 +156,7 @@ main .form-offer .offer-form .label-form {
   width: 80%;
 }
 main .form-offer .offer-form .label-form .text {
+  font-size: 1.5em;
   text-align: left;
 }
 main .form-offer .offer-form .label-form input {

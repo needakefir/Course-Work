@@ -29,8 +29,7 @@ main{
                 border-top-right-radius: 50px;
                 height:10vh;
                 padding:4% 0%;
-                @extend %text;
-                text-align:center;
+               
                 font-size:1.5em;
                 background-color: red;
                 border-bottom:3px solid white;

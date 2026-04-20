@@ -1,4 +1,4 @@
-.text, main .prices .head, main .prices .after-head, main .prices .container .item-card .card-header, main .prices .container .item-card .card-main .description-text .text, main .prices .container .item-card .card-footer {
+.text, main .prices .head, main .prices .after-head, main .prices .container .item-card .card-main .description-text .text, main .prices .container .item-card .card-footer {
   font-family: "RussianRail GPro";
   color: white;
 }
@@ -45,7 +45,6 @@ main .prices .container .item-card .card-header {
   border-top-right-radius: 50px;
   height: 10vh;
   padding: 4% 0%;
-  text-align: center;
   font-size: 1.5em;
   background-color: red;
   border-bottom: 3px solid white;
