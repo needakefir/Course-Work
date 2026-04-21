@@ -21,7 +21,7 @@ body {
 
 main .main {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
   height: 100vh;
   width: 100%;
@@ -30,16 +30,17 @@ main .main {
 main .main .main-text {
   margin-top: 0;
   text-align: center;
-  font-size: 9em;
+  font-size: 5.5em;
 }
 main .main .advantages-list {
-  align-self: flex-end;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 main .main .advantages-list .advantage-item {
   font-size: 3em;
   text-align: center;
+  text-decoration: underline;
+  letter-spacing: 3%;
 }
 main .about {
   height: 100vh;

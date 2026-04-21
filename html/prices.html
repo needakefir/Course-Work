@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +9,25 @@
 </head>
 <body>
      <header>
-        <div class="text"><span class="red">Health</span>Fit</div>
+        <p class="text"><span class="red">Health</span>Fit</p>
+        <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+        <label for="burger-checkbox" class="burger"></label>
         <nav class="nav">
             <ul class="links">
-                <li><a href="../index.html">Главная</a></li>
-                <li><a href="#">Цены</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="#">Главная</a></li>
+                <li><a href="html/prices.html">Цены</a></li>
+                <li><a href="html/about.html">О нас</a></li>
+                <li><a href="html/reviews.html">Отзывы</a></li>
             </ul>
         </nav>
     </header>
     <main>
     <section class="prices">
-            <h1 class="head">Цены</h1>
-            <h2 class="after-head">Абонементы</h2>
+            <h2 class="head">Абонементы</h2>
             <section class="container">
                 <div class="item-card">
                     <div class="card-header">
-                        Безлимит на 1 месяц
+                        <p class="description">Безлимит на 1 месяц</p>
                     </div>
                     <div class="card-main">
                        <div class="description-text">
@@ -41,41 +42,45 @@
                     <div class="card-footer">50 руб</div>
                 </div>
                 <div class="item-card">
-                    <div class="card-header">Безлимит на 3 месяца</div>
+                    <div class="card-header">
+                        <p class="description">Безлимит на 3 месяца</p>
+                    </div>
                     <div class="card-main">
                        <div class="description-text">
-                        <img src="../res/svg/material-symbols_info.svg" alt="">
-                        <div class="text">Абонемент на 1 месяц действует 30 дней.</div>
+                            <img src="../res/svg/material-symbols_info.svg" alt="">
+                            <div class="text">Абонемент на 1 месяц действует 30 дней.</div>
                        </div>
                        <div class="description-text">
-                         <img src="../res/svg/material-symbols_info.svg" alt="">
-                        <div class="text">Дает возможность неограниченного количества посещений тренажерного зала в период действия абонемента</div>
+                            <img src="../res/svg/material-symbols_info.svg" alt="">
+                            <div class="text">Дает возможность неограниченного количества посещений тренажерного зала в период действия абонемента</div>
                        </div>
                        <div class="description-text">
-                         <img src="../res/svg/material-symbols_info.svg" alt="">
-                        <div class="text">1 гостевой визит</div>
+                            <img src="../res/svg/material-symbols_info.svg" alt="">
+                            <div class="text">1 гостевой визит</div>
                        </div>
                     </div>
                     <div class="card-footer">140 руб</div>
                     </div>
                 <div class="item-card">
-                    <div class="card-header">Безлимит на 6 месяцев</div>
+                    <div class="card-header">
+                        <p class="description">Безлимит на 6 месяцев</p>
+                    </div>
                     <div class="card-main">
                        <div class="description-text">
-                        <img src="../res/svg/material-symbols_info.svg" alt="">
-                        <div class="text">Абонемент на 1 месяц действует 30 дней.</div>
+                            <img src="../res/svg/material-symbols_info.svg" alt="">
+                            <div class="text">Абонемент на 1 месяц действует 30 дней.</div>
                        </div>
                        <div class="description-text">
-                         <img src="../res/svg/material-symbols_info.svg" alt="">
-                        <div class="text">Дает возможность неограниченного количества посещений тренажерного зала в период действия абонемента</div>
+                            <img src="../res/svg/material-symbols_info.svg" alt="">
+                            <div class="text">Дает возможность неограниченного количества посещений тренажерного зала в период действия абонемента</div>
                        </div>
                        <div class="description-text">
-                         <img src="../res/svg/material-symbols_info.svg" alt="">
-                        <div class="text">2 гостевых визита</div>
+                            <img src="../res/svg/material-symbols_info.svg" alt="">
+                            <div class="text">2 гостевых визита</div>
                        </div>
                        <div class="description-text">
-                        <img src="../res/svg/material-symbols_info.svg" alt="">
-                        <div class="text">Входит пакет заморозки на 30 дней</div>
+                            <img src="../res/svg/material-symbols_info.svg" alt="">
+                            <div class="text">Входит пакет заморозки на 30 дней</div>
                        </div>
                     </div>
                     <div class="card-footer">250 руб</div>
@@ -85,8 +90,25 @@
          <section class="container">
                 <div class="item-card">
                     <div class="card-header" id="head">
-                        Разовое посещение
-                        <p class="text">Стандартное</p>
+                        <p class="description">Разовое посещение</p>
+                        <p class="after-description">Стандартное</p>
+                    </div>
+                    <div class="card-main">
+                       <div class="description-text">
+                            <img src="../res/svg/material-symbols_info.svg" alt="">
+                            <div class="text">Разовое занятие предполагает собой одно занятие в тренажерном зале.</div>
+                       </div>
+                       <div class="description-text">
+                            <img src="../res/svg/material-symbols_info.svg" alt="">
+                            <div class="text">Дает возможность посещения тренажерного зала 1 раз в день в период действия абонемента</div>
+                       </div>
+                    </div>
+                    <div class="card-footer">10 руб</div>
+                </div>
+                <div class="item-card">
+                    <div class="card-header">
+                        <p class="description">Разовое посещение</p>
+                        <p class="after-description">Стандартное</p>
                     </div>
                     <div class="card-main">
                        <div class="description-text">
@@ -95,31 +117,14 @@
                        </div>
                        <div class="description-text">
                          <img src="../res/svg/material-symbols_info.svg" alt="">
-                        <div class="text">Дает возможность посещения тренажерного зала 1 раз в день в период действия абонемента</div>
-                       </div>
-                    </div>
-                    <div class="card-footer">50 руб</div>
-                </div>
-                <div class="item-card">
-                    <div class="card-header">
-                        Разовое посещение
-                        <p class="text">Для школьников и студентов</p>
-                    </div>
-                    <div class="card-main">
-                       <div class="description-text">
-                        <img src="../res/svg/material-symbols_info.svg" alt="">
-                        <div class="text">Абонемент на 3 месяца действует 90 дней.</div>
-                       </div>
-                       <div class="description-text">
-                         <img src="../res/svg/material-symbols_info.svg" alt="">
-                        <div class="text">Абонемент на 1 месяц действует 30 дней.</div>
+                       <div class="text">Дает возможность посещения тренажерного зала 1 раз в день в период действия абонемента</div>
                        </div>
                        <div class="description-text">
                         <img src="../res/svg/material-symbols_info.svg" alt="">
                         <div class="text">Для приобретения необходимо предъявить документы, подтверждающие статус студента очной формы обучения или учащегося.</div>
                        </div>
                     </div>
-                    <div class="card-footer">140 руб</div>
+                    <div class="card-footer">8 руб</div>
                 </div>
         </section>
     </section>
@@ -163,7 +168,7 @@
                     <div class="text">HealthFit@gmail.com</div>
                 </div>
             </section>
-            <h4 class="end">&copy; 2026HealthFit.All rights are reserved</h4>
+            <h4 class="end">&copy; 2026 HealthFit.All rights are reserved</h4>
     </footer>
 </body>
 </html>
