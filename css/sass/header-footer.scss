@@ -4,51 +4,50 @@
     color:white;
 }
 header{
-    background-color: black;
-        @include extensions.flex-mixin(space-between);
-        align-items: center;
         & .text{
             margin:0;
             font-size:36px;
             letter-spacing: 5px;
         }
-        & .burger-checkbox{
-            visibility: hidden;
-        }
-        & .nav{
-        @media(min-width:0px) and (max-width:1279px)
+        @media (max-width:767px)
         {
+        & .logo.text{
+            position: absolute;
+            z-index:2;
+
+        } 
             //TODO: FIX THE MENU OF ITEMS
         & .links{
-            top: 0;
-            left: 100%;
-            position: absolute;
-            display: grid;
-            gap: 12px;
-            padding: 42px 0;
-            margin: 0;
-            background-color:#000;
+            margin:0;
+            background:linear-gradient(rgba(200,10,44,0.4) 15%,
+                rgba(200,10,44,0.2) 45%,
+                rgba(200,10,44,0) 100%);
+            z-index:1;
+            position: relative;
             list-style-type: none;
-            transition: .3s;
-            width: 200px;
+            display:none;
             & .link{
-                display: block;
-                padding: 8px;
-                color: white;
-                font-size: 18px;
                 text-align: center;
-                text-decoration: none;
-            }
-            & .link:hover {
-                background: rgba(255,255,255,.2);
+                & a{
+                    @include text-font();
+                    font-size: 2.5em;
+                    text-decoration: none;
+                }
             }
         }
-    }
-    @media(min-width:1280px)
+        & .links.animate{
+            @include extensions.flex-mixin(center);
+            flex-direction: column;
+            gap:10%;
+            width: 100%;
+            height: 100vh;
+            padding:0;
+            }
+        }
+    @media(min-width:768px)
     {
         @include extensions.flex-mixin(space-between);
         & .links{
-            order:4;
        @include extensions.flex-mixin(space-between);
         gap:5vw;
             & li{
@@ -62,55 +61,56 @@ header{
             }       
         }
     }
-}
 
-        @media(min-width:240px) and (max-width:1279px){
-        & .burger {
-            z-index: 1;
-            display: block;
-            position: relative;
-            border: none;
-            background: transparent;
-            width: 40px;
-            height: 26px;
-            color:white;
-            order:4;
-        }
-        & .burger::before,.burger::after {
-            content: '';
-            right: 0;
+    @media(max-width:767px){
+        & .burger{
             position: absolute;
-            display: block;
+            right: 10px;
+            top: 10px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            z-index:3;
+        }
+        & .burger span, .burger span:before, .burger span:after{
             width: 100%;
-            height: 4px;
-            border-radius: 10px;
+            position: absolute;
+            height: 10px;
             background: white;
+            display: block;
+            transition: .3s;
+            border-radius: 5px;
         }
-        & .burger::before {
-            top: 0;
-            box-shadow: 0 11px 0 white;
-            transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+        & .burger span:before{
+            content: "";
+            top: -20px;
+            transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
         }
-        & .burger::after {
-            bottom: 0;
-            transition: bottom .3s .15s, transform .3s;
+        & .burger span{
+            top: 20px;
         }
-        & .burger-checkbox:checked + .burger::before {
-            top: 11px;
+       & .burger span:after{
+            content: "";
+            bottom: -20px;
+            transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+        }  
+        & .burger span.active:before{
+            content: "";
+            top: 0px;
             transform: rotate(45deg);
-            box-shadow: 0 6px 0 rgba(0,0,0,0);
-            transition: box-shadow .15s, top .3s, transform .3s .15s;
+            transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
-        & .burger-checkbox:checked + .burger::after {
-            bottom: 11px;
+       & .burger span.active:after{
+            content: "";
+            bottom: 0;
             transform: rotate(-45deg);
-            transition: bottom .3s, transform .3s .15s;
+            transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
-        & .burger-checkbox:checked ~ .nav .links {
-            transform: translateX(-100%);
+        & .burger span.active{
+            background: rgba(255, 255, 255, 0);
             }
+        }
     }
-}
 footer{
     display:grid;
     grid-template-columns:1fr 1.5fr 1.5fr;
@@ -174,5 +174,5 @@ footer{
         text-align:center;
         font-size:1.5em;
         @extend %text;
+        }
     }
-}

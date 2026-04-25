@@ -9,6 +9,7 @@ span.red {
 
 body {
   background-color: black;
+  margin: 0;
 }
 
 @font-face {
