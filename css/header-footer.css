@@ -1,14 +1,9 @@
-footer .logotext .after, footer .social-networks .social-network .name, footer .contact-information .contact .text, footer .end {
-  font-family: "RussianRail GPro";
-  color: white;
-}
-
-span.red {
+.red {
   color: red;
 }
 
 body {
-  margin: 0;
+  background-color: black;
 }
 
 @font-face {
@@ -123,61 +118,148 @@ header .text {
 }
 
 footer {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr 1.5fr;
-  margin-top: 2.5%;
+  margin-top: 10%;
 }
-footer .logotext {
-  align-self: center;
+@media (max-width: 767px) {
+  footer {
+    display: grid;
+    grid-template-rows: auto 1fr 1fr auto;
+    place-items: center;
+  }
+  footer > .text {
+    font-size: 2.5em;
+    letter-spacing: 25%;
+  }
 }
-footer .logotext > .text {
-  font-size: 2em;
-  letter-spacing: 15%;
-  text-align: center;
+@media (min-width: 768px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.5fr;
+  }
+  footer > .text {
+    font-size: 2.5em;
+    letter-spacing: 25%;
+  }
 }
-footer .logotext .after {
-  color: darkgray;
-  font-size: 0.7em;
-  text-align: center;
+footer .social-networks {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
-footer .social-networks > .text {
-  text-align: center;
-  font-size: 1.2em;
-  margin-bottom: 5%;
+@media (min-width: 768px) {
+  footer .social-networks > .text {
+    font-size: 2.3em;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  footer .social-networks > .text {
+    font-size: 1.5em;
+    letter-spacing: 5%;
+    text-align: center;
+  }
 }
 footer .social-networks .social-network {
-  margin-bottom: 5%;
+  margin: 5% 0%;
   display: flex;
   justify-content: center;
+  place-items: center;
 }
 footer .social-networks .social-network img {
   margin-right: 2%;
-  height: 39px;
-  width: 39px;
+}
+@media (max-width: 480px) {
+  footer .social-networks .social-network img {
+    height: 39px;
+    width: 39px;
+  }
+}
+@media (min-width: 481px) {
+  footer .social-networks .social-network img {
+    height: 48px;
+    width: 48px;
+  }
 }
 footer .social-networks .social-network .name {
-  font-size: 1.3em;
+  font-family: "RussianRail GPro";
+  color: white;
+  margin: 0;
 }
-footer .contact-information > .text {
-  text-align: left;
-  font-size: 1.2em;
-  margin-bottom: 5%;
+@media (max-width: 480px) {
+  footer .social-networks .social-network .name {
+    font-size: 1.3em;
+  }
+}
+@media (min-width: 481px) {
+  footer .social-networks .social-network .name {
+    font-size: 1.6em;
+  }
+}
+footer .contact-information {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  footer .contact-information > .text {
+    font-size: 2.3em;
+    margin: 0;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  footer .contact-information > .text {
+    font-size: 1.5em;
+    letter-spacing: 5%;
+    margin: 0;
+  }
 }
 footer .contact-information .contact {
-  margin-bottom: 5%;
+  margin: 5% 0%;
   display: flex;
-  justify-content: start;
+  justify-content: center;
 }
 footer .contact-information .contact img {
   margin-right: 2%;
-  height: 39px;
-  width: 39px;
+}
+@media (max-width: 480px) {
+  footer .contact-information .contact img {
+    height: 39px;
+    width: 39px;
+  }
+}
+@media (min-width: 481px) {
+  footer .contact-information .contact img {
+    height: 48px;
+    width: 48px;
+  }
 }
 footer .contact-information .contact .text {
-  font-size: 1.2em;
+  font-family: "RussianRail GPro";
+  color: white;
+  margin: 0;
+}
+@media (max-width: 480px) {
+  footer .contact-information .contact .text {
+    font-size: 1.3em;
+  }
+}
+@media (min-width: 481px) {
+  footer .contact-information .contact .text {
+    font-size: 1.6em;
+  }
+}
+footer .contact-information #address {
+  font-size: 0.8em;
+}
+@media (min-width: 768px) {
+  footer .end {
+    grid-column: 1/4;
+  }
 }
 footer .end {
-  grid-column: 1/4;
   text-align: center;
   font-size: 1.5em;
+  font-family: "RussianRail GPro";
+  color: white;
 }/*# sourceMappingURL=header-footer.css.map */

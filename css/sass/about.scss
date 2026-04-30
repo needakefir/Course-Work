@@ -1,6 +1,6 @@
 @use 'extensions';
 .text{
-    @extend %text;
+    @include extensions.text-font();
     text-align:center;
 }
 main{
@@ -12,7 +12,7 @@ main{
         background:url("../../res/back/Header.png");
         & .main-text{
             margin-top:0;
-            @extend %text;
+            @include extensions.text-font();
             text-align:center;
             font-size:5.5em;
         }
@@ -20,7 +20,7 @@ main{
             @include extensions.flex-mixin(space-evenly);
             & .advantage-item
             {
-                @extend %text;
+                @include extensions.text-font();
                 font-size:3em;
                 text-align:center;
                 text-decoration: underline;
@@ -34,7 +34,7 @@ main{
         background:url("../../res/interier/interier4.jpg");
         & .why-text{
             margin:0%;
-            @extend %text;
+            @include extensions.text-font();
             text-align:center;
             font-size:5em;
         }
@@ -51,7 +51,7 @@ main{
                 flex-direction: column;
                 & .num{
                     padding:5% 2.5% 5% 2.5%;
-                    @extend %text;
+                    @include extensions.text-font();
                     align-self:flex-end;
                     background-color:rgba(255,255,255,0.1);
                 }
@@ -59,11 +59,10 @@ main{
                     margin:0% 5%;
                     & .head{
                     margin-top:0;
-                    @extend %text;
+                    @include extensions.text-font();
                     font-size:2em;
                 }
                 & .text{
-                    @extend %text;
                     text-align:left;
                     font-size:1.2em;
                 }
@@ -113,11 +112,11 @@ main{
                     width:80%;
                     margin:0% 10%;
                     & .name{
-                        @extend %text;
+                        @include extensions.text-font();
                         font-size: 1.2em;
                     }
                     & .stage{
-                        @extend %text;
+                        @include extensions.text-font();
                         font-size: 1em;
                     }
                 }
@@ -126,7 +125,7 @@ main{
                     margin:5% 10%;
                     background-color: red;
                     border:0;
-                    @extend %text;
+                    @include extensions.text-font();
                     font-size:1.5em;
                     padding:5% 2.5%;
                     visibility: hidden;

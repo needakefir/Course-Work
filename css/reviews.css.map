@@ -1,1 +1,1 @@
-{"version":3,"sources":["sass/extensions.scss","reviews.css","sass/reviews.scss"],"names":[],"mappings":"AAKA;EACI,+BAAA;EACA,YAAA;ACJJ;;ADMA;EACI,UAAA;ACHJ;;ADKA;EACI,uBAAA;EACA,SAAA;ACFJ;;ADKA;EACI,+BAAA;EACA,mEAAA;ACFJ;AChBA;EAEI,kBAAA;ADiBJ","file":"reviews.css"}
+{"version":3,"sources":["sass/extensions.scss","reviews.css","sass/reviews.scss"],"names":[],"mappings":"AASA;EACI,UAAA;ACRJ;;ADUA;EACI,uBAAA;ACPJ;;ADUA;EACI,+BAAA;EACA,mEAAA;ACPJ;ACVA;EFKI,+BAAA;EACA,YAAA;ACQJ","file":"reviews.css"}

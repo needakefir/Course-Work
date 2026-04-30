@@ -1,8 +1,4 @@
-@use 'extensions';
-@mixin text-font(){
-    font-family: "RussianRail GPro";
-    color:white;
-}
+@use './extensions';
 header{
         & .text{
             margin:0;
@@ -14,9 +10,7 @@ header{
         & .logo.text{
             position: absolute;
             z-index:2;
-
         } 
-            //TODO: FIX THE MENU OF ITEMS
         & .links{
             margin:0;
             background:linear-gradient(rgba(200,10,44,0.4) 15%,
@@ -29,7 +23,7 @@ header{
             & .link{
                 text-align: center;
                 & a{
-                    @include text-font();
+                    @include extensions.text-font();
                     font-size: 2.5em;
                     text-decoration: none;
                 }
@@ -53,7 +47,7 @@ header{
             & li{
             list-style:none;
             & a{
-                @include text-font();
+                @include extensions.text-font();
                 text-decoration: none;
                 font-size:1.3em;
                 color:white;
@@ -111,68 +105,136 @@ header{
             }
         }
     }
+//FIXME: Add support between 480 px and 768px
 footer{
-    display:grid;
-    grid-template-columns:1fr 1.5fr 1.5fr;
-    margin-top:2.5%;
-    & .logotext{
-        align-self:center;
-        &>.text{
-            font-size:2em;
-            letter-spacing: 15%;
-            text-align:center;
+    margin-top:10%;
+    @media (max-width:767px)
+    {
+        display:grid;
+        grid-template-rows:auto 1fr 1fr auto;
+        place-items: center;
+        & > .text{
+            font-size:2.5em;
+            letter-spacing: 25%;
         }
-        & .after{
-             @extend %text;
-             color:darkgray;
-            font-size:0.7em;
-            text-align:center;
+    }
+    @media (min-width:768px)
+    {
+        display:grid;
+        grid-template-columns: 1fr 1.5fr 1.5fr;
+        & > .text{
+            font-size:2.5em;
+            letter-spacing: 25%;
         }
     }
     & .social-networks{
+        @include extensions.flex-mixin(space-around);
+        flex-direction:column;
         & >.text {
+        @media (min-width:768px)
+        {
+            font-size:2.3em;
             text-align:center;
-            font-size:1.2em;
-            margin-bottom:5%;
+        }
+        @media (max-width:767px)
+        {
+            font-size:1.5em;
+            letter-spacing: 5%;
+            text-align:center;
+        }
         }
         & .social-network{
-            margin-bottom:5%;
-           @include extensions.flex-mixin(center);
+            margin:5% 0%;
+            @include extensions.flex-mixin(center);
+            place-items: center;
            & img{
-            margin-right:2%;
-            height:39px;
-            width:39px;
+                margin-right:2%;
+                @media (max-width:480px)
+                {
+                    height:39px;
+                    width:39px;
+                }
+                @media (min-width:481px)
+                {
+                    height:48px;
+                    width:48px;
+                }
            } 
            & .name{
-                @extend %text;
-                font-size:1.3em;
+            @include extensions.text-font();
+            margin:0;
+                @media (max-width:480px)
+                {
+                    font-size:1.3em;
+
+                }
+                @media (min-width:481px)
+                {
+                    font-size:1.6em;
+                }
             }
         }
     }
     & .contact-information{
-        & >.text {
-            text-align:left;
-            font-size:1.2em;
-            margin-bottom:5%;
+        @include extensions.flex-mixin(space-between);
+        flex-direction: column;
+        @media (min-width:768px)
+        {
+            & > .text{
+                font-size:2.3em;
+                margin:0;
+                text-align:center;
+            }
+        }
+        @media (max-width:480px)
+        {
+            & > .text{
+                font-size:1.5em;
+                letter-spacing: 5%;
+                margin:0;
+            }
         }
         & .contact{
-            margin-bottom:5%;
-            @include extensions.flex-mixin(start);
+            margin:5% 0%;
+            @include extensions.flex-mixin(center);
             & img{
                 margin-right:2%;
-                height:39px;
-                width:39px;
+                @media (max-width:480px)
+                {
+                    height:39px;
+                    width:39px;
+                }
+                @media (min-width:481px)
+                {
+                    height:48px;
+                    width:48px;
+                }
            } 
            & .text{
-            @extend %text;
-            font-size:1.2em;
+                 @include extensions.text-font();
+                margin:0;
+                @media (max-width:480px)
+                {
+                    font-size:1.3em;
+
+                }
+                @media (min-width:481px)
+                {
+                    font-size:1.6em;
+                }
            }
+        }
+        & #address{
+            font-size:0.8em;
         }
     }
     & .end{
-        grid-column:1/4;
+        @media (min-width:768px)
+        {
+            grid-column:1/4;
+        }
         text-align:center;
         font-size:1.5em;
-        @extend %text;
+        @include extensions.text-font();
         }
     }

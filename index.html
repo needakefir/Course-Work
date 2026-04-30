@@ -24,33 +24,33 @@
         <section class="main">
             <div class="left">
                 <!-- TODO: ADD CONTENT RELATED TO PHOTO-->
-                <p class="text">Изменись</p>
-                <p class="text">вместе с нами</p>
-                <button>Записаться</button>
+                <p class="text">Сожги жир и свою лень</p>
+                <p class="text">Отправь заявку </p>
+                <button class="formButton">Записаться</button>
             </div>
-                <img src="res/Person.png" alt="Person" class="right">
+            <div class="right"> </div>   
         </section>
-        <section class="training" style="background: url(res/back/Back1.png);">
+        <section class="training">
             <h1 class="text">Мы предлагаем вам </h1>
             <section class="offers-containter">
                 <div class="item-offer">
                     <img src="res/trains/Personal.png" alt="">
                     <div class="text">Персональные тренировки</div>
-                    <button>
+                    <button id="offer1">
                         Подробнее
                     </button>
                 </div>
                 <div class="item-offer">
                     <img src="res/trains/Group.png" alt="">
                     <div class="text">Групповые тренировки</div>
-                    <button>
-                        Подробнее
+                    <button id="offer2">
+                         Подробнее
                     </button>
                 </div>
                 <div class="item-offer">
                     <img src="res/trains/Kids.png" alt="">
-                    <div class="text">Детские секции</div>
-                    <button>
+                    <div class="text">Детские <br> секции</div>
+                    <button id-="offer3">
                         Подробнее
                     </button>
                 </div>
@@ -59,14 +59,10 @@
         <section class="interier">
             <p class="text">Интерьер тренажерного зала</p>
             <div class="container">
-                <div class="part">
-                    <img src="res/interier/interier5.jpg" alt="">
-                    <img src="res/interier/interier4.jpg" alt="">
-                </div>
-                <div class="part">
-                    <img src="res/interier/interier2.jpg" alt="">
-                    <img src="res/interier/interier4.jpg" alt="">
-                </div>
+                    <img src="res/interier/interier5.jpg" class="item" alt="">
+                    <img src="res/interier/interier4.jpg" class="item" alt="">
+                    <img src="res/interier/interier2.jpg" class="item" alt="">
+                    <img src="res/interier/interier4.jpg" class="item" alt="">
             </div>
         </section>
         <section class="form-offer">
@@ -74,25 +70,25 @@
                 <p class="text">Хотите привести себя в форму?</p>
                 <p class="text">Мы доведем вас до желаемого веса или поможем набрать мышечную массу</p>
             </div>
-            <form class="offer-form">
+            <form class="offer-form" id="form">
                 <p class="text">Заполните заявку,<br>и мы свяжемся с вами позже</p>
                 <div class="label-form">
                     <p class="text">
                         Имя
                     </p>
-                    <input type="text">
+                    <input type="text" required>
                 </div>
                 <div class="label-form">
                     <p class="text">
                         Телефон
                     </p>
-                    <input type="text">
+                    <input type="tel" required>
                 </div>
-                <div class="label-form">
+                <div class="label-form" id="comments_label">
                     <p class="text">
                         Комментарии к заявке
                     </p>
-                    <input type="text">
+                    <textarea required rows="7" cols="40" id="comments"></textarea>
                 </div>
                 <button>
                     Отправить
@@ -101,46 +97,44 @@
         </section>
     </main>
     <footer>
-        <section class="logotext">
-            <div class="text"><span class="red">Health</span>Fit</div>
-            <div class="after">-крупнейшая сеть фитнес-залов</div>
-        </section>
+        <section class="text"><span class="red">Health</span>Fit</section>
         <section class="social-networks">
             <div class="text">Наши социальные сети</div>
             <div class="social-networks">
                 <div class="social-network">
                     <img src="res/svg/Instagram.svg" alt="">
-                    <div class="name">@HealthFit</div>
+                    <p class="name">@HealthFit</p>
                 </div>
                 <div class="social-network">
                      <img src="res/svg/vkontakte.svg" alt="">
-                    <div class="name">@HealthFit</div>
+                    <p class="name">@HealthFit</p>
                 </div>
                 <div class="social-network">
                      <img src="res/svg/X.svg" alt="">
-                    <div class="name">@HealthFit</div>
+                    <p class="name">@HealthFit</p>
                 </div>
             </div>
         </section>
             <section class="contact-information">
-                <div class="text">
+                <p class="text">
                     Контактная информация
-                </div>
-                <div class="contact">
+                </p>
+                <div class="contact" id="address">
                     <img src="res/svg/map.svg" alt="">
-                    <div class="text">г.Минск,ул.Белорусская,д.21</div>
+                    <p class="text">г.Минск,ул.Белорусская,д.21</p>
                 </div>
                 <div class="contact">
                     <img src="res/svg/phone.svg" id="phone" alt="">
-                    <div class="text">+375(29)356-64-69 </div>
+                    <p class="text">+375(29)356-64-69 </p>
                 </div>
                 <div class="contact">
                     <img src="res/svg/Vector.svg" alt="">
-                    <div class="text">HealthFit@gmail.com</div>
+                    <p class="text">HealthFit@gmail.com</p>
                 </div>
             </section>
             <h2 class="end">&copy; 2026 HealthFit.All rights are reserved</h2>
     </footer>
     <script src="js/burger.js"></script>
+    <script src="js/Index.js"></script>
 </body>
 </html>

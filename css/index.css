@@ -1,15 +1,9 @@
-.text {
-  font-family: "RussianRail GPro";
-  color: white;
-}
-
-span.red {
+.red {
   color: red;
 }
 
 body {
   background-color: black;
-  margin: 0;
 }
 
 @font-face {
@@ -17,10 +11,16 @@ body {
   src: url(../fonts/RussianRail_G_Pro_Regular_0.otf) format(opentype);
 }
 .text {
-  align-self: center;
   text-align: center;
+  font-family: "RussianRail GPro";
+  color: white;
 }
 
+@media (max-width: 767px) {
+  body {
+    margin: 0;
+  }
+}
 @media (min-width: 768px) {
   main .main {
     display: grid;
@@ -47,14 +47,14 @@ body {
     border-radius: 50px/50px;
     background-color: red;
     padding: 5% 10%;
-  }
-  main .main .left button .text {
-    font-size: 1.2em;
-    color: white;
+    cursor: pointer;
   }
   main .main .right {
+    background: url("../../res/Person-mobile.png") 50% 50%;
+    background-size: contain;
     width: 100%;
     height: 100vh;
+    background-repeat: no-repeat;
   }
 }
 @media (max-width: 767px) {
@@ -62,45 +62,57 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    flex-direction: column;
     height: 100vh;
-    background: url("../../res/Person.png");
+    background: url("../../res/back/Back1.png");
   }
   main .main .left {
+    order: 1;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
   main .main .left .text {
-    font-size: 45px;
-    margin: 0;
+    font-size: 24px;
+    margin-top: 0;
   }
   main .main .left button {
     border: 0px;
-    font-family: "RussianRail GPro";
-    color: white;
-    font-size: 1.5em;
     border-radius: 50px/50px;
     background-color: red;
     padding: 5% 10%;
-  }
-  main .main .left button .text {
-    font-size: 1.2em;
+    font-family: "RussianRail GPro";
     color: white;
+    font-size: 1.5em;
+    text-decoration: none;
   }
   main .main .right {
-    display: none;
+    background: url("../../res/Person-mobile.png") 50% 50%;
+    width: 100%;
+    order: 0;
+    height: 55vh;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 main .training {
+  background: url("../../res/back/Back1.png");
   display: flex;
   justify-content: center;
 }
-main .training > .text {
-  margin-bottom: 5%;
-  font-size: 4em;
-  margin-top: 5%;
+@media (max-width: 767px) {
+  main .training > .text {
+    margin: 5% 0%;
+    font-size: 2em;
+  }
+}
+@media (min-width: 768px) {
+  main .training > .text {
+    margin: 5% 0%;
+    font-size: 3em;
+  }
 }
 main .training {
   flex-direction: column;
@@ -113,28 +125,70 @@ main .training .offers-containter {
 main .training .offers-containter .item-offer {
   display: flex;
   justify-content: center;
-  flex: 0 0 18vw;
+}
+@media (max-width: 767px) {
+  main .training .offers-containter .item-offer {
+    width: 250px;
+  }
+}
+@media (min-width: 768px) {
+  main .training .offers-containter .item-offer {
+    flex: 0 0 320px;
+  }
+}
+main .training .offers-containter .item-offer {
   flex-direction: column;
   align-items: center;
+  gap: 4vh;
   background-color: rgba(77, 70, 70, 0.63);
   border-radius: 50px;
-  gap: 4vh;
 }
 main .training .offers-containter .item-offer img {
-  margin-top: 2.5%;
   border-radius: 25px;
-  width: 270px;
-  height: 180px;
 }
-main .training .offers-containter .item-offer .text {
-  font-family: "RussianRail GPro";
-  color: white;
-  font-size: 2.3em;
+@media (max-width: 767px) {
+  main .training .offers-containter .item-offer img {
+    margin-top: 10%;
+    width: 210px;
+    height: 140px;
+  }
+}
+@media (min-width: 768px) {
+  main .training .offers-containter .item-offer img {
+    margin: 5% 10% 0% 10%;
+    width: 270px;
+    height: 180px;
+  }
+}
+@media (max-width: 767px) {
+  main .training .offers-containter .item-offer .text {
+    font-family: "RussianRail GPro";
+    color: white;
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 768px) {
+  main .training .offers-containter .item-offer .text {
+    font-family: "RussianRail GPro";
+    color: white;
+    font-size: 2.3em;
+  }
 }
 main .training .offers-containter .item-offer button {
   font-family: "RussianRail GPro";
   color: white;
-  font-size: 1.5em;
+}
+@media (max-width: 767px) {
+  main .training .offers-containter .item-offer button {
+    font-size: 1em;
+  }
+}
+@media (min-width: 768px) {
+  main .training .offers-containter .item-offer button {
+    font-size: 1.5em;
+  }
+}
+main .training .offers-containter .item-offer button {
   border: 0;
   border-radius: 50px/50px;
   background-color: red;
@@ -149,54 +203,77 @@ main .interier {
   padding: 5% 0 0 0;
   background-color: rgba(77, 70, 70, 0.2);
 }
-main .interier > .text {
-  margin: 0 0 5% 0;
-  font-size: 4em;
+@media (max-width: 767px) {
+  main .interier > .text {
+    margin: 0% 0% 5% 0%;
+    font-size: 2em;
+  }
+}
+@media (min-width: 768px) {
+  main .interier > .text {
+    margin: 0% 0% 5% 0%;
+    font-size: 4em;
+  }
 }
 main .interier .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-main .interier .container .part {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   align-items: center;
   gap: 5vh;
 }
-main .interier .container .part img {
-  border-radius: 5%;
-  width: 75%;
-  height: 45vh;
+@media (max-width: 767px) {
+  main .interier .container .item {
+    border-radius: 5%;
+    width: 80%;
+    height: 40vh;
+  }
+}
+@media (min-width: 768px) {
+  main .interier .container .item {
+    border-radius: 5%;
+    width: 40%;
+    height: 45vh;
+  }
 }
 main .form-offer {
   background: url("../../res/back/back3.png");
-  height: 90vh;
-  display: grid;
-  grid-template-columns: 3fr 4fr;
+}
+@media (min-width: 768px) {
+  main .form-offer {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+  }
+}
+main .form-offer {
   place-items: center;
 }
-main .form-offer .offer-texts {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+@media (min-width: 768px) {
+  main .form-offer .offer-texts {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  main .form-offer .offer-texts .text {
+    font-size: 2em;
+  }
 }
-main .form-offer .offer-texts .text {
-  font-size: 2em;
+@media (max-width: 767px) {
+  main .form-offer .offer-texts {
+    display: none;
+  }
 }
 main .form-offer .offer-form {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  height: 65vh;
-  width: 70%;
   background-color: rgba(0, 0, 0, 0.4);
   gap: 5%;
 }
 main .form-offer .offer-form .text {
   font-size: 2em;
-  margin-top: 0;
+  text-decoration: underline;
 }
 main .form-offer .offer-form .label-form {
   width: 80%;
@@ -219,6 +296,21 @@ main .form-offer .offer-form .label-form input:focus {
   border-bottom: 1px solid white;
   outline: none;
 }
+main .form-offer .offer-form .label-form textarea {
+  width: 80%;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  font-family: "RussianRail GPro";
+  color: white;
+  font-size: 1.2em;
+}
+main .form-offer .offer-form .label-form textarea:focus {
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+}
 main .form-offer .offer-form button {
   font-family: "RussianRail GPro";
   color: white;
@@ -227,4 +319,5 @@ main .form-offer .offer-form button {
   padding: 3% 10%;
   border: 0;
   border-radius: 50px/50px;
+  margin-top: 5%;
 }/*# sourceMappingURL=index.css.map */

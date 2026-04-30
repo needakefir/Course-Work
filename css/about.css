@@ -1,15 +1,9 @@
-.text, main .main .main-text, main .main .advantages-list .advantage-item, main .about .why-text, main .about .container .item-card .num, main .about .container .item-card .main-text .head, main .about .container .item-card .main-text .text, main .trainers .container .item .main-text-container .name, main .trainers .container .item .main-text-container .stage, main .trainers .container .item button {
-  font-family: "RussianRail GPro";
-  color: white;
-}
-
-span.red {
+.red {
   color: red;
 }
 
 body {
   background-color: black;
-  margin: 0;
 }
 
 @font-face {
@@ -17,6 +11,8 @@ body {
   src: url(../fonts/RussianRail_G_Pro_Regular_0.otf) format(opentype);
 }
 .text {
+  font-family: "RussianRail GPro";
+  color: white;
   text-align: center;
 }
 
@@ -30,6 +26,8 @@ main .main {
 }
 main .main .main-text {
   margin-top: 0;
+  font-family: "RussianRail GPro";
+  color: white;
   text-align: center;
   font-size: 5.5em;
 }
@@ -38,6 +36,8 @@ main .main .advantages-list {
   justify-content: space-evenly;
 }
 main .main .advantages-list .advantage-item {
+  font-family: "RussianRail GPro";
+  color: white;
   font-size: 3em;
   text-align: center;
   text-decoration: underline;
@@ -50,6 +50,8 @@ main .about {
 }
 main .about .why-text {
   margin: 0%;
+  font-family: "RussianRail GPro";
+  color: white;
   text-align: center;
   font-size: 5em;
 }
@@ -69,6 +71,8 @@ main .about .container .item-card {
 }
 main .about .container .item-card .num {
   padding: 5% 2.5% 5% 2.5%;
+  font-family: "RussianRail GPro";
+  color: white;
   align-self: flex-end;
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -77,6 +81,8 @@ main .about .container .item-card .main-text {
 }
 main .about .container .item-card .main-text .head {
   margin-top: 0;
+  font-family: "RussianRail GPro";
+  color: white;
   font-size: 2em;
 }
 main .about .container .item-card .main-text .text {
@@ -130,9 +136,13 @@ main .trainers .container .item .main-text-container {
   margin: 0% 10%;
 }
 main .trainers .container .item .main-text-container .name {
+  font-family: "RussianRail GPro";
+  color: white;
   font-size: 1.2em;
 }
 main .trainers .container .item .main-text-container .stage {
+  font-family: "RussianRail GPro";
+  color: white;
   font-size: 1em;
 }
 main .trainers .container .item button {
@@ -140,6 +150,8 @@ main .trainers .container .item button {
   margin: 5% 10%;
   background-color: red;
   border: 0;
+  font-family: "RussianRail GPro";
+  color: white;
   font-size: 1.5em;
   padding: 5% 2.5%;
   visibility: hidden;

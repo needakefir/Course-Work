@@ -1,9 +1,9 @@
-span.red {
+.red {
   color: red;
 }
 
 body {
-  margin: 0;
+  background-color: black;
 }
 
 @font-face {

@@ -1,13 +1,15 @@
 @use './extensions';
-@mixin text-font(){
-    font-family: "RussianRail GPro";
-    color:white;
-}
 .text{
-        align-self:center;
         text-align:center;
-        @extend %text;
+        @include extensions.text-font();
 }
+
+@media (max-width: 767px) {
+   body{
+    margin: 0;
+  }
+}
+//FIXME: Add support between 480 px and 768 px
 main{
     @media (min-width:768px)
     {
@@ -27,63 +29,75 @@ main{
             }
             & button{
                 border:0px;
-                @include text-font();
+                @include extensions.text-font();
                 font-size:1.5em;
                 border-radius: 50px/50px;
                 background-color: red;
                 padding:5% 10%;
-                & .text{
-                    font-size:1.2em;    
-                    color: white;
-                }
+                cursor:pointer;
             }
         }
          & .right{
+            background:url("../../res/Person-mobile.png") 50% 50% ;
+            background-size: contain;
             width:100%;
             height:100vh;
+            background-repeat:no-repeat;
             }  
         }
     }
     @media (max-width:767px)
     {
         & .main{
-        @include extensions.flex-mixin(center);
-        align-items: center;
-        width:100vw;
-        height:100vh;
-        background:url("../../res/Person.png");
+            @include extensions.flex-mixin(center);
+            align-items: center;
+            flex-direction: column;
+            height:100vh;
+            background:url("../../res/back/Back1.png");  
         & .left{
+            order:1;
+            width:100%;          
             @include extensions.flex-mixin(center);
             align-items:center;
             flex-direction:column;
             & .text{
-                font-size:45px;
-                margin:0;
+                font-size:24px;
+                margin-top:0;
             }
             & button{
                 border:0px;
-                @include text-font();
-                font-size:1.5em;
                 border-radius: 50px/50px;
                 background-color: red;
                 padding:5% 10%;
-                & .text{
-                    font-size:1.2em;    
-                    color: white;
-                }
+                @include extensions.text-font();
+                font-size:1.5em;
+                text-decoration:none;
             }
-    }
-        & .right{
-            display:none;
-            } 
+        }
+        & .right {
+            background:url("../../res/Person-mobile.png") 50% 50%;
+            width:100%;
+            order:0;
+            height:55vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            }
         }
     }
  & .training{
+    background: url("../../res/back/Back1.png");
     @include extensions.flex-mixin(center);
-    & > .text{
-        margin-bottom: 5%;
-        font-size:4em;
-        margin-top:5%;
+    @media (max-width:767px) {
+        & > .text{
+            margin:5% 0%;
+            font-size:2em;
+        }
+    }
+    @media (min-width:768px) {
+        & > .text{
+            margin:5% 0%;
+            font-size:3em;
+        }
     }
     flex-direction: column;
     & .offers-containter{
@@ -92,25 +106,54 @@ main{
         & .item-offer
         {
             @include extensions.flex-mixin(center);
-            flex:0 0 18vw;
+            @media (max-width:767px){
+                width:250px;
+            }
+            @media (min-width:768px){
+                flex:0 0 320px;
+            }
             flex-direction: column;
-            align-items: center;
+            align-items:center;
+            gap:4vh;
             background-color:rgba(77,70,70,0.63);
             border-radius: 50px;
-            gap:4vh;
             & img{
-                margin-top:2.5%;
                 border-radius: 25px;
-                width:270px;
-                height:180px;
+                @media (max-width:767px)
+                {
+                    margin-top:10%;
+                    width:210px;
+                    height:140px;
+                }
+                @media(min-width:768px)
+                {
+                    margin:5% 10% 0% 10%;
+                    width:270px;
+                    height:180px;
+                }
             }
-            & .text{
-                @include text-font();
-                font-size:2.3em;
+            @media (max-width:767px){
+                & .text{
+                    @include extensions.text-font();
+                    font-size:1.5em;
+                }
+            }
+            @media (min-width:768px){
+                & .text{
+                    @include extensions.text-font();
+                    font-size:2.3em;
+                }
             }
             & button{
-                @include text-font();
-                font-size:1.5em;
+                @include extensions.text-font();
+                @media (max-width:767px)
+                {
+                    font-size:1em;
+                }
+                @media (min-width:768px)
+                {
+                    font-size:1.5em;
+                }
                 border:0;
                 border-radius: 50px/50px;
                 background-color: red;
@@ -127,51 +170,77 @@ main{
  & .interier{
     padding:5% 0 0 0;
     background-color:rgba(77,70,70,0.2);
-     & > .text{
-        margin:0 0 5% 0;
-        font-size:4em;
+    @media (max-width:767px)
+    {
+        & > .text{
+            margin:0% 0% 5% 0%;
+            font-size:2em;
+        }
+    }
+    @media (min-width:768px)
+    {
+        & >.text{   
+            margin:0% 0% 5% 0%;
+            font-size:4em;
+        }
     }
     & .container{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        & .part{
-            @include extensions.flex-mixin(center);
-            flex-direction: column;
-            align-items: center;
-            gap:5vh;
-            & img{
+        @include extensions.flex-mixin(space-evenly);
+        flex-wrap: wrap;
+        align-items: center;
+        gap:5vh;
+        @media (max-width:767px)
+        {
+            & .item{
                 border-radius:5%;
-                width:75%;
+                width:80%;
+                height:40vh;
+            }
+        }
+        @media (min-width:768px)
+        {
+            & .item{
+                border-radius:5%;
+                width:40%;
                 height:45vh;
             }
         }
     }
-}
+    }
     & .form-offer
     {
         background: url("../../res/back/back3.png");
-        height:90vh;
-        display:grid;
-        grid-template-columns:3fr 4fr;
+        @media (min-width:768px)
+        {
+            display:grid;
+            grid-template-columns:3fr 4fr;
+        }
         place-items: center;
-        & .offer-texts{
+        @media (min-width:768px)
+        {
+            & .offer-texts{
             @include extensions.flex-mixin(center);
             flex-direction: column; 
             & .text{
                 font-size:2em;
             }
         }
+        }
+        @media (max-width:767px)
+        {
+            & .offer-texts{
+                display:none;
+            }
+        }
         & .offer-form{
             @include extensions.flex-mixin(flex-start);
             align-items:center;
             flex-direction: column;
-            height:65vh;
-            width:70%;
             background-color: rgba(0,0,0,0.4);
             gap:5%;
             & .text{
                 font-size:2em;
-                margin-top:0;
+                text-decoration:underline;
             }
             & .label-form{
                 width:80%;
@@ -184,7 +253,7 @@ main{
                     background-color: transparent;
                     border:none;
                     border-bottom:1px solid white;
-                    @include text-font();
+                    @include extensions.text-font();
                     font-size:1.2em;
                 }
                 & input:focus{
@@ -192,14 +261,29 @@ main{
                     border-bottom:1px solid white;
                     outline:none;
                 }
+                & textarea{
+                    width:80%;
+                    resize: none;
+                    border:none;
+                    border-bottom:1px solid white;
+                    background-color: transparent;
+                    @include extensions.text-font();
+                    font-size:1.2em;
+                }
+                & textarea:focus{
+                    border:none;
+                    border-bottom:1px solid white;
+                    outline:none;
+                }
             }
             & button{
-                   @include text-font();
-                   background-color: rgb(200,10,44); 
-                   font-size:1.5em;
-                   padding:3% 10%;
-                   border:0;
-                   border-radius: 50px/50px;
+                @include extensions.text-font();
+                background-color: rgb(200,10,44); 
+                font-size:1.5em;
+                padding:3% 10%;
+                border:0;
+                border-radius: 50px/50px;
+                margin-top:5%;
             }
         }
     }
