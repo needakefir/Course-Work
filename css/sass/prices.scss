@@ -30,7 +30,6 @@ main{
                     height:10vh;
                     & .description{
                         @include extensions.text-font();
-                        vertical-align: center;
                         text-align: center;
                         font-size:1.5em;
                         margin-bottom:0;

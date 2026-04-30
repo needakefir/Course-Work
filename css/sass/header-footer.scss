@@ -197,6 +197,7 @@ footer{
         & .contact{
             margin:5% 0%;
             @include extensions.flex-mixin(center);
+            place-items: center;
             & img{
                 margin-right:2%;
                 @media (max-width:480px)
@@ -228,13 +229,14 @@ footer{
             font-size:0.8em;
         }
     }
-    & .end{
-        @media (min-width:768px)
-        {
-            grid-column:1/4;
-        }
-        text-align:center;
-        font-size:1.5em;
-        @include extensions.text-font();
+    & #end{
+            @media (min-width:768px)
+            {
+                grid-column:1/4;
+            }
+            text-align:center;
+            font-size:1.5em;
+            color:rgba(255,255,255,0.5);
+            font-family: "RussianRail GPro";
         }
     }

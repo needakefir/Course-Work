@@ -1,7 +1,13 @@
+@charset "UTF-8";
 .red {
   color: red;
 }
 
+@media (max-width: 767px) {
+  body {
+    margin: 0;
+  }
+}
 body {
   background-color: black;
 }
@@ -14,6 +20,49 @@ body {
   font-family: "RussianRail GPro";
   color: white;
   text-align: center;
+}
+
+#trainer1 {
+  background: linear-gradient(rgba(200, 10, 44, 0) 15%, rgba(200, 10, 44, 0.3) 85%, rgba(200, 10, 44, 0.5) 100%), url(../../res/trainers/trainer1.png);
+}
+
+#trainer2 {
+  background: linear-gradient(rgba(200, 10, 44, 0) 15%, rgba(200, 10, 44, 0.3) 85%, rgba(200, 10, 44, 0.5) 100%), url(../../res/trainers/trainer2.png);
+}
+
+#trainer3 {
+  background: linear-gradient(rgba(200, 10, 44, 0) 15%, rgba(200, 10, 44, 0.3) 85%, rgba(200, 10, 44, 0.5) 100%), url(../../res/trainers/trainer3.png);
+}
+
+#trainer4 {
+  background: linear-gradient(rgba(200, 10, 44, 0) 15%, rgba(200, 10, 44, 0.3) 85%, rgba(200, 10, 44, 0.5) 100%), url(../../res/trainers/trainer4.png);
+}
+
+#num6 {
+  margin-top: 5%;
+  background: url("../../res/photos-card/card6.png");
+}
+
+#num5 {
+  margin-top: 5%;
+  background: url("../../res/photos-card/card5.png");
+}
+
+#num4 {
+  margin-top: 5%;
+  background: url("../../res/photos-card/card4.png");
+}
+
+#num3 {
+  background: url("../../res/photos-card/card3.png");
+}
+
+#num2 {
+  background: url("../../res/photos-card/card2.png");
+}
+
+#num1 {
+  background: url("../../res/photos-card/card1.png");
 }
 
 main .main {
@@ -29,22 +78,76 @@ main .main .main-text {
   font-family: "RussianRail GPro";
   color: white;
   text-align: center;
-  font-size: 5.5em;
+}
+@media (min-width: 1280px) {
+  main .main .main-text {
+    font-size: 5.5em;
+  }
+}
+@media (min-width: 769px) and (max-width: 1279px) {
+  main .main .main-text {
+    font-size: 4em;
+  }
+}
+@media (max-width: 768px) and (min-width: 481px) {
+  main .main .main-text {
+    font-size: 3em;
+  }
+}
+@media (max-width: 480px) {
+  main .main .main-text {
+    font-size: 1.9em;
+  }
 }
 main .main .advantages-list {
   display: flex;
   justify-content: space-evenly;
 }
+@media (max-width: 768px) {
+  main .main .advantages-list {
+    flex-direction: column;
+  }
+}
 main .main .advantages-list .advantage-item {
   font-family: "RussianRail GPro";
   color: white;
-  font-size: 3em;
   text-align: center;
-  text-decoration: underline;
   letter-spacing: 3%;
 }
+@media (min-width: 1281px) {
+  main .main .advantages-list .advantage-item {
+    font-size: 3em;
+  }
+}
+@media (max-width: 1280px) and (min-width: 769px) {
+  main .main .advantages-list .advantage-item {
+    font-size: 1.9em;
+  }
+}
+@media (max-width: 768px) and (min-width: 481px) {
+  main .main .advantages-list .advantage-item {
+    font-size: 2em;
+    margin-bottom: 25%;
+  }
+  main .main .advantages-list .advantage-item:before {
+    content: "✔ ";
+  }
+}
+@media (max-width: 480px) {
+  main .main .advantages-list .advantage-item {
+    font-size: 1.5em;
+    margin-bottom: 25%;
+  }
+  main .main .advantages-list .advantage-item:before {
+    content: "✔ ";
+  }
+}
+@media (min-width: 769px) {
+  main .about {
+    height: 100vh;
+  }
+}
 main .about {
-  height: 100vh;
   padding: 5% 0%;
   background: url("../../res/interier/interier4.jpg");
 }
@@ -53,21 +156,67 @@ main .about .why-text {
   font-family: "RussianRail GPro";
   color: white;
   text-align: center;
-  font-size: 5em;
+}
+@media (min-width: 1281px) {
+  main .about .why-text {
+    font-size: 5em;
+  }
+}
+@media (max-width: 1280px) and (min-width: 769px) {
+  main .about .why-text {
+    font-size: 3.5em;
+  }
+}
+@media (max-width: 768px) and (min-width: 481px) {
+  main .about .why-text {
+    font-size: 2em;
+  }
+}
+@media (max-width: 480px) {
+  main .about .why-text {
+    font-size: 1.5em;
+  }
 }
 main .about .container {
   margin-top: 5%;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  place-items: center;
+}
+@media (max-width: 768px) {
+  main .about .container {
+    flex-direction: column;
+  }
+}
+@media (min-width: 769px) {
+  main .about .container .item-card {
+    width: 25vw;
+    height: 33vh;
+  }
+}
+@media (max-width: 768px) and (min-width: 481px) {
+  main .about .container .item-card {
+    width: 60vw;
+    height: 30vh;
+  }
+}
+@media (max-width: 480px) {
+  main .about .container .item-card {
+    width: 80vw;
+    height: 30vh;
+  }
 }
 main .about .container .item-card {
-  width: 25vw;
-  height: 33vh;
   border-bottom: 10px solid red;
   display: flex;
   justify-content: start;
   flex-direction: column;
+}
+@media (max-width: 768px) {
+  main .about .container .item-card {
+    margin-bottom: 10%;
+  }
 }
 main .about .container .item-card .num {
   padding: 5% 2.5% 5% 2.5%;
@@ -83,50 +232,83 @@ main .about .container .item-card .main-text .head {
   margin-top: 0;
   font-family: "RussianRail GPro";
   color: white;
-  font-size: 2em;
+}
+@media (min-width: 769px) {
+  main .about .container .item-card .main-text .head {
+    font-size: 2em;
+  }
+}
+@media (max-width: 768px) {
+  main .about .container .item-card .main-text .head {
+    font-size: 1.5em;
+  }
 }
 main .about .container .item-card .main-text .text {
   text-align: left;
-  font-size: 1.2em;
 }
-main .about .container #num6 {
-  margin-top: 5%;
-  background: url("../../res/photos-card/card6.png");
+@media (min-width: 769px) {
+  main .about .container .item-card .main-text .text {
+    font-size: 1.2em;
+  }
 }
-main .about .container #num5 {
-  margin-top: 5%;
-  background: url("../../res/photos-card/card5.png");
-}
-main .about .container #num4 {
-  margin-top: 5%;
-  background: url("../../res/photos-card/card4.png");
-}
-main .about .container #num3 {
-  background: url("../../res/photos-card/card3.png");
-}
-main .about .container #num2 {
-  background: url("../../res/photos-card/card2.png");
-}
-main .about .container #num1 {
-  background: url("../../res/photos-card/card1.png");
+@media (max-width: 768px) {
+  main .about .container .item-card .main-text .text {
+    font-size: 1em;
+  }
 }
 main .trainers {
   padding: 2.5% 0% 0% 0%;
-  height: 80vh;
+}
+@media (min-width: 1025px) {
+  main .trainers {
+    height: 80vh;
+  }
+}
+main .trainers {
   background: url("../../res/back/back2.png");
 }
-main .trainers .text {
+main .trainers > .text {
   margin-top: 0;
-  font-size: 5em;
+  color: transparent;
+  background-image: linear-gradient(to right, rgb(255, 0, 4) 0%, rgb(255, 128, 130) 63%, rgb(255, 255, 255) 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+@media (min-width: 1281px) {
+  main .trainers > .text {
+    font-size: 5em;
+  }
+}
+@media (max-width: 1280px) and (min-width: 769px) {
+  main .trainers > .text {
+    font-size: 3.5em;
+  }
+}
+@media (max-width: 768px) and (min-width: 481px) {
+  main .trainers > .text {
+    font-size: 2em;
+  }
+}
+@media (max-width: 480px) {
+  main .trainers > .text {
+    font-size: 1.5em;
+  }
 }
 main .trainers .container {
   margin: auto;
   display: flex;
   justify-content: space-evenly;
 }
+@media (max-width: 1024px) {
+  main .trainers .container {
+    flex-direction: column;
+    place-items: center;
+  }
+}
 main .trainers .container .item {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   flex-direction: column;
   width: 317px;
   height: 400px;
@@ -168,16 +350,4 @@ main .trainers .container .item:hover button {
 }
 main .trainers .container .item:hover .line {
   visibility: visible;
-}
-main .trainers .container #trainer1 {
-  background: linear-gradient(rgba(200, 10, 44, 0) 15%, rgba(200, 10, 44, 0.3) 85%, rgba(200, 10, 44, 0.5) 100%), url(../../res/trainers/trainer1.png);
-}
-main .trainers .container #trainer2 {
-  background: linear-gradient(rgba(200, 10, 44, 0) 15%, rgba(200, 10, 44, 0.3) 85%, rgba(200, 10, 44, 0.5) 100%), url(../../res/trainers/trainer2.png);
-}
-main .trainers .container #trainer3 {
-  background: linear-gradient(rgba(200, 10, 44, 0) 15%, rgba(200, 10, 44, 0.3) 85%, rgba(200, 10, 44, 0.5) 100%), url(../../res/trainers/trainer3.png);
-}
-main .trainers .container #trainer4 {
-  background: linear-gradient(rgba(200, 10, 44, 0) 15%, rgba(200, 10, 44, 0.3) 85%, rgba(200, 10, 44, 0.5) 100%), url(../../res/trainers/trainer4.png);
 }/*# sourceMappingURL=about.css.map */

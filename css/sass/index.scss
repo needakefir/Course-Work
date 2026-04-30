@@ -4,11 +4,6 @@
         @include extensions.text-font();
 }
 
-@media (max-width: 767px) {
-   body{
-    margin: 0;
-  }
-}
 //FIXME: Add support between 480 px and 768 px
 main{
     @media (min-width:768px)
