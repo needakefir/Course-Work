@@ -13,50 +13,55 @@
         <div class="burger">
             <span></span>
         </div>
-        <ul class="links">
-            <li class="link"><a href="#">Главная</a></li>
-            <li class="link"><a href="html/prices.html">Цены</a></li>
-            <li class="link"><a href="html/about.html">О нас</a></li>
-            <li class="link"><a href="html/reviews.html">Отзывы</a></li>
-        </ul>
+        <nav>
+            <ul class="links">
+                <li class="link"><a href="#">Главная</a></li>
+                <li class="link"><a href="html/prices.html">Цены</a></li>
+                <li class="link"><a href="html/about.html">О нас</a></li>
+                <li class="link"><a href="html/reviews.html">Отзывы</a></li>
+            </ul>
+        </nav>
     </header>
 <main>
-        <section class="main">
+        <div class="main">
             <div class="left">
                 <!-- TODO: ADD CONTENT RELATED TO PHOTO-->
-                <p class="text">Сожги жир и свою лень</p>
+                <p class="text">Сожги жир <br> и свою лень</p>
                 <p class="text">Отправь заявку </p>
                 <button class="formButton">Записаться</button>
             </div>
-            <div class="right"> </div>   
-        </section>
-        <section class="training">
+            <div class="right"></div>   
+        </div>
+        <div class="training">
             <h1 class="text">Мы предлагаем вам </h1>
-            <section class="offers-containter">
+            <div class="offers-containter">
                 <div class="item-offer">
                     <img src="res/trains/Personal.png" alt="">
                     <div class="text">Персональные тренировки</div>
-                    <button id="offer1">
-                        Подробнее
-                    </button>
+                    <div class="button">
+                        <div id="dub-arrow"><img src="res/arrow.png" alt=""></div>
+                        <p>Подробнее</p>
+                    </div>
                 </div>
                 <div class="item-offer">
                     <img src="res/trains/Group.png" alt="">
                     <div class="text">Групповые тренировки</div>
-                    <button id="offer2">
-                         Подробнее
-                    </button>
+                    <div class="button">
+                        <div id="dub-arrow"><img src="res/arrow.png" alt=""></div>
+                        <p>Подробнее</p>
+                    </div>
                 </div>
                 <div class="item-offer">
                     <img src="res/trains/Kids.png" alt="">
                     <div class="text">Детские <br> секции</div>
-                    <button id-="offer3">
-                        Подробнее
-                    </button>
+                    <div class="button">
+                        <div id="dub-arrow"><img src="res/arrow.png" alt=""></div>
+                        <p>Подробнее</p>
+                    </div>
                 </div>
-            </section>
-        </section>
-        <section class="interier">
+            </div>
+        </div>
+        <div class="interier">
             <p class="text">Интерьер тренажерного зала</p>
             <div class="container">
                     <img src="res/interier/interier5.jpg" class="item" alt="">
@@ -64,8 +69,10 @@
                     <img src="res/interier/interier2.jpg" class="item" alt="">
                     <img src="res/interier/interier4.jpg" class="item" alt="">
             </div>
-        </section>
-        <section class="form-offer">
+        </div>
+        <div class="reviews">
+        </div>
+        <div class="form-offer">
             <div class="offer-texts">
                 <p class="text">Хотите привести себя в форму?</p>
                 <p class="text">Мы доведем вас до желаемого веса или поможем набрать мышечную массу</p>
@@ -76,29 +83,29 @@
                     <p class="text">
                         Имя
                     </p>
-                    <input type="text" required>
+                    <input type="text" required placeholder="Type here">
                 </div>
                 <div class="label-form">
                     <p class="text">
                         Телефон
                     </p>
-                    <input type="tel" required>
+                    <input type="tel" required placeholder="Type here">
                 </div>
                 <div class="label-form" id="comments_label">
                     <p class="text">
                         Комментарии к заявке
                     </p>
-                    <textarea required rows="7" cols="40" id="comments"></textarea>
+                    <textarea required rows="7" cols="40" id="comments" placeholder="Type here"></textarea>
                 </div>
                 <button>
                     Отправить
                 </button>
             </form>
-        </section>
+        </div>
     </main>
     <footer>
-        <section class="text"><span class="red">Health</span>Fit</section>
-        <section class="social-networks">
+        <div class="text"><span class="red">Health</span>Fit</div>
+        <div class="social-networks">
             <div class="text">Наши социальные сети</div>
             <div class="social-networks">
                 <div class="social-network">
@@ -114,8 +121,8 @@
                     <p class="name">@HealthFit</p>
                 </div>
             </div>
-        </section>
-            <section class="contact-information">
+        </div>
+            <div class="contact-information">
                 <p class="text">
                     Контактная информация
                 </p>
@@ -131,7 +138,7 @@
                     <img src="res/svg/Vector.svg" alt="">
                     <p class="text">HealthFit@gmail.com</p>
                 </div>
-            </section>
+            </div>
             <h2 id="end">&copy; 2026 HealthFit.All rights are reserved</h2>
     </footer>
     <script src="js/burger.js"></script>

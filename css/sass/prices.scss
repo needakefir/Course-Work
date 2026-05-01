@@ -1,6 +1,7 @@
 @use './extensions';
 .text{
     @include extensions.text-font();
+    text-align: center;
 }
 main{
     & .prices

@@ -11,7 +11,7 @@ header{
             position: absolute;
             z-index:2;
         } 
-        & .links{
+        & nav .links{
             margin:0;
             background:linear-gradient(rgba(200,10,44,0.4) 15%,
                 rgba(200,10,44,0.2) 45%,
@@ -29,28 +29,28 @@ header{
                 }
             }
         }
-        & .links.animate{
-            @include extensions.flex-mixin(center);
-            flex-direction: column;
-            gap:10%;
-            width: 100%;
-            height: 100vh;
-            padding:0;
+        & nav .links.animate{
+                @include extensions.flex-mixin(center);
+                flex-direction: column;
+                gap:10%;
+                width: 100%;
+                height: 100vh;
+                padding:0;
             }
         }
     @media(min-width:768px)
     {
         @include extensions.flex-mixin(space-between);
-        & .links{
-       @include extensions.flex-mixin(space-between);
-        gap:5vw;
+        & nav .links{
+            @include extensions.flex-mixin(space-between);
+            gap:5vw;
             & li{
-            list-style:none;
-            & a{
-                @include extensions.text-font();
-                text-decoration: none;
-                font-size:1.3em;
-                color:white;
+                list-style:none;
+                & a{
+                    @include extensions.text-font();
+                    text-decoration: none;
+                    font-size:1.3em;
+                    color:white;
                 }
             }       
         }
@@ -105,42 +105,40 @@ header{
             }
         }
     }
-//FIXME: Add support between 480 px and 768px
+//FIXME: Add support between 768 px and 1024px
 footer{
     margin-top:10%;
-    @media (max-width:767px)
+    @media (max-width:1024px)
     {
         display:grid;
-        grid-template-rows:auto 1fr 1fr auto;
+        grid-template-rows:0.2fr 1fr 1fr 0.2fr;
         place-items: center;
-        & > .text{
-            font-size:2.5em;
-            letter-spacing: 25%;
-        }
     }
-    @media (min-width:768px)
+    @media (min-width:1025px)
     {
         display:grid;
         grid-template-columns: 1fr 1.5fr 1.5fr;
-        & > .text{
-            font-size:2.5em;
-            letter-spacing: 25%;
-        }
+    }
+     & > .text{
+        font-size:2.5em;
+        letter-spacing: 25%;
     }
     & .social-networks{
         @include extensions.flex-mixin(space-around);
         flex-direction:column;
         & >.text {
-        @media (min-width:768px)
+        @media (min-width:1025px)
         {
             font-size:2.3em;
-            text-align:center;
         }
-        @media (max-width:767px)
+        @media (min-width:769px) and (max-width:1024px)
+        {
+            font-size:1.8em;
+        }
+        @media (max-width:768px)
         {
             font-size:1.5em;
             letter-spacing: 5%;
-            text-align:center;
         }
         }
         & .social-network{
@@ -170,7 +168,7 @@ footer{
                 }
                 @media (min-width:481px)
                 {
-                    font-size:1.6em;
+                    font-size:1.9em;
                 }
             }
         }
@@ -178,21 +176,21 @@ footer{
     & .contact-information{
         @include extensions.flex-mixin(space-between);
         flex-direction: column;
-        @media (min-width:768px)
+        & > .text{
+            margin:0;
+            letter-spacing: 5%;
+        @media (min-width:1025px)
         {
-            & > .text{
-                font-size:2.3em;
-                margin:0;
-                text-align:center;
-            }
+            font-size:2.3em;
         }
-        @media (max-width:480px)
+        @media (min-width:769px) and (max-width:1024px)
         {
-            & > .text{
-                font-size:1.5em;
-                letter-spacing: 5%;
-                margin:0;
-            }
+            font-size:1.8em;
+        }
+        @media (max-width:768px)
+        {
+            font-size:1.5em;
+        }
         }
         & .contact{
             margin:5% 0%;
@@ -217,11 +215,18 @@ footer{
                 @media (max-width:480px)
                 {
                     font-size:1.3em;
-
                 }
-                @media (min-width:481px)
+                @media (min-width:481px) and (max-width:768px)
                 {
-                    font-size:1.6em;
+                    font-size:1.3em;   
+                }
+                @media (min-width:769px) and (max-width:1024px)
+                {
+                    font-size:1.3em;
+                }
+                @media (min-width:1025px)
+                {
+                    font-size:2em;
                 }
            }
         }
@@ -230,7 +235,7 @@ footer{
         }
     }
     & #end{
-            @media (min-width:768px)
+            @media (min-width:1025px)
             {
                 grid-column:1/4;
             }

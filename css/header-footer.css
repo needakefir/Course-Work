@@ -13,7 +13,7 @@ body {
 
 @font-face {
   font-family: "RussianRail GPro";
-  src: url(../fonts/RussianRail_G_Pro_Regular_0.otf) format(opentype);
+  src: url("../fonts/RussianRail_G_Pro_Regular_0.otf") format(opentype);
 }
 header .text {
   margin: 0;
@@ -25,7 +25,7 @@ header .text {
     position: absolute;
     z-index: 2;
   }
-  header .links {
+  header nav .links {
     margin: 0;
     background: linear-gradient(rgba(200, 10, 44, 0.4) 15%, rgba(200, 10, 44, 0.2) 45%, rgba(200, 10, 44, 0) 100%);
     z-index: 1;
@@ -33,16 +33,16 @@ header .text {
     list-style-type: none;
     display: none;
   }
-  header .links .link {
+  header nav .links .link {
     text-align: center;
   }
-  header .links .link a {
+  header nav .links .link a {
     font-family: "RussianRail GPro";
     color: white;
     font-size: 2.5em;
     text-decoration: none;
   }
-  header .links.animate {
+  header nav .links.animate {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -57,15 +57,15 @@ header .text {
     display: flex;
     justify-content: space-between;
   }
-  header .links {
+  header nav .links {
     display: flex;
     justify-content: space-between;
     gap: 5vw;
   }
-  header .links li {
+  header nav .links li {
     list-style: none;
   }
-  header .links li a {
+  header nav .links li a {
     font-family: "RussianRail GPro";
     color: white;
     text-decoration: none;
@@ -125,43 +125,42 @@ header .text {
 footer {
   margin-top: 10%;
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   footer {
     display: grid;
-    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-rows: 0.2fr 1fr 1fr 0.2fr;
     place-items: center;
   }
-  footer > .text {
-    font-size: 2.5em;
-    letter-spacing: 25%;
-  }
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   footer {
     display: grid;
     grid-template-columns: 1fr 1.5fr 1.5fr;
   }
-  footer > .text {
-    font-size: 2.5em;
-    letter-spacing: 25%;
-  }
+}
+footer > .text {
+  font-size: 2.5em;
+  letter-spacing: 25%;
 }
 footer .social-networks {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   footer .social-networks > .text {
     font-size: 2.3em;
-    text-align: center;
   }
 }
-@media (max-width: 767px) {
+@media (min-width: 769px) and (max-width: 1024px) {
+  footer .social-networks > .text {
+    font-size: 1.8em;
+  }
+}
+@media (max-width: 768px) {
   footer .social-networks > .text {
     font-size: 1.5em;
     letter-spacing: 5%;
-    text-align: center;
   }
 }
 footer .social-networks .social-network {
@@ -197,7 +196,7 @@ footer .social-networks .social-network .name {
 }
 @media (min-width: 481px) {
   footer .social-networks .social-network .name {
-    font-size: 1.6em;
+    font-size: 1.9em;
   }
 }
 footer .contact-information {
@@ -205,18 +204,23 @@ footer .contact-information {
   justify-content: space-between;
   flex-direction: column;
 }
-@media (min-width: 768px) {
+footer .contact-information > .text {
+  margin: 0;
+  letter-spacing: 5%;
+}
+@media (min-width: 1025px) {
   footer .contact-information > .text {
     font-size: 2.3em;
-    margin: 0;
-    text-align: center;
   }
 }
-@media (max-width: 480px) {
+@media (min-width: 769px) and (max-width: 1024px) {
+  footer .contact-information > .text {
+    font-size: 1.8em;
+  }
+}
+@media (max-width: 768px) {
   footer .contact-information > .text {
     font-size: 1.5em;
-    letter-spacing: 5%;
-    margin: 0;
   }
 }
 footer .contact-information .contact {
@@ -250,15 +254,25 @@ footer .contact-information .contact .text {
     font-size: 1.3em;
   }
 }
-@media (min-width: 481px) {
+@media (min-width: 481px) and (max-width: 768px) {
   footer .contact-information .contact .text {
-    font-size: 1.6em;
+    font-size: 1.3em;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  footer .contact-information .contact .text {
+    font-size: 1.3em;
+  }
+}
+@media (min-width: 1025px) {
+  footer .contact-information .contact .text {
+    font-size: 2em;
   }
 }
 footer .contact-information #address {
   font-size: 0.8em;
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   footer #end {
     grid-column: 1/4;
   }

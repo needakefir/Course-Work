@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reviews>
+    <review>
+        <image-link>res/persons/review-1.png</image-link> 
+        <name>Дмитрий</name>
+        <stars>5</stars>
+        <text></text>
+    </review>
+    <review>
+        <image-link>res/persons/review-2.png</image-link> 
+        <name>Дмитрий</name>
+        <stars>5</stars>
+        <text></text>
+    </review>
+    <review>
+        <image-link>res/persons/review-3.png</image-link> 
+        <name>Дмитрий</name>
+        <stars>5</stars>
+        <text> </text>
+    </review>
+    <review>
+        <image-link>res/persons/review-4.png</image-link> 
+        <name>Дмитрий</name>
+        <stars>5</stars>
+        <text> </text>
+    </review>
+</reviews>

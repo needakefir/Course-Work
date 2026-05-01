@@ -95,19 +95,16 @@ main{
                 @media(max-width:768px) and (min-width:481px)
                 {
                     font-size:2em;
-                    margin-bottom:25%;
-                &:before{
-                    content: "✔ ";
-                }    
+                    margin-bottom:25%;   
                 }
                 @media(max-width:480px)
                 {
                     font-size:1.5em;
-                    margin-bottom:25%;
+                    margin-bottom:25%;   
+                }
                 &:before{
                     content: "✔ ";
-                }   
-                }
+                }  
             }  
         }
     }
@@ -190,7 +187,7 @@ main{
                         }
                         @media(max-width:768px)
                         {
-                            font-size:1.5em;
+                            font-size:1.1em;
                         }
                     }
                 & .text{
@@ -201,7 +198,7 @@ main{
                     }
                     @media (max-width:768px)
                     {
-                        font-size:1em;
+                        font-size:0.9em;
                     }
                 }
             }
@@ -234,7 +231,7 @@ main{
             }
             @media(max-width:480px)
             {
-                font-size:1.5em;
+                font-size:2em;
             }
         }
         & .container{
