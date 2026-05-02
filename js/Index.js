@@ -1,3 +1,61 @@
+async function loadReviews()
+{
+    let wrapper_reviews=document.querySelector('.swiper-wrapper');
+    const response = await fetch('xml/reviews.xml');
+    const xmlString = await response.text();
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(xmlString, 'text/xml');
+    const reviews=xmlDoc.querySelectorAll('review');
+    reviews.forEach(
+        (review)=>{
+        const wrapper_item=document.createElement('div');
+
+        wrapper_item.setAttribute('class','swiper-slide');
+
+        const avatar=document.createElement('div'); 
+
+        avatar.setAttribute('class','avatar');
+
+        const img=document.createElement('img');
+
+        img.setAttribute("src",review.children.item(0).textContent);
+
+        img.setAttribute('alt',"");
+
+        const name=document.createElement('p');
+
+        name.textContent=review.children.item(1).textContent;
+
+        name.setAttribute('class','text');
+
+        const num=Number(review.children.item(2).textContent);
+
+        const stars=document.createElement('p');
+
+        stars.innerHTML='&starf;'.repeat(Math.trunc(num));
+
+        if(num-Math.trunc(num)>0)
+            stars.innerHTML+='&#11240';
+
+        stars.setAttribute('class','text');
+
+        const text=document.createElement('p');
+
+        text.textContent=review.children.item(3).textContent;
+
+        text.setAttribute('class','text');
+
+        avatar.append(img,name,stars);
+
+        wrapper_item.append(avatar,text);
+
+        wrapper_reviews.append(wrapper_item);
+
+        }
+    )
+}
+loadReviews()
+
 const button=document.querySelector(".formButton");
 const form=document.getElementById('form');
 button.addEventListener('click',function(){
@@ -27,33 +85,7 @@ buttons.forEach(
         });
     }
 )
-async function loadReviews()
-{
-    let div_reviews=document.querySelector('.reviews');
-    const response = await fetch('xml/reviews.xml');
-    const xmlString = await response.text();
-    const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(xmlString, 'text/xml');
-    const reviews=xmlDoc.querySelectorAll('review');
-    reviews.forEach(
-        (review)=>{
-        const review_item=document.createElement('div');
-        review_item.setAttribute('class','review-item');
-        const img=document.createElement('img');
-        const name=document.createElement('p');
-        const stars=document.createElement('p');
-        const text=document.createElement('p');
-        img.setAttribute("src",review.children.item(0).textContent);
-        img.setAttribute('alt',"");
-        name.textContent=review.children.item(1).textContent;
-        stars.textContent=review.children.item(2).textContent;
-        text.textContent=review.children.item(3).textContent;
-        review_item.append(img,name,stars,text);
-        div_reviews.append(review_item);
-        }
-    )
-}
-loadReviews()
+
 
 
 

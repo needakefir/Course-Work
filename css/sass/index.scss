@@ -26,12 +26,14 @@ main{
                 font-size:1.5em;
                 border-radius: 25px/25px;
                 background-color: rgba(220,20,60,0.7);
-                padding:5% 10%;
+                padding:4% 8%;
                 letter-spacing: 2px;
                 position:relative;
                 overflow:hidden;
                 cursor:pointer;
-                &:before {
+                @media(min-width:1025px)
+                {
+                    &:before {
                     content: "";
                     position: absolute;
                     height: 150px;
@@ -45,6 +47,7 @@ main{
                 }
                 &:hover:before {
                     left:95%;
+                }
                 }
             }
         }
@@ -86,7 +89,7 @@ main{
                 border:0px;
                 @include extensions.text-font();
                 font-size:1.5em;
-                border-radius: 50px/50px;
+                border-radius: 25px/25px;
                 background-color: rgba(220,20,60,0.7);
                 padding:3% 6%;
                 cursor:pointer;
@@ -109,7 +112,7 @@ main{
     @media (min-width:768px) {
         & > .text{
             margin:5% 0%;
-            font-size:3em;
+            font-size:4em;
         }
     }
     flex-direction: column;
@@ -154,7 +157,7 @@ main{
             @media (min-width:768px){
                 & .text{
                     @include extensions.text-font();
-                    font-size:2.3em;
+                    font-size:1.9em;
                 }
             }
             & .button {
@@ -162,8 +165,9 @@ main{
               overflow: hidden;
               cursor: pointer;
               padding:5% 10%;
+              margin-bottom:5%;
               background-color: rgba(220,20,60,0.7);
-              border-radius: 50px/50px;
+              border-radius: 25px/25px;
                 & #dub-arrow {
                 @media(min-width:1025px)
                 {  
@@ -211,8 +215,7 @@ main{
                 top:100%;
             }
             }
-        }
-            
+        }  
         }
     }
 }
@@ -257,17 +260,25 @@ main{
     }
     }
     & .reviews{
-        @include extensions.flex-mixin(center);
-        @media (max-width:1024px)
-        {
-            flex-direction: column;
-        }
-        & .review-item{
-            @include extensions.flex-mixin(flex-start);
-            & img{
-                width:250px;
-                height:250px;
-                
+        & .swiper{
+            width:80vw;
+            height:400px;
+            & .swiper-wrapper{
+                & .swiper-slide{
+                    @include extensions.flex-mixin(center);
+                    & .avatar{ 
+                        & img{
+                            width:200px;
+                            height:200px;
+                        }
+                        & .name{
+                    
+                        }
+                        & .stars{ 
+                        
+                        }
+                    }
+                }
             }
         }
     }
@@ -302,7 +313,6 @@ main{
             gap:5%;
             & .text{
                 font-size:2em;
-                text-decoration:underline;
             }
             & .label-form{
                 width:80%;
@@ -338,14 +348,36 @@ main{
                     outline:none;
                 }
             }
-            & button{
-                @include extensions.text-font();
-                background-color: rgb(200,10,44); 
-                font-size:1.5em;
-                padding:3% 10%;
-                border:0;
-                border-radius: 50px/50px;
+             & button{
                 margin-top:5%;
+                border:0px;
+                @include extensions.text-font();
+                font-size:1.5em;
+                border-radius: 25px/25px;
+                background-color: rgba(220,20,60,0.7);
+                padding:4% 8%;
+                letter-spacing: 2px;
+                position:relative;
+                overflow:hidden;
+                cursor:pointer;
+               @media(min-width:1025px)
+                {
+                    &:before {
+                    content: "";
+                    position: absolute;
+                    height: 150px;
+                    width: 50px;
+                    background : #fff;
+                    left: -55px;
+                    top: -40px;
+                    transform: rotate(37deg);
+                    transition: all .3s;
+                    opacity: 0.3;
+                }
+                &:hover:before {
+                    left:95%;
+                }
+                }
             }
         }
     }

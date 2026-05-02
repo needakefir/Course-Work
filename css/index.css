@@ -45,12 +45,14 @@ body {
     font-size: 1.5em;
     border-radius: 25px/25px;
     background-color: rgba(220, 20, 60, 0.7);
-    padding: 5% 10%;
+    padding: 4% 8%;
     letter-spacing: 2px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
   }
+}
+@media (min-width: 1025px) and (min-width: 1025px) {
   main .main .left button:before {
     content: "";
     position: absolute;
@@ -66,6 +68,8 @@ body {
   main .main .left button:hover:before {
     left: 95%;
   }
+}
+@media (min-width: 1025px) {
   main .main .right {
     background: url("../../res/Person-mobile.png") 50% 50%;
     background-size: contain;
@@ -110,7 +114,7 @@ body {
     font-family: "RussianRail GPro";
     color: white;
     font-size: 1.5em;
-    border-radius: 50px/50px;
+    border-radius: 25px/25px;
     background-color: rgba(220, 20, 60, 0.7);
     padding: 3% 6%;
     cursor: pointer;
@@ -133,7 +137,7 @@ main .training {
 @media (min-width: 768px) {
   main .training > .text {
     margin: 5% 0%;
-    font-size: 3em;
+    font-size: 4em;
   }
 }
 main .training {
@@ -193,7 +197,7 @@ main .training .offers-containter .item-offer img {
   main .training .offers-containter .item-offer .text {
     font-family: "RussianRail GPro";
     color: white;
-    font-size: 2.3em;
+    font-size: 1.9em;
   }
 }
 main .training .offers-containter .item-offer .button {
@@ -201,8 +205,9 @@ main .training .offers-containter .item-offer .button {
   overflow: hidden;
   cursor: pointer;
   padding: 5% 10%;
+  margin-bottom: 5%;
   background-color: rgba(220, 20, 60, 0.7);
-  border-radius: 50px/50px;
+  border-radius: 25px/25px;
 }
 @media (min-width: 1025px) {
   main .training .offers-containter .item-offer .button #dub-arrow {
@@ -291,22 +296,17 @@ main .interier .container {
     height: 45vh;
   }
 }
-main .reviews {
+main .reviews .swiper {
+  width: 80vw;
+  height: 400px;
+}
+main .reviews .swiper .swiper-wrapper .swiper-slide {
   display: flex;
   justify-content: center;
 }
-@media (max-width: 1024px) {
-  main .reviews {
-    flex-direction: column;
-  }
-}
-main .reviews .review-item {
-  display: flex;
-  justify-content: flex-start;
-}
-main .reviews .review-item img {
-  width: 250px;
-  height: 250px;
+main .reviews .swiper .swiper-wrapper .swiper-slide .avatar img {
+  width: 200px;
+  height: 200px;
 }
 main .form-offer {
   background: url("../../res/back/back3.png");
@@ -345,7 +345,6 @@ main .form-offer .offer-form {
 }
 main .form-offer .offer-form .text {
   font-size: 2em;
-  text-decoration: underline;
 }
 main .form-offer .offer-form .label-form {
   width: 80%;
@@ -384,12 +383,33 @@ main .form-offer .offer-form .label-form textarea:focus {
   outline: none;
 }
 main .form-offer .offer-form button {
+  margin-top: 5%;
+  border: 0px;
   font-family: "RussianRail GPro";
   color: white;
-  background-color: rgb(200, 10, 44);
   font-size: 1.5em;
-  padding: 3% 10%;
-  border: 0;
-  border-radius: 50px/50px;
-  margin-top: 5%;
+  border-radius: 25px/25px;
+  background-color: rgba(220, 20, 60, 0.7);
+  padding: 4% 8%;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+@media (min-width: 1025px) {
+  main .form-offer .offer-form button:before {
+    content: "";
+    position: absolute;
+    height: 150px;
+    width: 50px;
+    background: #fff;
+    left: -55px;
+    top: -40px;
+    transform: rotate(37deg);
+    transition: all 0.3s;
+    opacity: 0.3;
+  }
+  main .form-offer .offer-form button:hover:before {
+    left: 95%;
+  }
 }/*# sourceMappingURL=index.css.map */

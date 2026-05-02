@@ -41,6 +41,7 @@ header{
     @media(min-width:768px)
     {
         @include extensions.flex-mixin(space-between);
+        align-items: center;
         & nav .links{
             @include extensions.flex-mixin(space-between);
             gap:5vw;
