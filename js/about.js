@@ -1,4 +1,4 @@
-async function loadReviews()
+async function loadTrainers()
 {
     let wrapper_reviews=document.querySelector('.swiper-wrapper');
     const response = await fetch('../xml/trainers.xml');
@@ -47,4 +47,4 @@ async function loadReviews()
         }
     )
 }
-loadReviews()
+loadTrainers()

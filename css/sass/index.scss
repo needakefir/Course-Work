@@ -3,6 +3,10 @@
         text-align:center;
         @include extensions.text-font();
 }
+@font-face {
+    font-family: "NT Comic";
+    src: url("../../fonts/NTSomic-Semibold.otf") format(opentype);
+}
 :root{
     --swiper-navigation-sides-offset:-10px !important;
     --swiper-pagination-right:16px !important;
@@ -62,7 +66,6 @@ main{
         }
          & .right{
             background:url("../../res/Person-mobile.png") 50% 50% ;
-            background-size: contain;
             width:100%;
             height:100vh;
             background-repeat:no-repeat;
@@ -230,7 +233,7 @@ main{
     }
 }
     & .interier{
-    padding:5% 0 0 0;
+    padding:5% 0;
     background-color:rgba(77,70,70,0.2);
     @media (max-width:767px)
     {
@@ -271,46 +274,123 @@ main{
     }
     & .reviews{
         height:70vh;
-        @media (max-width:767px) {
-        & > .text{
-            margin-top:1%;
-            margin-bottom:0%;
-            font-size:2em;
+	    background: linear-gradient(-45deg,#B40A1B,#FF000046,#460000,#E20338);
+	    background-size: 400% 400%;
+	    animation: gradient 10s ease infinite;
+        @keyframes gradient {
+        	0% {
+        		background-position: 0% 50%;
+        	}
+        	50% {
+        		background-position: 100% 50%;
+        	}
+        	100% {
+        		background-position: 0% 50%;
+        	}
         }
-    }
-    @media (min-width:768px) {
         & > .text{
-             margin-top:1%;
-             margin-bottom:0;
-            font-size:4em;
+            margin-top:0;
+            margin-bottom:3%;
+             @media (max-width:768px) {
+                font-size:2em;
+             }     
+            @media (min-width:769px) and (max-width:1024px) {
+                font-size:3em;
+            }
+             @media (min-width:1025px) {
+                font-size:4em;
+            }
         }
-    }
     //TODO: Do a mobile swiper
         & .swiper{
-            width:80vw;
-            height:500px;
+            @media(min-width:1025px)
+            {
+                height:40vh;
+                width:80vw;
+            }
+            @media(max-width:768px)
+            {
+                height:60vh;
+            }
             & .swiper-wrapper{
                 & .swiper-slide{
-                    @include extensions.flex-mixin(space-evenly);
+                    @include extensions.flex-mixin(flex-start);
+                    gap:3%;
+                    height:80%;
+                    flex-direction: column;
                     align-items: center;
                     & .avatar{ 
-
+                        width:70%;
+                        @include extensions.flex-mixin(flex-start);
+                        @media (max-width:768px)
+                        {
+                            flex-direction: column;
+                        }
+                        gap:3%;
                         & img{
-                            width:200px;
-                            height:200px;
+                            width:120px;
+                            height:120px;
+                            @media(max-width:768px)
+                            {
+                                align-self:center;
+                            }
                         }
                         & .name{
-                            font-size:2em;
+                            font-family: "NT Comic";
+                            font-size:1.5em;
+                            align-self:center;
+                            @media(max-width:768px)
+                            {
+                                margin:0;
+                            }
                         }
                         & .stars{ 
-                            font-size:1.5em;
+                            font-size:2em;
+                            @media(max-width:768px)
+                            {
+                                margin:0;
+                            }
+                             @media( min-width:769px)
+                            {
+                                position:absolute;
+                                left:70%;
+                            }
+                            color:gold;
                         }
                     }
                     & .review-text{
+                            margin:0;
+                            font-family: "NT Comic";
                             text-align: center;
-                            width:50%;
-                            font-size:1.2em;
-                    }                           
+                            width:70%;
+                            @media(max-width:768px)
+                            {
+                                font-size:1em;
+                                overflow:hidden;
+                                white-space: collapse;
+                                text-overflow: ellipsis;
+                            }
+                            @media(min-width:769px)
+                            {
+                                font-size:1.2em;
+                            }
+                    }  
+                        & button{
+                            border:0px;
+                            @include extensions.text-font();
+                            font-size:1em;
+                            border-radius: 25px/25px;
+                            background-color: rgba(220,20,60,0.7);
+                            cursor:pointer;
+                            @media(max-width:480px)
+                            {
+                                padding:5% 10%;
+                            }
+                            @media (min-width:481px)
+                            {
+                                display:none;
+                            }
+                    }                     
                 }
             }
             & .swiper-button-next,& .swiper-button-prev{

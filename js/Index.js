@@ -2,7 +2,7 @@ async function loadReviews()
 {
     let wrapper_reviews=document.querySelector('.swiper-wrapper');
     const response = await fetch('xml/reviews.xml');
-    const xmlString = await response.text();
+    const xmlString =await response.text();
     const parser = new DOMParser();
     const xmlDoc = parser.parseFromString(xmlString, 'text/xml');
     const reviews=xmlDoc.querySelectorAll('review');
@@ -45,17 +45,39 @@ async function loadReviews()
 
         text.setAttribute('class','text review-text');
 
+        text.setAttribute('style','height:200px;');
+
+        const button=document.createElement('button');
+
+        button.textContent="Показать еще";
+
         avatar.append(img,name,stars);
 
-        wrapper_item.append(avatar,text);
+        wrapper_item.append(avatar,text,button);
 
         wrapper_reviews.append(wrapper_item);
 
         }
     )
+    const buttonsReview=document.querySelectorAll('.swiper-slide button');
+    buttonsReview.forEach(
+    (button)=>
+    button.addEventListener('click',function(){
+    let text=document.querySelector('.swiper-slide.swiper-slide-active .review-text');
+    if(button.textContent==="Показать еще")
+    {
+        text.setAttribute('style','height:auto;');
+        button.textContent='Скрыть';
+    }
+    else
+    {
+        text.setAttribute('style','height:150px;');
+        button.textContent='Показать еще';
+    }
+    })
+)
 }
-loadReviews()
-
+loadReviews();
 const button=document.querySelector(".formButton");
 const form=document.getElementById('form');
 button.addEventListener('click',function(){
@@ -83,5 +105,6 @@ buttons.forEach(
                 );
             comments_label.value= "" + standardComments[index];
         });
-    }
+}
 )
+

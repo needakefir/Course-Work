@@ -43,6 +43,12 @@ main .prices .container {
   display: flex;
   justify-content: space-evenly;
 }
+@media (max-width: 768px) {
+  main .prices .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 main .prices .container .item-card {
   flex: 0 0 25%;
 }

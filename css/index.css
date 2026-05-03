@@ -21,6 +21,10 @@ body {
   color: white;
 }
 
+@font-face {
+  font-family: "NT Comic";
+  src: url("../../fonts/NTSomic-Semibold.otf") format(opentype);
+}
 :root {
   --swiper-navigation-sides-offset:-10px !important;
   --swiper-pagination-right:16px !important;
@@ -82,7 +86,6 @@ body {
 @media (min-width: 1025px) {
   main .main .right {
     background: url("../../res/Person-mobile.png") 50% 50%;
-    background-size: contain;
     width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
@@ -271,7 +274,7 @@ main .training .offers-containter .item-offer .button p {
   }
 }
 main .interier {
-  padding: 5% 0 0 0;
+  padding: 5% 0;
   background-color: rgba(77, 70, 70, 0.2);
 }
 @media (max-width: 767px) {
@@ -309,44 +312,145 @@ main .interier .container {
 }
 main .reviews {
   height: 70vh;
+  background: linear-gradient(-45deg, #B40A1B, rgba(255, 0, 0, 0.2745098039), #460000, #E20338);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
 }
-@media (max-width: 767px) {
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+main .reviews > .text {
+  margin-top: 0;
+  margin-bottom: 3%;
+}
+@media (max-width: 768px) {
   main .reviews > .text {
-    margin-top: 1%;
-    margin-bottom: 0%;
     font-size: 2em;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   main .reviews > .text {
-    margin-top: 1%;
-    margin-bottom: 0;
+    font-size: 3em;
+  }
+}
+@media (min-width: 1025px) {
+  main .reviews > .text {
     font-size: 4em;
   }
 }
-main .reviews .swiper {
-  width: 80vw;
-  height: 500px;
+@media (min-width: 1025px) {
+  main .reviews .swiper {
+    height: 40vh;
+    width: 80vw;
+  }
+}
+@media (max-width: 768px) {
+  main .reviews .swiper {
+    height: 60vh;
+  }
 }
 main .reviews .swiper .swiper-wrapper .swiper-slide {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  gap: 3%;
+  height: 80%;
+  flex-direction: column;
   align-items: center;
 }
+main .reviews .swiper .swiper-wrapper .swiper-slide .avatar {
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+}
+@media (max-width: 768px) {
+  main .reviews .swiper .swiper-wrapper .swiper-slide .avatar {
+    flex-direction: column;
+  }
+}
+main .reviews .swiper .swiper-wrapper .swiper-slide .avatar {
+  gap: 3%;
+}
 main .reviews .swiper .swiper-wrapper .swiper-slide .avatar img {
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
+}
+@media (max-width: 768px) {
+  main .reviews .swiper .swiper-wrapper .swiper-slide .avatar img {
+    align-self: center;
+  }
 }
 main .reviews .swiper .swiper-wrapper .swiper-slide .avatar .name {
-  font-size: 2em;
+  font-family: "NT Comic";
+  font-size: 1.5em;
+  align-self: center;
+}
+@media (max-width: 768px) {
+  main .reviews .swiper .swiper-wrapper .swiper-slide .avatar .name {
+    margin: 0;
+  }
 }
 main .reviews .swiper .swiper-wrapper .swiper-slide .avatar .stars {
-  font-size: 1.5em;
+  font-size: 2em;
+}
+@media (max-width: 768px) {
+  main .reviews .swiper .swiper-wrapper .swiper-slide .avatar .stars {
+    margin: 0;
+  }
+}
+@media (min-width: 769px) {
+  main .reviews .swiper .swiper-wrapper .swiper-slide .avatar .stars {
+    position: absolute;
+    left: 70%;
+  }
+}
+main .reviews .swiper .swiper-wrapper .swiper-slide .avatar .stars {
+  color: gold;
 }
 main .reviews .swiper .swiper-wrapper .swiper-slide .review-text {
+  margin: 0;
+  font-family: "NT Comic";
   text-align: center;
-  width: 50%;
-  font-size: 1.2em;
+  width: 70%;
+}
+@media (max-width: 768px) {
+  main .reviews .swiper .swiper-wrapper .swiper-slide .review-text {
+    font-size: 1em;
+    overflow: hidden;
+    white-space: collapse;
+    text-overflow: ellipsis;
+  }
+}
+@media (min-width: 769px) {
+  main .reviews .swiper .swiper-wrapper .swiper-slide .review-text {
+    font-size: 1.2em;
+  }
+}
+main .reviews .swiper .swiper-wrapper .swiper-slide button {
+  border: 0px;
+  font-family: "RussianRail GPro";
+  color: white;
+  font-size: 1em;
+  border-radius: 25px/25px;
+  background-color: rgba(220, 20, 60, 0.7);
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  main .reviews .swiper .swiper-wrapper .swiper-slide button {
+    padding: 5% 10%;
+  }
+}
+@media (min-width: 481px) {
+  main .reviews .swiper .swiper-wrapper .swiper-slide button {
+    display: none;
+  }
 }
 main .reviews .swiper .swiper-button-next, main .reviews .swiper .swiper-button-prev {
   color: white;

@@ -285,8 +285,8 @@ main .trainers > .text {
   }
 }
 main .trainers .swiper {
-  width: 1000px;
-  height: 600px;
+  width: 80vw;
+  height: 500px;
 }
 main .trainers .swiper .swiper-wrapper .swiper-slide {
   display: flex;

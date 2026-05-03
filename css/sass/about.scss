@@ -224,8 +224,8 @@ main{
         }
         //TODO: A mobile version of swiper 
         & .swiper{
-            width:1000px;
-            height:600px;
+            width:80vw;
+            height:500px;
             & .swiper-wrapper{
                 & .swiper-slide{
                 @include extensions.flex-mixin(flex-end);

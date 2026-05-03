@@ -22,6 +22,11 @@ main{
         }
         & .container{
             @include extensions.flex-mixin(space-evenly);
+            @media(max-width:768px)
+            {
+                flex-direction: column;
+                align-items: center;
+            }
             & .item-card{
                 flex:0 0 25%;
                 & .card-header{

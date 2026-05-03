@@ -41,7 +41,7 @@
                     <img src="res/trains/Personal.png" alt="">
                     <div class="text">Персональные тренировки</div>
                     <div class="button">
-                        <div id="dub-arrow"><img src="res/arrow.png" alt=""></div>
+                        <div id="dub-arrow"><img src="res/arrow.svg" alt=""></div>
                         <p>Подробнее</p>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                     <img src="res/trains/Group.png" alt="">
                     <div class="text">Групповые тренировки</div>
                     <div class="button">
-                        <div id="dub-arrow"><img src="res/arrow.png" alt=""></div>
+                        <div id="dub-arrow"><img src="res/arrow.svg" alt=""></div>
                         <p>Подробнее</p>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                     <img src="res/trains/Kids.png" alt="">
                     <div class="text">Детские <br> секции</div>
                     <div class="button">
-                        <div id="dub-arrow"><img src="res/arrow.png" alt=""></div>
+                        <div id="dub-arrow"><img src="res/arrow.svg" alt=""></div>
                         <p>Подробнее</p>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="reviews">
-            <h2 class="text">Вот что о нас думают люди</h2>
+            <p class="text">Вот что о нас думают люди</p>
             <div class="swiper">
                 <div class="swiper-wrapper"></div>
                 <div class="swiper-pagination"></div>
@@ -155,18 +155,34 @@
     <script src="js/burger.js"></script>
     <script src="js/Index.js"></script>
     <script type="module">
-        import {Swiper} from 'https://cdn.jsdelivr.net/npm/swiper@12.1.4/swiper-bundle.min.mjs';
-        const swiper=new Swiper('.swiper',{
-        direction:'horizontal',
-        loop:true,
+    import {Swiper} from 'https://cdn.jsdelivr.net/npm/swiper@12.1.4/swiper-bundle.min.mjs';
+    const swiper=new Swiper('.swiper',{
+    slidesPerView:1,
+    spaceBetween:20,
+    direction:'horizontal',
+    loop:true,
+    
+    navigation:{
+        nextEl:'.swiper-button-next',
+        prevEl:'.swiper-button-prev',
+    },
+    breakpoints:{
+        320:{
         navigation:{
-            nextEl:'.swiper-button-next',
-            prevEl:'.swiper-button-prev',
-        },
-        pagination:{
-            el:'.swiper-pagination',
-            dynamicBullets:true
+            enabled:false
         }
+        },
+        1024:{
+        navigation:{
+            enabled:true
+        }
+
+        }
+    },
+    pagination:{
+        el:'.swiper-pagination',
+        dynamicBullets:true
+    }
     });
     </script>
 </html>

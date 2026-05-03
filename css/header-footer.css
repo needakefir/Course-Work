@@ -17,13 +17,20 @@ body {
 }
 header .text {
   margin: 0;
-  font-size: 36px;
+  font-size: 28px;
   letter-spacing: 5px;
 }
 @media (max-width: 767px) {
   header .logo.text {
     position: absolute;
     z-index: 2;
+    vertical-align: center;
+  }
+  header img {
+    position: absolute;
+    left: 50%;
+    width: 90px;
+    height: 60px;
   }
   header nav .links {
     margin: 0;

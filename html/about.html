@@ -132,8 +132,26 @@
     <script type="module">
         import {Swiper} from 'https://cdn.jsdelivr.net/npm/swiper@12.1.4/swiper-bundle.min.mjs';
         const swiper=new Swiper('.swiper',{
-        slidesPerView:3,
-        spaceBetween:30,
+        breakpoints:{
+            320:{
+                slidesPerView:1,
+                spaceBetween:10,
+                navigation:{
+                    enabled:false
+                }
+            },
+            768:{
+                slidesPerView:2,
+                spaceBetween:20,
+                navigation:{
+                    enabled:true
+                }
+            },
+            1024:{
+                slidesPerView:3,
+                spaceBetween:30
+            }
+        },
         direction:'horizontal',
         loop:true,
         navigation:{
