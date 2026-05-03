@@ -52,7 +52,29 @@ header .text {
     padding: 0;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav .links {
+    display: flex;
+    justify-content: space-between;
+    gap: 3vw;
+  }
+  header nav .links li {
+    list-style: none;
+  }
+  header nav .links li a {
+    font-family: "RussianRail GPro";
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: white;
+  }
+}
+@media (min-width: 1025px) {
   header {
     display: flex;
     justify-content: space-between;
@@ -124,7 +146,7 @@ header .text {
 }
 
 footer {
-  margin-top: 10%;
+  margin-top: 2%;
 }
 @media (max-width: 1024px) {
   footer {

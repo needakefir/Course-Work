@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/about.css">
     <link rel="stylesheet" href="../css/header-footer.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12.1.4/swiper-bundle.min.css">
     <title>О нас</title>
 </head>
 <body>
@@ -80,47 +81,11 @@
         </div>
         <div class="trainers">
             <h1 class="text">Наша команда</h1>
-            <div class="container">
-                <div class="item" id="trainer1">
-                    <div class="main-text-container">
-                        <p class="name">Максим Плотников</p>
-                        <p class="stage">Стаж: 5 лет</p>
-                    </div> 
-                    <button>
-                        Выбрать
-                    </button>
-                    <div class="line"></div>
-                </div>
-                <div class="item" id="trainer2">
-                     <div class="main-text-container">
-                        <p class="name">Екатерина Ярышко</p>
-                        <p class="stage">Стаж: 6 лет</p>
-                    </div> 
-                    <button>
-                        Выбрать
-                    </button>
-                    <div class="line"></div>
-                </div>
-                <div class="item" id="trainer3">
-                     <div class="main-text-container">
-                        <p class="name">Евгений Кузнецов</p>
-                        <p class="stage">Стаж: 8 лет</p>
-                    </div> 
-                    <button>
-                        Выбрать
-                    </button>
-                    <div class="line"></div>
-                </div>
-                <div class="item" id="trainer4">
-                     <div class="main-text-container">
-                        <p class="name">Анна Сайгутина</p>
-                        <p class="stage">Стаж: 3 года</p>
-                    </div> 
-                    <button>
-                        Выбрать
-                    </button>
-                    <div class="line"></div>
-                </div>
+            <div class="swiper">
+                <div class="swiper-wrapper"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
     </main>
@@ -163,5 +128,23 @@
             <h2 id="end">&copy; 2026 HealthFit.All rights are reserved</h2>
     </footer>
     <script src="../js/burger.js"></script>
+    <script src="../js/about.js"></script>
+    <script type="module">
+        import {Swiper} from 'https://cdn.jsdelivr.net/npm/swiper@12.1.4/swiper-bundle.min.mjs';
+        const swiper=new Swiper('.swiper',{
+        slidesPerView:3,
+        spaceBetween:30,
+        direction:'horizontal',
+        loop:true,
+        navigation:{
+            nextEl:'.swiper-button-next',
+            prevEl:'.swiper-button-prev',
+        },
+        pagination:{
+            el:'.swiper-pagination',
+            dynamicBullets:true
+        }
+    });
+    </script>
 </body>
 </html>

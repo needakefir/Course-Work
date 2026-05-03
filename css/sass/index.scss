@@ -3,6 +3,15 @@
         text-align:center;
         @include extensions.text-font();
 }
+:root{
+    --swiper-navigation-sides-offset:-10px !important;
+    --swiper-pagination-right:16px !important;
+    --swiper-pagination-bottom:16px !important;
+    --swiper-pagination-bullet-size:16px !important;
+    --swiper-theme-color:red !important; 
+    --swiper-pagination-bullet-inactive-color:white !important; 
+    --swiper-pagination-bullet-inactive-opacity:0.5 !important; 
+}
 //FIXME: Add support between 480 px and 768 px
 main{
      @media (min-width:1025px)
@@ -261,27 +270,56 @@ main{
     }
     }
     & .reviews{
+        height:70vh;
+        @media (max-width:767px) {
+        & > .text{
+            margin-top:1%;
+            margin-bottom:0%;
+            font-size:2em;
+        }
+    }
+    @media (min-width:768px) {
+        & > .text{
+             margin-top:1%;
+             margin-bottom:0;
+            font-size:4em;
+        }
+    }
+    //TODO: Do a mobile swiper
         & .swiper{
             width:80vw;
-            height:400px;
+            height:500px;
             & .swiper-wrapper{
                 & .swiper-slide{
-                    @include extensions.flex-mixin(center);
+                    @include extensions.flex-mixin(space-evenly);
+                    align-items: center;
                     & .avatar{ 
+
                         & img{
                             width:200px;
                             height:200px;
                         }
                         & .name{
-                    
+                            font-size:2em;
                         }
                         & .stars{ 
-                        
+                            font-size:1.5em;
                         }
                     }
+                    & .review-text{
+                            text-align: center;
+                            width:50%;
+                            font-size:1.2em;
+                    }                           
                 }
             }
+            & .swiper-button-next,& .swiper-button-prev{
+                color:white;
+            }
         }
+         .swiper-pagination-bullet-active{
+                color:white;
+            }
     }
     & .form-offer
     {

@@ -14,7 +14,7 @@
         <div class="burger">
             <span></span>
         </div>
-        <img src="res/logo.svg" alt="">
+        <img src="res/logo.svg" alt=""> 
         <nav>
             <ul class="links">
                 <li class="link"><a href="#">Главная</a></li>
@@ -79,7 +79,7 @@
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-                <div class="swiper-scrollbar"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
         <div class="form-offer">
@@ -163,8 +163,9 @@
             nextEl:'.swiper-button-next',
             prevEl:'.swiper-button-prev',
         },
-        scrollbar:{
-            el:'swiper-scrollbar'
+        pagination:{
+            el:'.swiper-pagination',
+            dynamicBullets:true
         }
     });
     </script>

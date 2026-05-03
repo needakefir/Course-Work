@@ -21,6 +21,16 @@ body {
   color: white;
 }
 
+:root {
+  --swiper-navigation-sides-offset:-10px !important;
+  --swiper-pagination-right:16px !important;
+  --swiper-pagination-bottom:16px !important;
+  --swiper-pagination-bullet-size:16px !important;
+  --swiper-theme-color:red !important;
+  --swiper-pagination-bullet-inactive-color:white !important;
+  --swiper-pagination-bullet-inactive-opacity:0.5 !important;
+}
+
 @media (min-width: 1025px) {
   main .main {
     display: grid;
@@ -215,6 +225,7 @@ main .training .offers-containter .item-offer .button {
     height: 100%;
     background: #FFFFFF;
     top: -100%;
+    left: 0;
     position: absolute;
     display: flex;
     align-items: center;
@@ -296,17 +307,52 @@ main .interier .container {
     height: 45vh;
   }
 }
+main .reviews {
+  height: 70vh;
+}
+@media (max-width: 767px) {
+  main .reviews > .text {
+    margin-top: 1%;
+    margin-bottom: 0%;
+    font-size: 2em;
+  }
+}
+@media (min-width: 768px) {
+  main .reviews > .text {
+    margin-top: 1%;
+    margin-bottom: 0;
+    font-size: 4em;
+  }
+}
 main .reviews .swiper {
   width: 80vw;
-  height: 400px;
+  height: 500px;
 }
 main .reviews .swiper .swiper-wrapper .swiper-slide {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
 main .reviews .swiper .swiper-wrapper .swiper-slide .avatar img {
   width: 200px;
   height: 200px;
+}
+main .reviews .swiper .swiper-wrapper .swiper-slide .avatar .name {
+  font-size: 2em;
+}
+main .reviews .swiper .swiper-wrapper .swiper-slide .avatar .stars {
+  font-size: 1.5em;
+}
+main .reviews .swiper .swiper-wrapper .swiper-slide .review-text {
+  text-align: center;
+  width: 50%;
+  font-size: 1.2em;
+}
+main .reviews .swiper .swiper-button-next, main .reviews .swiper .swiper-button-prev {
+  color: white;
+}
+main .reviews .swiper-pagination-bullet-active {
+  color: white;
 }
 main .form-offer {
   background: url("../../res/back/back3.png");

@@ -26,7 +26,7 @@ async function loadReviews()
 
         name.textContent=review.children.item(1).textContent;
 
-        name.setAttribute('class','text');
+        name.setAttribute('class','text name');
 
         const num=Number(review.children.item(2).textContent);
 
@@ -37,13 +37,13 @@ async function loadReviews()
         if(num-Math.trunc(num)>0)
             stars.innerHTML+='&#11240';
 
-        stars.setAttribute('class','text');
+        stars.setAttribute('class','text stars');
 
         const text=document.createElement('p');
 
         text.textContent=review.children.item(3).textContent;
 
-        text.setAttribute('class','text');
+        text.setAttribute('class','text review-text');
 
         avatar.append(img,name,stars);
 
@@ -85,7 +85,3 @@ buttons.forEach(
         });
     }
 )
-
-
-
-

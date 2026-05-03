@@ -22,20 +22,14 @@ body {
   text-align: center;
 }
 
-#trainer1 {
-  background: linear-gradient(rgba(200, 10, 44, 0) 15%, rgba(200, 10, 44, 0.3) 85%, rgba(200, 10, 44, 0.5) 100%), url(../../res/trainers/trainer1.png);
-}
-
-#trainer2 {
-  background: linear-gradient(rgba(200, 10, 44, 0) 15%, rgba(200, 10, 44, 0.3) 85%, rgba(200, 10, 44, 0.5) 100%), url(../../res/trainers/trainer2.png);
-}
-
-#trainer3 {
-  background: linear-gradient(rgba(200, 10, 44, 0) 15%, rgba(200, 10, 44, 0.3) 85%, rgba(200, 10, 44, 0.5) 100%), url(../../res/trainers/trainer3.png);
-}
-
-#trainer4 {
-  background: linear-gradient(rgba(200, 10, 44, 0) 15%, rgba(200, 10, 44, 0.3) 85%, rgba(200, 10, 44, 0.5) 100%), url(../../res/trainers/trainer4.png);
+:root {
+  --swiper-navigation-sides-offset:-10px !important;
+  --swiper-pagination-right:16px !important;
+  --swiper-pagination-bottom:16px !important;
+  --swiper-pagination-bullet-size:16px !important;
+  --swiper-theme-color:red !important;
+  --swiper-pagination-bullet-inactive-color:white !important;
+  --swiper-pagination-bullet-inactive-opacity:0.5 !important;
 }
 
 #num6 {
@@ -265,7 +259,6 @@ main .trainers {
   background: url("../../res/back/back2.png");
 }
 main .trainers > .text {
-  margin-top: 0;
   color: transparent;
   background-image: linear-gradient(to right, rgb(255, 0, 4) 0%, rgb(255, 128, 130) 63%, rgb(255, 255, 255) 100%);
   -webkit-background-clip: text;
@@ -291,60 +284,62 @@ main .trainers > .text {
     font-size: 2em;
   }
 }
-main .trainers .container {
-  margin: auto;
-  display: flex;
-  justify-content: space-evenly;
+main .trainers .swiper {
+  width: 1000px;
+  height: 600px;
 }
-@media (max-width: 1024px) {
-  main .trainers .container {
-    flex-direction: column;
-    place-items: center;
-  }
-}
-main .trainers .container .item {
+main .trainers .swiper .swiper-wrapper .swiper-slide {
   display: flex;
   justify-content: flex-end;
-  flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
+  overflow: hidden;
   width: 317px;
   height: 400px;
 }
-main .trainers .container .item .main-text-container {
+main .trainers .swiper .swiper-wrapper .swiper-slide .main-text-container {
   width: 80%;
   margin: 0% 10%;
 }
-main .trainers .container .item .main-text-container .name {
+main .trainers .swiper .swiper-wrapper .swiper-slide .main-text-container .name {
   font-family: "RussianRail GPro";
   color: white;
   font-size: 1.2em;
 }
-main .trainers .container .item .main-text-container .stage {
+main .trainers .swiper .swiper-wrapper .swiper-slide .main-text-container .stage {
   font-family: "RussianRail GPro";
   color: white;
   font-size: 1em;
 }
-main .trainers .container .item button {
+main .trainers .swiper .swiper-wrapper .swiper-slide button {
   border-radius: 50px/50px;
-  margin: 5% 10%;
   background-color: red;
+  margin-bottom: 2%;
   border: 0;
   font-family: "RussianRail GPro";
   color: white;
   font-size: 1.5em;
-  padding: 5% 2.5%;
-  visibility: hidden;
+  padding: 5% 10%;
+  position: relative;
+  top: 20%;
 }
-main .trainers .container .item .line {
+main .trainers .swiper .swiper-wrapper .swiper-slide .line {
   width: 80%;
   margin: 0% 10%;
   background-color: red;
   height: 1.25%;
   visibility: hidden;
 }
-main .trainers .container .item:hover button {
+main .trainers .swiper .swiper-wrapper .swiper-slide:hover button {
+  top: 0%;
+  transition: all 0.2s ease-in-out;
+}
+main .trainers .swiper .swiper-wrapper .swiper-slide:hover .line {
   visibility: visible;
 }
-main .trainers .container .item:hover .line {
-  visibility: visible;
+main .trainers .swiper .swiper-button-next, main .trainers .swiper .swiper-button-prev {
+  color: white;
+}
+main .trainers .swiper .swiper-pagination-bullet-active {
+  color: white;
 }/*# sourceMappingURL=about.css.map */

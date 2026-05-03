@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--TODO: End XML version of cards-->
+<trainers>
+    <trainer>
+        <image-link>res/trainers/trainer1.jpg</image-link> 
+        <name>Анна</name>
+        <exp>5</exp>
+    </trainer>
+    <trainer>
+        <image-link>res/trainers/trainer2.jpg</image-link> 
+        <name>Анатолий</name>
+        <exp>5</exp>
+    </trainer>
+    <trainer>
+        <image-link>res/trainers/trainer3.jpg</image-link> 
+        <name>Никита</name>
+        <exp>5</exp>
+    </trainer>
+    <trainer>
+        <image-link>res/trainers/trainer4.jpg</image-link> 
+        <name>Виктория</name>
+        <exp>5</exp>
+    </trainer>
+    <trainer>
+        <image-link>res/trainers/trainer5.jpg</image-link> 
+        <name>Игорь Осипчук</name>
+        <exp>5</exp>
+    </trainer>
+    <trainer>
+        <image-link>res/trainers/trainer6.jpg</image-link> 
+        <name>Карапетян Гор</name>
+        <exp>5</exp>
+    </trainer>
+    <trainer>
+        <image-link>res/trainers/trainer7.jpg</image-link> 
+        <name>Успенская Дарья</name>
+        <exp>5</exp>
+    </trainer>
+    <trainer>
+        <image-link>res/trainers/trainer8.jpg</image-link> 
+        <name>Шлыкова Ольга</name>
+        <exp>5</exp>
+    </trainer>
+    <trainer>
+        <image-link>res/trainers/trainer9.jpg</image-link> 
+        <name>Костючик Василий</name>
+        <exp>5</exp>
+    </trainer>
+    <trainer>
+        <image-link>res/trainers/trainer10.jpg</image-link> 
+        <name>Анатолий</name>
+        <exp>5</exp>
+    </trainer>
+    <trainer>
+        <image-link>res/trainers/trainer11.jpg</image-link> 
+        <name>Никита</name>
+        <exp>5</exp>
+    </trainer>
+    <trainer>
+        <image-link>res/trainers/trainer12.jpg</image-link> 
+        <name>Виктория</name>
+        <exp>5</exp>
+    </trainer>
+</trainers>

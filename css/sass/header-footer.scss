@@ -11,6 +11,7 @@ header{
             position: absolute;
             z-index:2;
         } 
+
         & nav .links{
             margin:0;
             background:linear-gradient(rgba(200,10,44,0.4) 15%,
@@ -38,7 +39,25 @@ header{
                 padding:0;
             }
         }
-    @media(min-width:768px)
+    @media(min-width:768px) and (max-width:1024px)
+    {
+        @include extensions.flex-mixin(space-between);
+        align-items: center;
+        & nav .links{
+            @include extensions.flex-mixin(space-between);
+            gap:3vw;
+            & li{
+                list-style:none;
+                & a{
+                    @include extensions.text-font();
+                    text-decoration: none;
+                    font-size:1.3em;
+                    color:white;
+                }
+            }       
+        }
+    }
+    @media (min-width:1025px)
     {
         @include extensions.flex-mixin(space-between);
         align-items: center;
@@ -56,7 +75,6 @@ header{
             }       
         }
     }
-
     @media(max-width:767px){
         & .burger{
             position: absolute;
@@ -108,7 +126,7 @@ header{
     }
 //FIXME: Add support between 768 px and 1024px
 footer{
-    margin-top:10%;
+    margin-top:2%;
     @media (max-width:1024px)
     {
         display:grid;
