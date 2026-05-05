@@ -281,7 +281,10 @@ main{
     }
     }
     & .reviews{
-        height:70vh;
+        @media(min-width:769px)
+        {
+            height:70vh;
+        }
 	    background: linear-gradient(-45deg,#B40A1B,#FF000046,#460000,#E20338);
 	    background-size: 400% 400%;
 	    animation: gradient 10s ease infinite;
@@ -316,11 +319,7 @@ main{
                 height:40vh;
                 width:80vw;
             }
-            @media(max-width:768px)
-            {
-                height:60vh;
-            }
-            & .swiper-wrapper{
+           & .swiper-wrapper{
                 & .swiper-slide{
                     @include extensions.flex-mixin(flex-start);
                     gap:3%;
@@ -395,7 +394,7 @@ main{
                         cursor:pointer;
                         @media (max-width:768px)
                         {
-                            padding:5% 10%;
+                            padding:4% 8%;
                         }
                         @media (min-width:769px) and (max-width:1024px)
                         {

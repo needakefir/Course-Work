@@ -169,7 +169,7 @@ footer {
   }
 }
 footer > .text {
-  font-size: 2.5em;
+  font-size: 2em;
   letter-spacing: 25%;
 }
 footer .social-networks {
@@ -179,7 +179,7 @@ footer .social-networks {
 }
 @media (min-width: 1025px) {
   footer .social-networks > .text {
-    font-size: 2.3em;
+    font-size: 2.1em;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -221,12 +221,27 @@ footer .social-networks .social-network .name {
 }
 @media (max-width: 480px) {
   footer .social-networks .social-network .name {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 }
-@media (min-width: 481px) {
+@media (min-width: 481px) and (max-width: 768px) {
   footer .social-networks .social-network .name {
-    font-size: 1.9em;
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  footer .social-networks .social-network .name {
+    font-size: 1.4em;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  footer .social-networks .social-network .name {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 1281px) {
+  footer .social-networks .social-network .name {
+    font-size: 2em;
   }
 }
 footer .contact-information {
@@ -240,7 +255,7 @@ footer .contact-information > .text {
 }
 @media (min-width: 1025px) {
   footer .contact-information > .text {
-    font-size: 2.3em;
+    font-size: 2.1em;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -294,7 +309,12 @@ footer .contact-information .contact .text {
     font-size: 1.3em;
   }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1025px) and (max-width: 1280px) {
+  footer .contact-information .contact .text {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 1281px) {
   footer .contact-information .contact .text {
     font-size: 2em;
   }

@@ -317,8 +317,12 @@ main .interier .container {
     height: 45vh;
   }
 }
+@media (min-width: 769px) {
+  main .reviews {
+    height: 70vh;
+  }
+}
 main .reviews {
-  height: 70vh;
   background: linear-gradient(-45deg, #B40A1B, rgba(255, 0, 0, 0.2745098039), #460000, #E20338);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
@@ -357,11 +361,6 @@ main .reviews > .text {
   main .reviews .swiper {
     height: 40vh;
     width: 80vw;
-  }
-}
-@media (max-width: 768px) {
-  main .reviews .swiper {
-    height: 60vh;
   }
 }
 main .reviews .swiper .swiper-wrapper .swiper-slide {
@@ -455,7 +454,7 @@ main .reviews .swiper .swiper-wrapper .swiper-slide button {
 }
 @media (max-width: 768px) {
   main .reviews .swiper .swiper-wrapper .swiper-slide button {
-    padding: 5% 10%;
+    padding: 4% 8%;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {

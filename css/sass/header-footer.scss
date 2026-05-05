@@ -146,7 +146,7 @@ footer{
         grid-template-columns: 1fr 1.5fr 1.5fr;
     }
      & > .text{
-        font-size:2.5em;
+        font-size:2em;
         letter-spacing: 25%;
     }
     & .social-networks{
@@ -155,7 +155,7 @@ footer{
         & > .text {
         @media (min-width:1025px)
         {
-            font-size:2.3em;
+            font-size:2.1em;
         }
         @media (min-width:769px) and (max-width:1024px)
         {
@@ -189,12 +189,24 @@ footer{
             margin:0;
                 @media (max-width:480px)
                 {
-                    font-size:1.1em;
+                    font-size:1em;
 
                 }
-                @media (min-width:481px)
+                @media (min-width:481px) and (max-width:768px)
                 {
-                    font-size:1.9em;
+                    font-size:1.2em;
+                }
+                @media (min-width:769px) and (max-width:1024px)
+                {
+                    font-size:1.4em;
+                }
+                @media (min-width:1025px) and (max-width:1280px)
+                {
+                    font-size:1.5em;
+                }
+                @media (min-width:1281px)
+                {
+                    font-size:2em;
                 }
             }
         }
@@ -207,7 +219,7 @@ footer{
             letter-spacing: 5%;
         @media (min-width:1025px)
         {
-            font-size:2.3em;
+            font-size:2.1em;
         }
         @media (min-width:769px) and (max-width:1024px)
         {
@@ -250,10 +262,15 @@ footer{
                 {
                     font-size:1.3em;
                 }
-                @media (min-width:1025px)
+                @media (min-width:1025px) and (max-width:1280px)
+                {
+                    font-size:1.5em;
+                }
+                @media (min-width:1281px)
                 {
                     font-size:2em;
                 }
+
            }
         }
         & #address{
