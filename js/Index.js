@@ -9,7 +9,6 @@ async function loadReviews()
     reviews.forEach(
         (review)=>{
         const wrapper_item=document.createElement('div');
-
         wrapper_item.setAttribute('class','swiper-slide');
 
         const avatar=document.createElement('div'); 
@@ -45,7 +44,7 @@ async function loadReviews()
 
         text.setAttribute('class','text review-text');
 
-        text.setAttribute('style','height:200px;');
+        text.setAttribute('style','height:150px;');
 
         const button=document.createElement('button');
 

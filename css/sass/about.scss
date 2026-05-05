@@ -64,7 +64,7 @@ main{
         }
         & .advantages-list{
             @include extensions.flex-mixin(space-evenly);
-            @media(max-width:768px)
+            @media(max-width:1024px)
             {
                 flex-direction: column;
             }
@@ -79,7 +79,7 @@ main{
                 }
                 @media(max-width:1280px) and (min-width:769px)
                 {
-                    font-size:1.9em;
+                    font-size:1.5em;
                 }
                 @media(max-width:768px) and (min-width:481px)
                 {

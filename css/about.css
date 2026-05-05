@@ -97,7 +97,7 @@ main .main .advantages-list {
   display: flex;
   justify-content: space-evenly;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   main .main .advantages-list {
     flex-direction: column;
   }
@@ -115,7 +115,7 @@ main .main .advantages-list .advantage-item {
 }
 @media (max-width: 1280px) and (min-width: 769px) {
   main .main .advantages-list .advantage-item {
-    font-size: 1.9em;
+    font-size: 1.5em;
   }
 }
 @media (max-width: 768px) and (min-width: 481px) {
@@ -261,8 +261,7 @@ main .trainers {
 main .trainers > .text {
   color: transparent;
   background-image: linear-gradient(to right, rgb(255, 0, 4) 0%, rgb(255, 128, 130) 63%, rgb(255, 255, 255) 100%);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
 }
 @media (min-width: 1281px) {
   main .trainers > .text {
@@ -342,4 +341,6 @@ main .trainers .swiper .swiper-button-next, main .trainers .swiper .swiper-butto
 }
 main .trainers .swiper .swiper-pagination-bullet-active {
   color: white;
-}/*# sourceMappingURL=about.css.map */
+}
+
+/*# sourceMappingURL=about.css.map */

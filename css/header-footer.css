@@ -20,7 +20,7 @@ header .text {
   font-size: 28px;
   letter-spacing: 5px;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   header .logo.text {
     position: absolute;
     z-index: 2;
@@ -59,7 +59,7 @@ header .text {
     padding: 0;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   header {
     display: flex;
     justify-content: space-between;
@@ -77,7 +77,7 @@ header .text {
     font-family: "RussianRail GPro";
     color: white;
     text-decoration: none;
-    font-size: 1.3em;
+    font-size: 1.1em;
     color: white;
   }
 }
@@ -103,7 +103,7 @@ header .text {
     color: white;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   header .burger {
     position: absolute;
     right: 10px;
@@ -221,7 +221,7 @@ footer .social-networks .social-network .name {
 }
 @media (max-width: 480px) {
   footer .social-networks .social-network .name {
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
 }
 @media (min-width: 481px) {
@@ -312,4 +312,6 @@ footer #end {
   font-size: 1.5em;
   color: rgba(255, 255, 255, 0.5);
   font-family: "RussianRail GPro";
-}/*# sourceMappingURL=header-footer.css.map */
+}
+
+/*# sourceMappingURL=header-footer.css.map */

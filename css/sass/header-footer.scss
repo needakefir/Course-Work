@@ -5,7 +5,7 @@ header{
             font-size:28px;
             letter-spacing: 5px;
         }
-        @media (max-width:767px)
+        @media (max-width:768px)
         {
         & .logo.text{
             position: absolute;
@@ -46,7 +46,7 @@ header{
                 padding:0;
             }
         }
-    @media(min-width:768px) and (max-width:1024px)
+    @media(min-width:769px) and (max-width:1024px)
     {
         @include extensions.flex-mixin(space-between);
         align-items: center;
@@ -58,7 +58,7 @@ header{
                 & a{
                     @include extensions.text-font();
                     text-decoration: none;
-                    font-size:1.3em;
+                    font-size:1.1em;
                     color:white;
                 }
             }       
@@ -82,7 +82,7 @@ header{
             }       
         }
     }
-    @media(max-width:767px){
+    @media(max-width:768px){
         & .burger{
             position: absolute;
             right: 10px;
@@ -152,7 +152,7 @@ footer{
     & .social-networks{
         @include extensions.flex-mixin(space-around);
         flex-direction:column;
-        & >.text {
+        & > .text {
         @media (min-width:1025px)
         {
             font-size:2.3em;
@@ -189,7 +189,7 @@ footer{
             margin:0;
                 @media (max-width:480px)
                 {
-                    font-size:1.3em;
+                    font-size:1.1em;
 
                 }
                 @media (min-width:481px)

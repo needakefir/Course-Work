@@ -141,13 +141,13 @@ main .training {
   display: flex;
   justify-content: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main .training > .text {
     margin: 5% 0%;
     font-size: 2em;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   main .training > .text {
     margin: 5% 0%;
     font-size: 4em;
@@ -165,12 +165,12 @@ main .training .offers-containter .item-offer {
   display: flex;
   justify-content: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main .training .offers-containter .item-offer {
     width: 250px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   main .training .offers-containter .item-offer {
     flex: 0 0 320px;
   }
@@ -185,28 +185,28 @@ main .training .offers-containter .item-offer {
 main .training .offers-containter .item-offer img {
   border-radius: 25px;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main .training .offers-containter .item-offer img {
     margin-top: 10%;
     width: 210px;
     height: 140px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   main .training .offers-containter .item-offer img {
     margin: 5% 10% 0% 10%;
     width: 270px;
     height: 180px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main .training .offers-containter .item-offer .text {
     font-family: "RussianRail GPro";
     color: white;
     font-size: 1.5em;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   main .training .offers-containter .item-offer .text {
     font-family: "RussianRail GPro";
     color: white;
@@ -250,12 +250,12 @@ main .training .offers-containter .item-offer .button p {
   font-family: "RussianRail GPro";
   color: white;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main .training .offers-containter .item-offer .button p {
     font-size: 1em;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   main .training .offers-containter .item-offer .button p {
     font-size: 1.5em;
   }
@@ -277,13 +277,13 @@ main .interier {
   padding: 5% 0;
   background-color: rgba(77, 70, 70, 0.2);
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main .interier > .text {
     margin: 0% 0% 5% 0%;
     font-size: 2em;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   main .interier > .text {
     margin: 0% 0% 5% 0%;
     font-size: 4em;
@@ -296,14 +296,21 @@ main .interier .container {
   align-items: center;
   gap: 5vh;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main .interier .container .item {
     border-radius: 5%;
-    width: 80%;
+    width: 100%;
     height: 40vh;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .interier .container .item {
+    border-radius: 5%;
+    width: 90%;
+    height: 45vh;
+  }
+}
+@media (min-width: 1025px) {
   main .interier .container .item {
     border-radius: 5%;
     width: 40%;
@@ -420,15 +427,19 @@ main .reviews .swiper .swiper-wrapper .swiper-slide .review-text {
   text-align: center;
   width: 70%;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   main .reviews .swiper .swiper-wrapper .swiper-slide .review-text {
-    font-size: 1em;
     overflow: hidden;
     white-space: collapse;
     text-overflow: ellipsis;
   }
 }
-@media (min-width: 769px) {
+@media (max-width: 1024px) and (min-width: 769px) {
+  main .reviews .swiper .swiper-wrapper .swiper-slide .review-text {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 1025px) {
   main .reviews .swiper .swiper-wrapper .swiper-slide .review-text {
     font-size: 1.2em;
   }
@@ -442,12 +453,17 @@ main .reviews .swiper .swiper-wrapper .swiper-slide button {
   background-color: rgba(220, 20, 60, 0.7);
   cursor: pointer;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   main .reviews .swiper .swiper-wrapper .swiper-slide button {
     padding: 5% 10%;
   }
 }
-@media (min-width: 481px) {
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .reviews .swiper .swiper-wrapper .swiper-slide button {
+    padding: 3% 7%;
+  }
+}
+@media (min-width: 1025px) {
   main .reviews .swiper .swiper-wrapper .swiper-slide button {
     display: none;
   }
@@ -470,7 +486,7 @@ main .form-offer {
 main .form-offer {
   place-items: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   main .form-offer .offer-texts {
     display: flex;
     justify-content: center;
@@ -480,7 +496,7 @@ main .form-offer {
     font-size: 2em;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main .form-offer .offer-texts {
     display: none;
   }
@@ -562,4 +578,6 @@ main .form-offer .offer-form button {
   main .form-offer .offer-form button:hover:before {
     left: 95%;
   }
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -115,13 +115,13 @@ main{
  & .training{
     background: url("../../res/back/Back1.png");
     @include extensions.flex-mixin(center);
-    @media (max-width:767px) {
+    @media (max-width:768px) {
         & > .text{
             margin:5% 0%;
             font-size:2em;
         }
     }
-    @media (min-width:768px) {
+    @media (min-width:769px) {
         & > .text{
             margin:5% 0%;
             font-size:4em;
@@ -134,10 +134,10 @@ main{
         & .item-offer
         {
             @include extensions.flex-mixin(center);
-            @media (max-width:767px){
+            @media (max-width:768px){
                 width:250px;
             }
-            @media (min-width:768px){
+            @media (min-width:769px){
                 flex:0 0 320px;
             }
             flex-direction: column;
@@ -147,26 +147,26 @@ main{
             border-radius: 50px;
             & img{
                 border-radius: 25px;
-                @media (max-width:767px)
+                @media (max-width:768px)
                 {
                     margin-top:10%;
                     width:210px;
                     height:140px;
                 }
-                @media(min-width:768px)
+                @media(min-width:769px)
                 {
                     margin:5% 10% 0% 10%;
                     width:270px;
                     height:180px;
                 }
             }
-            @media (max-width:767px){
+            @media (max-width:768px){
                 & .text{
                     @include extensions.text-font();
                     font-size:1.5em;
                 }
             }
-            @media (min-width:768px){
+            @media (min-width:769px){
                 & .text{
                     @include extensions.text-font();
                     font-size:1.9em;
@@ -206,11 +206,11 @@ main{
             & p {
                 margin:0;
                 @include extensions.text-font();
-                @media (max-width:767px)
+                @media (max-width:768px)
                 {
                     font-size:1em;
                 }
-                @media (min-width:768px)
+                @media (min-width:769px)
                 {
                     font-size:1.5em;
                 }
@@ -235,14 +235,14 @@ main{
     & .interier{
     padding:5% 0;
     background-color:rgba(77,70,70,0.2);
-    @media (max-width:767px)
+    @media (max-width:768px)
     {
         & > .text{
             margin:0% 0% 5% 0%;
             font-size:2em;
         }
     }
-    @media (min-width:768px)
+    @media (min-width:769px)
     {
         & >.text{   
             margin:0% 0% 5% 0%;
@@ -254,15 +254,23 @@ main{
         flex-wrap: wrap;
         align-items: center;
         gap:5vh;
-        @media (max-width:767px)
+        @media (max-width:768px)
         {
             & .item{
                 border-radius:5%;
-                width:80%;
+                width:100%;
                 height:40vh;
             }
         }
-        @media (min-width:768px)
+        @media (min-width:769px) and (max-width:1024px)
+        {
+            & .item{
+                border-radius:5%;
+                width:90%;
+                height:45vh;
+            }
+        }
+        @media (min-width:1025px)
         {
             & .item{
                 border-radius:5%;
@@ -359,37 +367,44 @@ main{
                         }
                     }
                     & .review-text{
-                            margin:0;
-                            font-family: "NT Comic";
-                            text-align: center;
-                            width:70%;
-                            @media(max-width:768px)
-                            {
-                                font-size:1em;
-                                overflow:hidden;
-                                white-space: collapse;
-                                text-overflow: ellipsis;
-                            }
-                            @media(min-width:769px)
-                            {
-                                font-size:1.2em;
-                            }
+                    margin:0;
+                    font-family: "NT Comic";
+                    text-align: center;
+                    width:70%;
+                    @media(max-width:1024px)
+                    {
+                        @media (min-width:769px)
+                        {
+                            font-size:1.5em;
+                        }
+                        overflow:hidden;
+                        white-space: collapse;
+                        text-overflow: ellipsis;
+                    }
+                    @media(min-width:1025px)
+                    {
+                        font-size:1.2em;
+                    }
                     }  
-                        & button{
-                            border:0px;
-                            @include extensions.text-font();
-                            font-size:1em;
-                            border-radius: 25px/25px;
-                            background-color: rgba(220,20,60,0.7);
-                            cursor:pointer;
-                            @media(max-width:480px)
-                            {
-                                padding:5% 10%;
-                            }
-                            @media (min-width:481px)
-                            {
-                                display:none;
-                            }
+                    & button{
+                        border:0px;
+                        @include extensions.text-font();
+                        font-size:1em;
+                        border-radius: 25px/25px;
+                        background-color: rgba(220,20,60,0.7);
+                        cursor:pointer;
+                        @media (max-width:768px)
+                        {
+                            padding:5% 10%;
+                        }
+                        @media (min-width:769px) and (max-width:1024px)
+                        {
+                            padding:3% 7%;
+                        }
+                        @media (min-width:1025px)
+                        {
+                            display:none;
+                        }
                     }                     
                 }
             }
@@ -411,7 +426,7 @@ main{
         }
         place-items: center;
         & .offer-texts{
-        @media (min-width:768px)
+        @media (min-width:769px)
         {
             @include extensions.flex-mixin(center);
             flex-direction: column; 
@@ -419,7 +434,7 @@ main{
                 font-size:2em;
             }
         }
-        @media (max-width:767px)
+        @media (max-width:768px)
         {
             display:none;
         }
