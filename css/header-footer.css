@@ -1,26 +1,26 @@
-.red {
-  color: red;
+body {
+  background-color: black;
 }
-
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   body {
     margin: 0;
   }
-}
-body {
-  background-color: black;
 }
 
 @font-face {
   font-family: "RussianRail GPro";
   src: url("../fonts/RussianRail_G_Pro_Regular_0.otf") format(opentype);
 }
+.red {
+  color: red;
+}
+
 header .text {
   margin: 0;
   font-size: 28px;
   letter-spacing: 5px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   header .logo.text {
     position: absolute;
     z-index: 2;
@@ -32,6 +32,13 @@ header .text {
     width: 90px;
     height: 60px;
   }
+}
+@media (max-width: 1024px) and (max-width: 768px) {
+  header img {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
   header nav .links {
     margin: 0;
     background: linear-gradient(rgba(200, 10, 44, 0.4) 15%, rgba(200, 10, 44, 0.2) 45%, rgba(200, 10, 44, 0) 100%);
@@ -59,28 +66,6 @@ header .text {
     padding: 0;
   }
 }
-@media (min-width: 769px) and (max-width: 1024px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  header nav .links {
-    display: flex;
-    justify-content: space-between;
-    gap: 3vw;
-  }
-  header nav .links li {
-    list-style: none;
-  }
-  header nav .links li a {
-    font-family: "RussianRail GPro";
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-    color: white;
-  }
-}
 @media (min-width: 1025px) {
   header {
     display: flex;
@@ -103,7 +88,7 @@ header .text {
     color: white;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   header .burger {
     position: absolute;
     right: 10px;
@@ -332,6 +317,4 @@ footer #end {
   font-size: 1.5em;
   color: rgba(255, 255, 255, 0.5);
   font-family: "RussianRail GPro";
-}
-
-/*# sourceMappingURL=header-footer.css.map */
+}/*# sourceMappingURL=header-footer.css.map */

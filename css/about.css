@@ -1,15 +1,11 @@
 @charset "UTF-8";
-.red {
-  color: red;
+body {
+  background-color: black;
 }
-
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   body {
     margin: 0;
   }
-}
-body {
-  background-color: black;
 }
 
 @font-face {
@@ -146,7 +142,6 @@ main .about .why-text {
   margin: 0%;
   font-family: "RussianRail GPro";
   color: white;
-  text-align: center;
 }
 @media (min-width: 1281px) {
   main .about .why-text {
@@ -201,7 +196,6 @@ main .about .container {
 main .about .container .item-card {
   border-bottom: 10px solid red;
   display: flex;
-  justify-content: start;
   flex-direction: column;
 }
 @media (max-width: 768px) {
@@ -261,7 +255,8 @@ main .trainers {
 main .trainers > .text {
   color: transparent;
   background-image: linear-gradient(to right, rgb(255, 0, 4) 0%, rgb(255, 128, 130) 63%, rgb(255, 255, 255) 100%);
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 @media (min-width: 1281px) {
   main .trainers > .text {
@@ -336,11 +331,6 @@ main .trainers .swiper .swiper-wrapper .swiper-slide:hover button {
 main .trainers .swiper .swiper-wrapper .swiper-slide:hover .line {
   visibility: visible;
 }
-main .trainers .swiper .swiper-button-next, main .trainers .swiper .swiper-button-prev {
+main .trainers .swiper .swiper-button-next, main .trainers .swiper .swiper-button-prev, main .trainers .swiper .swiper-pagination-bullet-active {
   color: white;
-}
-main .trainers .swiper .swiper-pagination-bullet-active {
-  color: white;
-}
-
-/*# sourceMappingURL=about.css.map */
+}/*# sourceMappingURL=about.css.map */

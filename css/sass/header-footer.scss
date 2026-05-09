@@ -1,11 +1,14 @@
 @use './extensions';
+.red{
+    color:red;
+}
 header{
         & .text{
             margin:0;
             font-size:28px;
             letter-spacing: 5px;
         }
-        @media (max-width:768px)
+        @media (max-width:1024px)
         {
         & .logo.text{
             position: absolute;
@@ -14,6 +17,10 @@ header{
         } 
 
         & img{
+            @media(max-width:768px)
+            {
+                display:none;
+            }
             position:absolute;
             left:50%;
             width:90px;
@@ -46,24 +53,6 @@ header{
                 padding:0;
             }
         }
-    @media(min-width:769px) and (max-width:1024px)
-    {
-        @include extensions.flex-mixin(space-between);
-        align-items: center;
-        & nav .links{
-            @include extensions.flex-mixin(space-between);
-            gap:3vw;
-            & li{
-                list-style:none;
-                & a{
-                    @include extensions.text-font();
-                    text-decoration: none;
-                    font-size:1.1em;
-                    color:white;
-                }
-            }       
-        }
-    }
     @media (min-width:1025px)
     {
         @include extensions.flex-mixin(space-between);
@@ -82,7 +71,7 @@ header{
             }       
         }
     }
-    @media(max-width:768px){
+    @media(max-width:1024px){
         & .burger{
             position: absolute;
             right: 10px;

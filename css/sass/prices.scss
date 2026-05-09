@@ -6,12 +6,20 @@
 main{
     & .prices
     {
+        @media (max-width:1024px)
+        {
+            padding-top:15%;
+        }
         background:url("../../res/back/Prices.png");
         & .head{
+            margin:0;
             @include extensions.text-font();
             text-align:center;
+           @media (max-width:1024px)
+           {
+             margin-bottom:5%;
+           }
             font-size:4em;
-            margin-bottom:5%;
         }
         & .after-head{
             @include extensions.text-font();

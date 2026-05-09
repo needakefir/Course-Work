@@ -107,7 +107,6 @@ main{
         & .why-text{
             margin:0%;
             @include extensions.text-font();
-            text-align:center;
             @media(min-width:1281px)
             {
                 font-size:5em;
@@ -153,7 +152,7 @@ main{
                 }
             
                 border-bottom:10px solid red;
-                @include extensions.flex-mixin(start);
+                display:flex;
                 flex-direction: column;
                 @media (max-width:768px)
                 {
@@ -275,10 +274,7 @@ main{
                 }
             }
         }
-            & .swiper-button-next,& .swiper-button-prev{
-                color:white;
-            }
-            .swiper-pagination-bullet-active{
+            & .swiper-button-next,& .swiper-button-prev,.swiper-pagination-bullet-active{
                 color:white;
             }
         }
