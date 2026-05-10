@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--TODO: End XML version of cards-->
 <trainers>
     <trainer>
         <image-link>res/trainers/trainer1.jpg</image-link> 

@@ -61,7 +61,16 @@ main .main {
   flex-direction: column;
   height: 100vh;
   width: 100%;
+}
+@media (max-width: 1024px) {
+  main .main {
+    padding-top: 60px;
+  }
+}
+main .main {
   background: url("../../res/back/Header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 main .main .main-text {
   margin-top: 0;
@@ -69,12 +78,12 @@ main .main .main-text {
   color: white;
   text-align: center;
 }
-@media (min-width: 1280px) {
+@media (min-width: 1281px) {
   main .main .main-text {
-    font-size: 5.5em;
+    font-size: 4.5em;
   }
 }
-@media (min-width: 769px) and (max-width: 1279px) {
+@media (min-width: 769px) and (max-width: 1280px) {
   main .main .main-text {
     font-size: 4em;
   }
@@ -106,17 +115,23 @@ main .main .advantages-list .advantage-item {
 }
 @media (min-width: 1281px) {
   main .main .advantages-list .advantage-item {
-    font-size: 3em;
+    font-size: 2.7em;
   }
 }
-@media (max-width: 1280px) and (min-width: 769px) {
+@media (min-width: 1025px) and (max-width: 1280px) {
   main .main .advantages-list .advantage-item {
-    font-size: 1.5em;
+    font-size: 2.3em;
+  }
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+  main .main .advantages-list .advantage-item {
+    font-size: 2em;
+    margin-bottom: 10%;
   }
 }
 @media (max-width: 768px) and (min-width: 481px) {
   main .main .advantages-list .advantage-item {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 25%;
   }
 }
@@ -129,7 +144,7 @@ main .main .advantages-list .advantage-item {
 main .main .advantages-list .advantage-item:before {
   content: "✔ ";
 }
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
   main .about {
     height: 100vh;
   }
@@ -140,8 +155,6 @@ main .about {
 }
 main .about .why-text {
   margin: 0%;
-  font-family: "RussianRail GPro";
-  color: white;
 }
 @media (min-width: 1281px) {
   main .about .why-text {
@@ -175,9 +188,20 @@ main .about .container {
     flex-direction: column;
   }
 }
-@media (min-width: 769px) {
+main .about .container .item-card {
+  border-bottom: 10px solid red;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1025px) {
   main .about .container .item-card {
     width: 25vw;
+    height: 33vh;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .about .container .item-card {
+    width: 40vw;
     height: 33vh;
   }
 }
@@ -193,12 +217,7 @@ main .about .container {
     height: 30vh;
   }
 }
-main .about .container .item-card {
-  border-bottom: 10px solid red;
-  display: flex;
-  flex-direction: column;
-}
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   main .about .container .item-card {
     margin-bottom: 10%;
   }
@@ -218,27 +237,32 @@ main .about .container .item-card .main-text .head {
   font-family: "RussianRail GPro";
   color: white;
 }
-@media (min-width: 769px) {
+@media (min-width: 1281px) {
   main .about .container .item-card .main-text .head {
-    font-size: 2em;
+    font-size: 1.7em;
+  }
+}
+@media (min-width: 769px) and (max-width: 1280px) {
+  main .about .container .item-card .main-text .head {
+    font-size: 1.4em;
   }
 }
 @media (max-width: 768px) {
   main .about .container .item-card .main-text .head {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 }
 main .about .container .item-card .main-text .text {
   text-align: left;
 }
-@media (min-width: 769px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   main .about .container .item-card .main-text .text {
     font-size: 1.2em;
   }
 }
 @media (max-width: 768px) {
   main .about .container .item-card .main-text .text {
-    font-size: 0.9em;
+    font-size: 1.1em;
   }
 }
 main .trainers {
@@ -288,7 +312,7 @@ main .trainers .swiper .swiper-wrapper .swiper-slide {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  width: 317px;
+  width: 320px !important;
   height: 400px;
 }
 main .trainers .swiper .swiper-wrapper .swiper-slide .main-text-container {

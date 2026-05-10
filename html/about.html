@@ -28,13 +28,13 @@
         <div class="main">
             <h1 class="main-text">Мы предоставляем клиентам<br> самое лучшее!</h1>
             <div class="advantages-list">
-                <div class="advantage-item">Приятные цены</div>
-                <div class="advantage-item">Квалифицированные тренера</div>
-                <div class="advantage-item">Чистые помещения</div>
+                <div class="advantage-item">Приятные<br> цены</div>
+                <div class="advantage-item">Квалифицированные <br> тренера</div>
+                <div class="advantage-item">Чистые<br> помещения</div>
             </div>
         </div>
         <div class="about">
-            <h1 class="why-text">Что мы вам предлагаем</h1>
+            <h1 class="why-text text">Что мы вам предлагаем</h1>
             <div class="container">
                 <div class="item-card" id="num1">
                     <div class="num">#1</div>
@@ -115,7 +115,7 @@
                 </p>
                 <div class="contact">
                     <img src="../res/svg/map.svg" alt="">
-                    <p class="text">г.Минск,ул.Белорусская,д.21</p>
+                    <p class="text" id="address">г.Минск,ул.Белорусская,д.21</p>
                 </div>
                 <div class="contact">
                     <img src="../res/svg/phone.svg" id="phone" alt="">
@@ -133,28 +133,27 @@
     <script type="module">
         import {Swiper} from 'https://cdn.jsdelivr.net/npm/swiper@12.1.4/swiper-bundle.min.mjs';
         const swiper=new Swiper('.swiper',{
+        slidesPerView:"auto",
         breakpoints:{
             320:{
-                slidesPerView:1,
                 spaceBetween:10,
                 navigation:{
-                    enabled:false
-                }
+                    enabled:false,
+                },
             },
             768:{
-                slidesPerView:2,
                 spaceBetween:20,
                 navigation:{
-                    enabled:true
-                }
+                    enabled:true,
+                },
+                
             },
             1024:{
-                slidesPerView:3,
-                spaceBetween:30
+                spaceBetween:30,
             }
         },
         direction:'horizontal',
-        loop:true,
+        freeMode:true,
         navigation:{
             nextEl:'.swiper-button-next',
             prevEl:'.swiper-button-prev',

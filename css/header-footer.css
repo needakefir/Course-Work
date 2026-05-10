@@ -24,7 +24,8 @@ header .text {
   header .logo.text {
     position: absolute;
     z-index: 2;
-    vertical-align: center;
+    top: 10px;
+    font-size: 2em;
   }
   header img {
     position: absolute;
@@ -46,6 +47,8 @@ header .text {
     position: relative;
     list-style-type: none;
     display: none;
+    right: -100%;
+    transition: right 0.25s ease-in;
   }
   header nav .links .link {
     text-align: center;
@@ -64,31 +67,8 @@ header .text {
     width: 100%;
     height: 100vh;
     padding: 0;
+    right: 0;
   }
-}
-@media (min-width: 1025px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  header nav .links {
-    display: flex;
-    justify-content: space-between;
-    gap: 5vw;
-  }
-  header nav .links li {
-    list-style: none;
-  }
-  header nav .links li a {
-    font-family: "RussianRail GPro";
-    color: white;
-    text-decoration: none;
-    font-size: 1.3em;
-    color: white;
-  }
-}
-@media (max-width: 1024px) {
   header .burger {
     position: absolute;
     right: 10px;
@@ -136,6 +116,28 @@ header .text {
     background: rgba(255, 255, 255, 0);
   }
 }
+@media (min-width: 1025px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav .links {
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+  }
+  header nav .links li {
+    list-style: none;
+  }
+  header nav .links li a {
+    font-family: "RussianRail GPro";
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: white;
+  }
+}
 
 footer {
   margin-top: 2%;
@@ -153,8 +155,27 @@ footer {
     grid-template-columns: 1fr 1.5fr 1.5fr;
   }
 }
+@media (max-width: 480px) {
+  footer > .text {
+    font-size: 2em;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  footer > .text {
+    font-size: 2.5em;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  footer > .text {
+    font-size: 3em;
+  }
+}
+@media (min-width: 1025px) {
+  footer > .text {
+    font-size: 2.5em;
+  }
+}
 footer > .text {
-  font-size: 2em;
   letter-spacing: 25%;
 }
 footer .social-networks {
@@ -169,7 +190,7 @@ footer .social-networks {
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   footer .social-networks > .text {
-    font-size: 1.8em;
+    font-size: 2.9em;
   }
 }
 @media (max-width: 768px) {
@@ -206,17 +227,17 @@ footer .social-networks .social-network .name {
 }
 @media (max-width: 480px) {
   footer .social-networks .social-network .name {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
   footer .social-networks .social-network .name {
-    font-size: 1.2em;
+    font-size: 2.5em;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   footer .social-networks .social-network .name {
-    font-size: 1.4em;
+    font-size: 2.5em;
   }
 }
 @media (min-width: 1025px) and (max-width: 1280px) {
@@ -245,7 +266,7 @@ footer .contact-information > .text {
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   footer .contact-information > .text {
-    font-size: 1.8em;
+    font-size: 2.8em;
   }
 }
 @media (max-width: 768px) {
@@ -291,7 +312,7 @@ footer .contact-information .contact .text {
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   footer .contact-information .contact .text {
-    font-size: 1.3em;
+    font-size: 2em;
   }
 }
 @media (min-width: 1025px) and (max-width: 1280px) {
@@ -304,8 +325,10 @@ footer .contact-information .contact .text {
     font-size: 2em;
   }
 }
-footer .contact-information #address {
-  font-size: 0.8em;
+@media (max-width: 480px) {
+  footer .contact-information #address {
+    font-size: 0.9em;
+  }
 }
 @media (min-width: 1025px) {
   footer #end {

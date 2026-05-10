@@ -40,16 +40,22 @@ main{
         flex-direction: column;
         height:100vh;
         width:100%;
+        @media (max-width:1024px)
+        {
+            padding-top:60px;
+        }
         background:url("../../res/back/Header.png");
+        background-repeat:no-repeat;    
+        background-size:cover;
         & .main-text{
             margin-top:0;
             @include extensions.text-font();
             text-align:center;
-            @media (min-width:1280px)
+            @media (min-width:1281px)
             {
-                font-size:5.5em;
+                font-size:4.5em;
             }
-            @media (min-width:769px) and (max-width:1279px)
+            @media (min-width:769px) and (max-width:1280px)
             {
                 font-size:4em;
             }
@@ -75,15 +81,20 @@ main{
                 letter-spacing: 3%;
                 @media(min-width:1281px)
                 {
-                    font-size:3em;
+                    font-size:2.7em;
                 }
-                @media(max-width:1280px) and (min-width:769px)
+                @media (min-width:1025px) and (max-width:1280px)
                 {
-                    font-size:1.5em;
+                    font-size:2.3em;
+                }
+                @media(max-width:1024px) and (min-width:769px)
+                {
+                    font-size:2em;
+                    margin-bottom:10%;
                 }
                 @media(max-width:768px) and (min-width:481px)
                 {
-                    font-size:2em;
+                    font-size:2.5em;
                     margin-bottom:25%;   
                 }
                 @media(max-width:480px)
@@ -98,7 +109,7 @@ main{
         }
     }
     & .about{
-        @media(min-width:769px)
+        @media(min-width:1025px)
         {
             height:100vh;
         }
@@ -106,7 +117,6 @@ main{
         background:url("../../res/interier/interier4.jpg");
         & .why-text{
             margin:0%;
-            @include extensions.text-font();
             @media(min-width:1281px)
             {
                 font-size:5em;
@@ -126,7 +136,7 @@ main{
         }
         & .container
         {
-            margin-top:5%;
+            margin-top:5%;  
             @include extensions.flex-mixin(space-evenly);
             flex-wrap:wrap;
             place-items: center;
@@ -135,9 +145,17 @@ main{
             flex-direction: column;
             }
             & .item-card{
-                @media(min-width:769px)
+                border-bottom:10px solid red;
+                display:flex;
+                flex-direction: column;
+                @media (min-width:1025px)
                 {
                     width:25vw;
+                    height:33vh;
+                }
+                @media(min-width:769px) and (max-width:1024px)
+                {
+                    width:40vw;
                     height:33vh;
                 }
                 @media(max-width:768px) and (min-width:481px)
@@ -150,11 +168,7 @@ main{
                     width:80vw;
                     height:30vh;
                 }
-            
-                border-bottom:10px solid red;
-                display:flex;
-                flex-direction: column;
-                @media (max-width:768px)
+                @media (max-width:1024px)
                 {
                     margin-bottom:10%;
                 }
@@ -169,24 +183,28 @@ main{
                     & .head{
                         margin-top:0;
                         @include extensions.text-font();
-                        @media(min-width:769px)
+                        @media (min-width:1281px)
                         {
-                            font-size:2em;
+                            font-size:1.7em;
+                        }
+                        @media(min-width:769px) and (max-width:1280px)
+                        {
+                            font-size:1.4em;
                         }
                         @media(max-width:768px)
                         {
-                            font-size:1.1em;
+                            font-size:1.2em;
                         }
                     }
                 & .text{
                     text-align:left;
-                    @media(min-width:769px)
+                    @media(min-width:769px) and (max-width:1024px)
                     {
                         font-size:1.2em;
                     }
                     @media (max-width:768px)
                     {
-                        font-size:0.9em;
+                        font-size:1.1em;
                     }
                 }
             }
@@ -231,7 +249,7 @@ main{
                 flex-direction: column;
                 align-items:center;
                 overflow: hidden;
-                width:317px;
+                width:320px !important;
                 height:400px;
                 & .main-text-container{
                     width:80%;

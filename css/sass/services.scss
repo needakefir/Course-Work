@@ -3,3 +3,14 @@
     @include extensions.text-font();
     text-align: center;
 }
+main{
+    @media (max-width:1024px)
+        {
+            padding-top:60px;
+        }   
+    & .services{
+        
+        width:100%;
+        height:100vh;   
+    }
+}

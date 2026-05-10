@@ -19,7 +19,7 @@ body {
 
 @media (max-width: 1024px) {
   main .prices {
-    padding-top: 15%;
+    padding-top: 60px;
   }
 }
 main .prices {
