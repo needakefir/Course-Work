@@ -197,6 +197,10 @@ main .about .container .item-card {
   main .about .container .item-card {
     width: 25vw;
     height: 33vh;
+    transition: transform 0.15s ease-in;
+  }
+  main .about .container .item-card:hover {
+    transform: scale(1.05);
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -314,6 +318,8 @@ main .trainers .swiper .swiper-wrapper .swiper-slide {
   overflow: hidden;
   width: 320px !important;
   height: 400px;
+  transition: transform 0.25s ease-in;
+  border-radius: 15px;
 }
 main .trainers .swiper .swiper-wrapper .swiper-slide .main-text-container {
   width: 80%;
@@ -347,6 +353,9 @@ main .trainers .swiper .swiper-wrapper .swiper-slide .line {
   background-color: red;
   height: 1.25%;
   visibility: hidden;
+}
+main .trainers .swiper .swiper-wrapper .swiper-slide:hover {
+  transform: scale(1.1);
 }
 main .trainers .swiper .swiper-wrapper .swiper-slide:hover button {
   top: 0%;

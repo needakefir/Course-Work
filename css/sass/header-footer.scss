@@ -103,7 +103,7 @@ header{
         & .burger span.active{
             background: rgba(255, 255, 255, 0);
             }
-    }
+    } 
     @media (min-width:1025px)
     {
         @include extensions.flex-mixin(space-between);
@@ -114,10 +114,25 @@ header{
             & li{
                 list-style:none;
                 & a{
+                    display: inline-block;
+                    line-height: 1;
+                    cursor: pointer;
                     @include extensions.text-font();
                     text-decoration: none;
                     font-size:1.3em;
-                    color:white;
+                    &:after{
+                        background-color: #FF0000;
+                        display: block;
+                        content: "";
+                        height: 2px; 
+                        width: 0%;
+                        -webkit-transition: width .2s ease-in-out;
+                        -moz--transition: width .2s ease-in-out;
+                        transition: width .2s ease-in-out;
+                    }
+                    &:hover:after,&:focus:after{
+                        width:100%;
+                    }
                 }
             }       
         }

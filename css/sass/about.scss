@@ -152,6 +152,10 @@ main{
                 {
                     width:25vw;
                     height:33vh;
+                    transition:transform 0.15s ease-in;
+                    &:hover{
+                        transform:scale(1.05);
+                    }
                 }
                 @media(min-width:769px) and (max-width:1024px)
                 {
@@ -239,7 +243,6 @@ main{
                 font-size:2em;
             }
         }
-        //TODO: A mobile version of swiper 
         & .swiper{
             width:80vw;
             height:500px;
@@ -251,6 +254,8 @@ main{
                 overflow: hidden;
                 width:320px !important;
                 height:400px;
+                transition:transform 0.25s ease-in;
+                border-radius:15px;
                 & .main-text-container{
                     width:80%;
                     margin:0% 10%;
@@ -282,6 +287,7 @@ main{
                     visibility: hidden;
                 }
                 &:hover{
+                    transform:scale(1.1);
                     & button{
                         top:0%;
                         transition:all 0.2s ease-in-out;

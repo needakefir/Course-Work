@@ -62,8 +62,9 @@ main .main .left {
 }
 @media (min-width: 1025px) {
   main .main .left .text {
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 0;
+    margin-bottom: 10%;
   }
 }
 @media (max-width: 1024px) {
@@ -299,6 +300,10 @@ main .interier .container .item {
   main .interier .container .item {
     width: 40%;
     height: 50vh;
+    transition: transform 0.15s ease-in;
+  }
+  main .interier .container .item:hover {
+    transform: scale(1.05);
   }
 }
 @media (min-width: 769px) {
