@@ -5,12 +5,12 @@
 }
 main{
     @media (max-width:1024px)
-        {
-            padding-top:60px;
-        }   
-    & .services{
-        
-        width:100%;
-        height:100vh;   
+    {
+        padding-top:60px;
+    }   
+    & .training{
+    background: url("../../res/back/Back1.png");
+    @include extensions.flex-mixin(center);
+    
     }
 }

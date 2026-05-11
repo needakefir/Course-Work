@@ -6,6 +6,10 @@
 main{
     & .prices
     {
+        @media (min-width:1025px)
+        {
+            padding-top:5%;
+        }
         @media (max-width:1024px)
         {
             padding-top:60px;
@@ -13,46 +17,66 @@ main{
         background:url("../../res/back/Prices.png");
         & .head{
             margin:0;
-            @include extensions.text-font();
-            text-align:center;
-           @media (max-width:1024px)
+           @media (min-width:1025px)
            {
              margin-bottom:5%;
            }
-            font-size:4em;
+            @media (min-width:769px)
+            {
+                font-size:4em;
+            }
+            @media (max-width:768px)
+            {
+                font-size:2em;
+            }
         }
-        & .after-head{
-            @include extensions.text-font();
-            text-align:center;
-            font-size:3em;
+        & #after{
             margin-top:5%;
-            margin-bottom:5%;
         }
         & .container{
             @include extensions.flex-mixin(space-evenly);
-            @media(max-width:768px)
+            @media(max-width:1024px)
             {
                 flex-direction: column;
                 align-items: center;
             }
             & .item-card{
-                flex:0 0 25%;
+                @media (min-width:1281px)
+                {
+                    flex: 0 0 25%
+                }
+                @media (min-width:1025px) and (max-width:1280px)
+                {
+                    flex:0 0 30%;
+                }
+                @media (max-width:1024px)
+                {
+                    margin-bottom:10%;
+                    @media (min-width:769px)
+                    {
+                        width:50%;
+                    }
+                    @media (max-width:480px)
+                    {
+                        width:80%;
+                    }
+                    @media (min-width:481px) and (max-width:768px)
+                    {
+                        width:60%;
+                    }
+                }
                 & .card-header{
                     border-top-left-radius: 10px;
                     border-top-right-radius: 10px;
                     padding:4% 0%;
                     height:10vh;
                     & .description{
-                        @include extensions.text-font();
-                        text-align: center;
                         font-size:1.5em;
                         margin-bottom:0;
                     }
                     background-color: red;
                     border-bottom:3px solid white;
                     & .after-description{
-                        @include extensions.text-font();
-                        text-align: center;
                         vertical-align: center;
                         color:rgba(255,255,255,0.75);
                         font-size:1em;
@@ -60,13 +84,20 @@ main{
                     }
                 }
                 & .card-main{
-                    height:35vh;
+                    @media (max-width:768px)
+                    {
+                        height:30vh;
+                    }
+                    @media (min-width:769px)
+                    {
+                        height:35vh;
+                    }
                     background-color:rgba(77,70,70,0.96);
                     @include extensions.flex-mixin(space-evenly);
                     flex-direction: column;
                     & .description-text
                     {
-                        @include extensions.flex-mixin(start);
+                        display:flex;
                         & img{
                             display:inline-block;
                             width:30px;
@@ -74,7 +105,6 @@ main{
                         }
                         & .text{
                             text-align:start;
-                            @include extensions.text-font();
                             font-size:0.9em;
                         }
                     }
@@ -82,8 +112,6 @@ main{
                 & .card-footer{
                     border-top:3px solid white;
                     background-color: red;
-                    @include extensions.text-font();
-                    text-align:center;
                     font-size:2.5em;
                     border-bottom-left-radius: 10px;
                     border-bottom-right-radius: 10px;

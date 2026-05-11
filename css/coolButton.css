@@ -1,0 +1,13 @@
+body {
+  background-color: black;
+}
+@media (max-width: 1024px) {
+  body {
+    margin: 0;
+  }
+}
+
+@font-face {
+  font-family: "RussianRail GPro";
+  src: url("../fonts/RussianRail_G_Pro_Regular_0.otf") format(opentype);
+}/*# sourceMappingURL=coolButton.css.map */

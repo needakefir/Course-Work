@@ -74,9 +74,6 @@ main .main {
 }
 main .main .main-text {
   margin-top: 0;
-  font-family: "RussianRail GPro";
-  color: white;
-  text-align: center;
 }
 @media (min-width: 1281px) {
   main .main .main-text {
@@ -108,9 +105,6 @@ main .main .advantages-list {
   }
 }
 main .main .advantages-list .advantage-item {
-  font-family: "RussianRail GPro";
-  color: white;
-  text-align: center;
   letter-spacing: 3%;
 }
 @media (min-width: 1281px) {
@@ -228,8 +222,6 @@ main .about .container .item-card {
 }
 main .about .container .item-card .num {
   padding: 5% 2.5% 5% 2.5%;
-  font-family: "RussianRail GPro";
-  color: white;
   align-self: flex-end;
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -238,8 +230,6 @@ main .about .container .item-card .main-text {
 }
 main .about .container .item-card .main-text .head {
   margin-top: 0;
-  font-family: "RussianRail GPro";
-  color: white;
 }
 @media (min-width: 1281px) {
   main .about .container .item-card .main-text .head {
@@ -326,13 +316,9 @@ main .trainers .swiper .swiper-wrapper .swiper-slide .main-text-container {
   margin: 0% 10%;
 }
 main .trainers .swiper .swiper-wrapper .swiper-slide .main-text-container .name {
-  font-family: "RussianRail GPro";
-  color: white;
   font-size: 1.2em;
 }
 main .trainers .swiper .swiper-wrapper .swiper-slide .main-text-container .stage {
-  font-family: "RussianRail GPro";
-  color: white;
   font-size: 1em;
 }
 main .trainers .swiper .swiper-wrapper .swiper-slide button {
@@ -340,8 +326,6 @@ main .trainers .swiper .swiper-wrapper .swiper-slide button {
   background-color: red;
   margin-bottom: 2%;
   border: 0;
-  font-family: "RussianRail GPro";
-  color: white;
   font-size: 1.5em;
   padding: 5% 10%;
   position: relative;
@@ -358,6 +342,7 @@ main .trainers .swiper .swiper-wrapper .swiper-slide:hover {
   transform: scale(1.1);
 }
 main .trainers .swiper .swiper-wrapper .swiper-slide:hover button {
+  cursor: pointer;
   top: 0%;
   transition: all 0.2s ease-in-out;
 }

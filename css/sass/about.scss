@@ -49,8 +49,6 @@ main{
         background-size:cover;
         & .main-text{
             margin-top:0;
-            @include extensions.text-font();
-            text-align:center;
             @media (min-width:1281px)
             {
                 font-size:4.5em;
@@ -76,8 +74,6 @@ main{
             }
             & .advantage-item
             {
-                @include extensions.text-font();
-                text-align:center;
                 letter-spacing: 3%;
                 @media(min-width:1281px)
                 {
@@ -178,7 +174,6 @@ main{
                 }
                 & .num{
                     padding:5% 2.5% 5% 2.5%;
-                    @include extensions.text-font();
                     align-self:flex-end;
                     background-color:rgba(255,255,255,0.1);
                 }
@@ -186,7 +181,6 @@ main{
                     margin:0% 5%;
                     & .head{
                         margin-top:0;
-                        @include extensions.text-font();
                         @media (min-width:1281px)
                         {
                             font-size:1.7em;
@@ -260,11 +254,9 @@ main{
                     width:80%;
                     margin:0% 10%;
                     & .name{
-                        @include extensions.text-font();
                         font-size: 1.2em;
                     }
                     & .stage{
-                        @include extensions.text-font();
                         font-size: 1em;
                     }
                 }
@@ -273,7 +265,6 @@ main{
                     background-color: red;
                     margin-bottom:2%;
                     border:0;
-                    @include extensions.text-font();
                     font-size:1.5em;
                     padding:5% 10%;
                     position:relative;
@@ -289,6 +280,7 @@ main{
                 &:hover{
                     transform:scale(1.1);
                     & button{
+                        cursor:pointer;
                         top:0%;
                         transition:all 0.2s ease-in-out;
                     }

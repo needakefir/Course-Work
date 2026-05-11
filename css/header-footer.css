@@ -15,17 +15,21 @@ body {
   color: red;
 }
 
-header .text {
-  margin: 0;
-  font-size: 28px;
-  letter-spacing: 5px;
-}
 @media (max-width: 1024px) {
   header .logo.text {
     position: absolute;
     z-index: 2;
     top: 10px;
     font-size: 2em;
+  }
+  header .text {
+    margin: 0;
+    font-size: 1.8em;
+    letter-spacing: 5px;
+  }
+  header .text a {
+    color: white;
+    text-decoration: none;
   }
   header img {
     position: absolute;
@@ -152,6 +156,31 @@ header .text {
   header nav .links li a:hover:after, header nav .links li a:focus:after {
     width: 100%;
   }
+  header .text {
+    margin: 0;
+    font-size: 2em;
+    letter-spacing: 5px;
+  }
+  header .text a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+  }
+  header .text a:after {
+    background-color: #FF0000;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    -webkit-transition: width 0.2s ease-in-out;
+    -moz--transition: width 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out;
+  }
+  header .text a:hover:after, header .text a:focus:after {
+    width: 100%;
+  }
 }
 
 footer {
@@ -247,7 +276,7 @@ footer .social-networks .social-network .name {
 }
 @media (min-width: 481px) and (max-width: 768px) {
   footer .social-networks .social-network .name {
-    font-size: 2.5em;
+    font-size: 1.8em;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {

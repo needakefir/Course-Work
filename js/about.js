@@ -16,23 +16,25 @@ async function loadTrainers()
 
         const main_text=document.createElement('div'); 
 
-        main_text.setAttribute('class','main-text-container');
+        main_text.setAttribute('class','main-text-container text');
 
         const name=document.createElement('p');
 
         name.textContent=review.children.item(1).textContent;
 
-        name.setAttribute('class','name');
+        name.setAttribute('class','name text');
 
         const exp=document.createElement('p');
 
-        exp.textContent=review.children.item(2).textContent;
+        exp.textContent=review.children.item(2).textContent + ' опыта';
 
         exp.setAttribute('class','stage');
 
         main_text.append(name,exp)
 
         const button=document.createElement('button');
+
+        button.setAttribute('class','text');
 
         button.textContent="Выбрать";
 

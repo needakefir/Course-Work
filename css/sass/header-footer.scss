@@ -3,11 +3,6 @@
     color:red;
 }
 header{
-        & .text{
-            margin:0;
-            font-size:28px;
-            letter-spacing: 5px;
-        }
         @media (max-width:1024px)
         {
         & .logo.text{
@@ -15,7 +10,17 @@ header{
             z-index:2;
             top:10px;
             font-size:2em;
+            
         } 
+        & .text{
+            margin:0;
+            font-size:1.8em;
+            letter-spacing: 5px;
+            & a{
+                color:white;
+                text-decoration: none;
+            }
+        }
 
         & img{
             @media(max-width:768px)
@@ -136,6 +141,31 @@ header{
                 }
             }       
         }
+        & .text{
+            margin:0;
+            font-size:2em;
+            letter-spacing: 5px;
+            & a{
+                color:white;
+                text-decoration: none;
+                cursor:pointer;
+                display: inline-block;
+                line-height: 1;
+                &:after{
+                        background-color: #FF0000;
+                        display: block;
+                        content: "";
+                        height: 2px; 
+                        width: 0%;
+                        -webkit-transition: width .2s ease-in-out;
+                        -moz--transition: width .2s ease-in-out;
+                        transition: width .2s ease-in-out;
+                    }
+                    &:hover:after,&:focus:after{
+                        width:100%;
+                    }
+            }
+        }
     }
 }
 footer{
@@ -215,7 +245,7 @@ footer{
                 }
                 @media (min-width:481px) and (max-width:768px)
                 {
-                    font-size:2.5em;
+                    font-size:1.8em;
                 }
                 @media (min-width:769px) and (max-width:1024px)
                 {
