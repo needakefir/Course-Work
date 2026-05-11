@@ -3,14 +3,51 @@
     @include extensions.text-font();
     text-align: center;
 }
+#solution{
+    left:15%;
+}
 main{
     @media (max-width:1024px)
     {
         padding-top:60px;
     }   
     & .training{
-    background: url("../../res/back/Back1.png");
-    @include extensions.flex-mixin(center);
-    
+        background: url("../../res/services/Prices.jpg");
+        & .offers-containter{
+            @include extensions.flex-mixin(space-evenly);
+            flex-direction: column;
+            align-items:center;
+             gap:5%;
+             width:100%;
+            & .offer{ 
+                background:linear-gradient(rgba(200,10,44,0) 15%,rgba(200,10,44,0.3) 85%,rgba(200,10,44,0.5) 100%);
+                border:2px solid rgb(255,128,130);
+                border-radius: 25px;
+                margin-bottom:5%;
+                width:90%;
+                display:grid;
+                grid-template-columns: 4fr 6fr;
+                & .name{
+                     & img{
+                        margin:2% 0% 0% 2%;
+                        width:70%;
+                        border-radius:100%;
+                    }
+                    & > .text{
+                        margin:0;
+                        text-align: left;
+                        position: relative;
+                        left:25%;
+                    }
+                }
+                & .text{ 
+                    align-self:center;
+                    @media (min-width:1281px)
+                    {
+                        font-size:1.3em;
+                    }
+                }
+            }
+        }
     }
 }

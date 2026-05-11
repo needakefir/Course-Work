@@ -52,10 +52,10 @@
     }
 }
 @mixin button-setup($topBottom,$leftRight){
- border:0px;
- @include extensions.text-font();
- border-radius: 25px/25px;
- background-color: rgba(220,20,60,0.7);
- padding:$topBottom $leftRight;
- cursor:pointer;
+    border:0px;
+    @include extensions.text-font();
+    border-radius: 25px/25px;
+    background-color: rgba(220,20,60,0.7);
+    padding:$topBottom $leftRight;
+    cursor:pointer;
 }
