@@ -30,29 +30,29 @@ body {
 
 #num6 {
   margin-top: 5%;
-  background: url("../../res/photos-card/card6.png");
+  background: url("../res/photos-card/card6.png");
 }
 
 #num5 {
   margin-top: 5%;
-  background: url("../../res/photos-card/card5.png");
+  background: url("../res/photos-card/card5.png");
 }
 
 #num4 {
   margin-top: 5%;
-  background: url("../../res/photos-card/card4.png");
+  background: url("../res/photos-card/card4.png");
 }
 
 #num3 {
-  background: url("../../res/photos-card/card3.png");
+  background: url("../res/photos-card/card3.png");
 }
 
 #num2 {
-  background: url("../../res/photos-card/card2.png");
+  background: url("../res/photos-card/card2.png");
 }
 
 #num1 {
-  background: url("../../res/photos-card/card1.png");
+  background: url("../res/photos-card/card1.png");
 }
 
 main .main {
@@ -68,7 +68,7 @@ main .main {
   }
 }
 main .main {
-  background: url("../../res/back/Header.png");
+  background: url("../res/back/Header.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -163,7 +163,7 @@ main .main .advantages-list .advantage-item:before {
 }
 main .about {
   padding: 5% 0%;
-  background: url("../../res/interier/interier4.jpg");
+  background: url("../res/interier/interier4.jpg");
 }
 main .about .why-text {
   margin: 0%;
@@ -286,7 +286,7 @@ main .trainers {
   }
 }
 main .trainers {
-  background: url("../../res/back/back2.png");
+  background: url("../res/back/back2.png");
 }
 main .trainers > .text {
   color: transparent;

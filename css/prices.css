@@ -28,7 +28,7 @@ body {
   }
 }
 main .prices {
-  background: url("../../res/back/Prices.png");
+  background: url("../res/back/Prices.png");
 }
 main .prices .head {
   margin: 0;

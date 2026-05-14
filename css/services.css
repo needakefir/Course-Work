@@ -27,7 +27,7 @@ body {
   }
 }
 main .training {
-  background: url("../../res/services/Prices.jpg");
+  background: url("../res/services/Prices.jpg");
 }
 main .training .offers-containter {
   display: flex;
