@@ -15,24 +15,24 @@
 }
 #num6{
     margin-top:5%;
-    background: url("../../res/photos-card/card6.png");
+    background: url("../res/photos-card/card6.png");
     }
 #num5{
     margin-top:5%;
-    background: url("../../res/photos-card/card5.png");
+    background: url("../res/photos-card/card5.png");
     }
 #num4{
     margin-top:5%;
-    background: url("../../res/photos-card/card4.png");
+    background: url("../res/photos-card/card4.png");
     }
 #num3{
-    background: url("../../res/photos-card/card3.png");
+    background: url("../res/photos-card/card3.png");
     }
 #num2{
-    background: url("../../res/photos-card/card2.png");
+    background: url("../res/photos-card/card2.png");
     }
 #num1{
-    background: url("../../res/photos-card/card1.png");
+    background: url("../res/photos-card/card1.png");
     }
  
 main{
@@ -45,7 +45,7 @@ main{
         {
             padding-top:60px;
         }
-        background:url("../../res/back/Header.png");
+        background:url("../res/back/Header.png");
         background-repeat:no-repeat;    
         background-size:cover;
         & .main-text{
@@ -113,7 +113,7 @@ main{
             height:100vh;
         }
         padding:5% 0%;
-        background:url("../../res/interier/interier4.jpg");
+        background:url("../res/interier/interier4.jpg");
         & .why-text{
             margin:0%;
             @media(min-width:1281px)
@@ -218,7 +218,7 @@ main{
         {
             height:80vh;
         }
-        background:url("../../res/back/back2.png");
+        background:url("../res/back/back2.png");
         & > .text{
             color:transparent;
             background-image: linear-gradient(to right, rgb(255,0,4) 0%,rgb(255,128,130) 63%,rgba(255,255,255) 100% );

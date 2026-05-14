@@ -14,7 +14,7 @@ main{
         padding-top:60px;
     }   
     & .training{
-        background: url("../../res/services/Prices.jpg");
+        background: url("../res/services/Prices.jpg");
         & .offers-containter{
             @include extensions.flex-mixin(space-evenly);
             flex-direction: column;
