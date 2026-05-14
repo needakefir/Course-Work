@@ -6,6 +6,7 @@
 #solution{
     left:15%;
 }
+
 main{
     @media (max-width:1024px)
     {
@@ -26,7 +27,14 @@ main{
                 margin-bottom:5%;
                 width:90%;
                 display:grid;
+                opacity: 0;
+                transform: translateY(30px);
+                transition: opacity 0.8s ease, transform 0.8s ease;
                 grid-template-columns: 4fr 6fr;
+                &.square-animation {
+                opacity: 1;
+                transform: translateY(0);
+                }
                 & .name{
                      & img{
                         margin:2% 0% 0% 2%;
@@ -39,6 +47,15 @@ main{
                         position: relative;
                         left:25%;
                     }
+                }
+                
+                @keyframes wipe-enter {
+                  0% {
+                    transform: scale(0)
+                  }
+                  50% {
+                    transform: scale(1)
+                  }
                 }
                 & .text{ 
                     align-self:center;

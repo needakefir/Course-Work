@@ -44,7 +44,14 @@ main .training .offers-containter .offer {
   margin-bottom: 5%;
   width: 90%;
   display: grid;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
   grid-template-columns: 4fr 6fr;
+}
+main .training .offers-containter .offer.square-animation {
+  opacity: 1;
+  transform: translateY(0);
 }
 main .training .offers-containter .offer .name img {
   margin: 2% 0% 0% 2%;
@@ -57,6 +64,14 @@ main .training .offers-containter .offer .name > .text {
   position: relative;
   left: 25%;
 }
+@keyframes wipe-enter {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
 main .training .offers-containter .offer .text {
   align-self: center;
 }
@@ -64,4 +79,6 @@ main .training .offers-containter .offer .text {
   main .training .offers-containter .offer .text {
     font-size: 1.3em;
   }
-}/*# sourceMappingURL=services.css.map */
+}
+
+/*# sourceMappingURL=services.css.map */

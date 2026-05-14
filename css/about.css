@@ -273,8 +273,7 @@ main .trainers {
 main .trainers > .text {
   color: transparent;
   background-image: linear-gradient(to right, rgb(255, 0, 4) 0%, rgb(255, 128, 130) 63%, rgb(255, 255, 255) 100%);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
 }
 @media (min-width: 1281px) {
   main .trainers > .text {
@@ -351,4 +350,6 @@ main .trainers .swiper .swiper-wrapper .swiper-slide:hover .line {
 }
 main .trainers .swiper .swiper-button-next, main .trainers .swiper .swiper-button-prev, main .trainers .swiper .swiper-pagination-bullet-active {
   color: white;
-}/*# sourceMappingURL=about.css.map */
+}
+
+/*# sourceMappingURL=about.css.map */
