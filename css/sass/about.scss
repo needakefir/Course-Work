@@ -1,4 +1,5 @@
 @use 'extensions';
+@use './coolButton';
 .text{
     @include extensions.text-font();
     text-align:center;
@@ -48,6 +49,7 @@ main{
         background-repeat:no-repeat;    
         background-size:cover;
         & .main-text{
+            @include coolButton.animationSetup();
             margin-top:0;
             @media (min-width:1281px)
             {
@@ -74,6 +76,7 @@ main{
             }
             & .advantage-item
             {
+                @include coolButton.animationSetup();
                 letter-spacing: 3%;
                 @media(min-width:1281px)
                 {
@@ -268,16 +271,24 @@ main{
                     font-size:1.5em;
                     padding:5% 10%;
                     position:relative;
-                    top:20%;
+                    @media (min-width:1025px)
+                    {
+                        top:20%;
+                    }
                 }
                 & .line{
                     width:80%;
                     margin:0% 10%;
                     background-color: red;
                     height:1.25%;
-                    visibility: hidden;
+                    @media (min-width:1025px)
+                    {
+                        visibility: hidden;
+                    }
                 }
-                &:hover{
+                @media (min-width:1025px)
+                {
+                    &:hover{
                     transform:scale(1.1);
                     & button{
                         cursor:pointer;
@@ -287,6 +298,7 @@ main{
                     & .line{
                         visibility: visible;
                     }            
+                }
                 }
             }
         }

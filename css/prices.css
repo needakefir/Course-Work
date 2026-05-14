@@ -61,6 +61,15 @@ main .prices .container {
     align-items: center;
   }
 }
+main .prices .container .item-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+main .prices .container .item-card.square-animation {
+  opacity: 1;
+  transform: translateY(0);
+}
 @media (min-width: 1281px) {
   main .prices .container .item-card {
     flex: 0 0 25%;
@@ -145,6 +154,4 @@ main .prices .container .item-card .card-footer {
   font-size: 2.5em;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-}
-
-/*# sourceMappingURL=prices.css.map */
+}/*# sourceMappingURL=prices.css.map */

@@ -59,6 +59,15 @@ main .main .left {
   align-items: center;
   flex-direction: column;
 }
+main .main .left .text {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+main .main .left .text.square-animation {
+  opacity: 1;
+  transform: translateY(0);
+}
 @media (min-width: 1025px) {
   main .main .left .text {
     font-size: 2em;
@@ -554,6 +563,4 @@ main .form-offer .offer-form button {
   main .form-offer .offer-form button:hover:before {
     left: 95%;
   }
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

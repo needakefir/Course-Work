@@ -73,6 +73,15 @@ main .main {
   background-size: cover;
 }
 main .main .main-text {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+main .main .main-text.square-animation {
+  opacity: 1;
+  transform: translateY(0);
+}
+main .main .main-text {
   margin-top: 0;
 }
 @media (min-width: 1281px) {
@@ -103,6 +112,15 @@ main .main .advantages-list {
   main .main .advantages-list {
     flex-direction: column;
   }
+}
+main .main .advantages-list .advantage-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+main .main .advantages-list .advantage-item.square-animation {
+  opacity: 1;
+  transform: translateY(0);
 }
 main .main .advantages-list .advantage-item {
   letter-spacing: 3%;
@@ -273,7 +291,8 @@ main .trainers {
 main .trainers > .text {
   color: transparent;
   background-image: linear-gradient(to right, rgb(255, 0, 4) 0%, rgb(255, 128, 130) 63%, rgb(255, 255, 255) 100%);
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 @media (min-width: 1281px) {
   main .trainers > .text {
@@ -328,28 +347,36 @@ main .trainers .swiper .swiper-wrapper .swiper-slide button {
   font-size: 1.5em;
   padding: 5% 10%;
   position: relative;
-  top: 20%;
+}
+@media (min-width: 1025px) {
+  main .trainers .swiper .swiper-wrapper .swiper-slide button {
+    top: 20%;
+  }
 }
 main .trainers .swiper .swiper-wrapper .swiper-slide .line {
   width: 80%;
   margin: 0% 10%;
   background-color: red;
   height: 1.25%;
-  visibility: hidden;
 }
-main .trainers .swiper .swiper-wrapper .swiper-slide:hover {
-  transform: scale(1.1);
+@media (min-width: 1025px) {
+  main .trainers .swiper .swiper-wrapper .swiper-slide .line {
+    visibility: hidden;
+  }
 }
-main .trainers .swiper .swiper-wrapper .swiper-slide:hover button {
-  cursor: pointer;
-  top: 0%;
-  transition: all 0.2s ease-in-out;
-}
-main .trainers .swiper .swiper-wrapper .swiper-slide:hover .line {
-  visibility: visible;
+@media (min-width: 1025px) {
+  main .trainers .swiper .swiper-wrapper .swiper-slide:hover {
+    transform: scale(1.1);
+  }
+  main .trainers .swiper .swiper-wrapper .swiper-slide:hover button {
+    cursor: pointer;
+    top: 0%;
+    transition: all 0.2s ease-in-out;
+  }
+  main .trainers .swiper .swiper-wrapper .swiper-slide:hover .line {
+    visibility: visible;
+  }
 }
 main .trainers .swiper .swiper-button-next, main .trainers .swiper .swiper-button-prev, main .trainers .swiper .swiper-pagination-bullet-active {
   color: white;
-}
-
-/*# sourceMappingURL=about.css.map */
+}/*# sourceMappingURL=about.css.map */
