@@ -33,14 +33,14 @@
             </div>
             <div class="right"></div>   
         </div>
-        <div class="training">
+        <section class="training">
             <h1 class="text">Мы предлагаем вам </h1>
             <div class="offers-containter">
                 <div class="item-offer">
                     <img src="res/trains/Personal.png" alt="">
                     <div class="text">Персональные тренировки</div>
                     <div class="button">
-                        <div id="dub-arrow"><img src="res/arrow.svg" alt=""></div>
+                        <div class="dub-arrow"><img src="res/arrow.svg" alt=""></div>
                         <p class="text">Подробнее</p>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                     <img src="res/trains/Group.png" alt="">
                     <div class="text">Групповые тренировки</div>
                     <div class="button">
-                        <div id="dub-arrow"><img src="res/arrow.svg" alt=""></div>
+                        <div class="dub-arrow"><img src="res/arrow.svg" alt=""></div>
                         <p class="text">Подробнее</p>
                     </div>
                 </div>
@@ -56,23 +56,23 @@
                     <img src="res/trains/Kids.png" alt="">
                     <div class="text">Детские <br> секции</div>
                     <div class="button">
-                        <div id="dub-arrow"><img src="res/arrow.svg" alt=""></div>
+                        <div class="dub-arrow"><img src="res/arrow.svg" alt=""></div>
                         <p class="text">Подробнее</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="interier">
-            <p class="text">Интерьер тренажерного зала</p>
+        </section>
+        <section class="interier">
+            <h2 class="text">Интерьер тренажерного зала</h2>
             <div class="container">
                     <img src="res/interier/interier5.jpg" class="item" alt="">
                     <img src="res/interier/interier4.jpg" class="item" alt="">
                     <img src="res/interier/interier2.jpg" class="item" alt="">
                     <img src="res/interier/interier4.jpg" class="item" alt="">
             </div>
-        </div>
-        <div class="reviews">
-            <p class="text">Вот что о нас думают люди</p>
+        </section>
+        <section class="reviews">
+            <h2 class="text">Вот что о нас думают люди</h2>
             <div class="swiper">
                 <div class="swiper-wrapper"></div>
                 <div class="swiper-pagination"></div>
@@ -80,7 +80,8 @@
                 <div class="swiper-button-next"></div>
                 <div class="swiper-pagination"></div>
             </div>
-        </div>
+        </section>
+        <!-- TODO: Add a form dialog -->
         <div class="form-offer">
             <div class="offer-texts">
                 <p class="text">Хотите привести себя в форму?</p>
@@ -92,24 +93,30 @@
                     <p class="text">
                         Имя
                     </p>
-                    <input type="text" required placeholder="Нажмите,чтобы начать заполнять">
+                    <input type="text" placeholder="Нажмите,чтобы начать заполнять">
                 </div>
                 <div class="label-form">
                     <p class="text">
                         Телефон
                     </p>
-                    <input type="tel" required placeholder="Нажмите,чтобы начать заполнять">
+                    <input type="tel" placeholder="Нажмите,чтобы начать заполнять">
                 </div>
                 <div class="label-form" id="comments_label">
                     <p class="text">
                         Комментарии к заявке
                     </p>
-                    <textarea required rows="7" cols="40" id="comments" placeholder="Нажмите,чтобы начать заполнять"></textarea>
+                    <textarea  rows="7" cols="40" id="comments" placeholder="Нажмите,чтобы начать заполнять"></textarea>
                 </div>
                 <button>
                     Отправить
                 </button>
             </form>
+            <!-- TODO: Add support of mobile version -->
+            <dialog id="my-dialog">
+              <p class=text>Спасибо за заявку.</p>
+              <p class=text>Мы вам скоро перезвоним.</p>
+              <button id="close-dialog-btn" class="text">Закрыть</button>
+            </dialog>
         </div>
     </main>
     <footer>
@@ -135,7 +142,7 @@
                 <p class="text">
                     Контактная информация
                 </p>
-                <div class="contact" id="address">
+                <div class="contact">
                     <img src="res/svg/map.svg" alt="">
                     <p class="text" id="address">г.Минск,ул.Белорусская,д.21</p>
                 </div>
@@ -150,7 +157,6 @@
             </div>
             <h2 id="end">&copy; 2026 HealthFit.All rights are reserved</h2>
     </footer>
-    </body>
     <script src="js/burger.js"></script>
     <script src="js/Index.js"></script>
     <script src="js/observer.js"></script>
@@ -182,4 +188,6 @@
     }
     });
     </script>
+    </body>
+    
 </html>

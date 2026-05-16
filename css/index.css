@@ -217,7 +217,7 @@ main .training .offers-containter .item-offer .button {
   margin-bottom: 5%;
 }
 @media (min-width: 1025px) {
-  main .training .offers-containter .item-offer .button:hover #dub-arrow {
+  main .training .offers-containter .item-offer .button:hover .dub-arrow {
     top: 0;
   }
   main .training .offers-containter .item-offer .button:hover .text {
@@ -225,7 +225,7 @@ main .training .offers-containter .item-offer .button {
   }
 }
 @media (min-width: 1025px) {
-  main .training .offers-containter .item-offer .button #dub-arrow {
+  main .training .offers-containter .item-offer .button .dub-arrow {
     width: 100%;
     height: 100%;
     background: #FFFFFF;
@@ -237,13 +237,13 @@ main .training .offers-containter .item-offer .button {
     align-items: center;
     transition: all 0.15s ease-out;
   }
-  main .training .offers-containter .item-offer .button #dub-arrow img {
+  main .training .offers-containter .item-offer .button .dub-arrow img {
     width: 30px;
     height: auto;
   }
 }
 @media (max-width: 1024px) {
-  main .training .offers-containter .item-offer .button #dub-arrow {
+  main .training .offers-containter .item-offer .button .dub-arrow {
     display: none;
   }
 }
@@ -294,8 +294,8 @@ main .interier .container .item {
 }
 @media (max-width: 768px) {
   main .interier .container .item {
-    width: 100%;
-    height: 40vh;
+    width: 90%;
+    height: 35vh;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -440,7 +440,7 @@ main .reviews .swiper .swiper-wrapper .swiper-slide .review-text {
 }
 @media (min-width: 1025px) {
   main .reviews .swiper .swiper-wrapper .swiper-slide .review-text {
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
 }
 main .reviews .swiper .swiper-wrapper .swiper-slide button {
@@ -563,4 +563,33 @@ main .form-offer .offer-form button {
   main .form-offer .offer-form button:hover:before {
     left: 95%;
   }
+}
+main dialog {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #B40A1B;
+  border-radius: 10px;
+  width: 60%;
+  height: 45%;
+}
+main dialog.animation {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+main dialog.animation::backdrop {
+  backdrop-filter: blur(5px);
+}
+main dialog p {
+  font-size: 2.5em;
+}
+main dialog button {
+  border: 0px;
+  font-family: "RussianRail GPro";
+  color: white;
+  border-radius: 25px/25px;
+  background-color: rgba(220, 20, 60, 0.7);
+  padding: 3% 6%;
+  cursor: pointer;
+  font-size: 1.5em;
 }/*# sourceMappingURL=index.css.map */

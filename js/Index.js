@@ -106,7 +106,27 @@ buttons.forEach(
         });
 }
 )
-document.querySelector('form').addEventListener('submit',function(event){
-    event.preventDefault();
-})
+  const showDialogBtn = document.querySelector('form button');
+  const myDialog = document.querySelector('#my-dialog');
+  const closeDialogBtn = document.querySelector('#close-dialog-btn');
+
+  showDialogBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    const nameValue = form.querySelector('input[type="text"]').value.trim();
+    const phoneValue = form.querySelector('input[type="tel"]').value.trim();
+    
+    if (!nameValue || !phoneValue) {
+        alert('Заполните имя и телефон!');
+        return;
+    }
+    myDialog.classList.add('animation');
+    myDialog.showModal();
+    form.reset();
+  });
+
+  closeDialogBtn.addEventListener('click', () => {
+    myDialog.close();
+    myDialog.classList.remove('animation');
+  });
 
