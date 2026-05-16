@@ -13,7 +13,7 @@ async function loadTrainers()
 
         wrapper_item.setAttribute('class','swiper-slide');
 
-        wrapper_item.setAttribute('style','background:linear-gradient(rgba(200,10,44,0) 15%,rgba(200,10,44,0.3) 85%,rgba(200,10,44,0.5) 100%),url(../'+ trainer.querySelector('image-link')+ 'no-repeat;');
+        wrapper_item.setAttribute('style','background:linear-gradient(rgba(200,10,44,0) 15%,rgba(200,10,44,0.3) 85%,rgba(200,10,44,0.5) 100%),url(../'+ trainer.children.item(0).textContent+ ') no-repeat;');
 
         const main_text=document.createElement('div'); 
 
@@ -21,13 +21,13 @@ async function loadTrainers()
 
         const name=document.createElement('p');
 
-        name.textContent=trainer.querySelector('name').textContent;
+        name.textContent=trainer.children.item(1).textContent;
 
         name.setAttribute('class','name text');
 
         const exp=document.createElement('p');
 
-        exp.textContent=trainer.querySelector('exp') + 'опыта';
+        exp.textContent=trainer.children.item(3).textContent + ' опыта';
 
         exp.setAttribute('class','stage');
 
@@ -40,7 +40,7 @@ async function loadTrainers()
         button.textContent="Выбрать";
 
         button.addEventListener('click',function(){
-            window.location.href='../index.html?trainer='+trainer.querySelector('queryName').textContent;
+            window.location.href='../index.html?trainer='+trainer.children.item(2).textContent;
         });
 
         const line=document.createElement('div');
