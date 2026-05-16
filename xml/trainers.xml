@@ -3,61 +3,71 @@
     <trainer>
         <image-link>res/trainers/trainer1.jpg</image-link> 
         <name>Максим Плотников</name>
+        <queryName>Максимом Плотниковым</queryName>
         <exp>5 лет</exp>
     </trainer>
     <trainer>
         <image-link>res/trainers/trainer2.jpg</image-link> 
         <name>Екатерина Ярышко</name>
+        <queryName>Екатериной Ярышко</queryName>
         <exp>6 лет</exp>
     </trainer>
     <trainer>
         <image-link>res/trainers/trainer3.jpg</image-link> 
         <name>Евгений Кузнецов</name>
+        <queryName>Евгением Кузнецовым</queryName>
         <exp>8 лет</exp>
     </trainer>
     <trainer>
         <image-link>res/trainers/trainer4.jpg</image-link> 
         <name>Анна Сайгутина</name>
+        <queryName>Анной Сайгутиной</queryName>
         <exp>3 года</exp>
     </trainer>
     <trainer>
         <image-link>res/trainers/trainer5.jpg</image-link> 
         <name>Осипчук Игорь</name>
+        <queryName>Осипчуком Игорем</queryName>
         <exp>3 года </exp>
     </trainer>
     <trainer>
         <image-link>res/trainers/trainer6.jpg</image-link> 
         <name>Карапетян Гор</name>
+        <queryName>Карапетяном Гором</queryName>
         <exp>5 лет</exp>
     </trainer>
     <trainer>
         <image-link>res/trainers/trainer7.jpg</image-link> 
         <name>Успенская Дарья</name>
+        <queryName>Успенской Дарьей</queryName>
         <exp>8 лет</exp>
     </trainer>
     <trainer>
         <image-link>res/trainers/trainer8.jpg</image-link> 
         <name>Шлыкова Ольга</name>
-        <exp>7 лет</exp>
-    </trainer>
+        <queryName>Шлыковой Ольгой
     <trainer>
         <image-link>res/trainers/trainer9.jpg</image-link> 
         <name>Костючик Василий</name>
+        <queryName>Костючиком Василием</queryName>
         <exp>6 лет</exp>
     </trainer>
     <trainer>
         <image-link>res/trainers/trainer10.jpg</image-link> 
         <name>Зеленовский Сергей</name>
+        <queryName>Зеленовским Сергеем</queryName>
         <exp>6 лет</exp>
     </trainer>
     <trainer>
         <image-link>res/trainers/trainer11.jpg</image-link> 
         <name>Осьмушкина Оксана</name>
+        <queryName>Осьмушкиной Оксаной</queryName>
         <exp>4 года</exp>
     </trainer>
     <trainer>
         <image-link>res/trainers/trainer12.jpg</image-link> 
         <name>Микаэлян Артур</name>
+        <queryName>Микаэляном Артуром</queryName>
         <exp>9 лет</exp>
     </trainer>
 </trainers>

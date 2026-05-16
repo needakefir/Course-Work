@@ -77,6 +77,7 @@ async function loadReviews()
 )
 }
 loadReviews();
+
 const button=document.querySelector(".formButton");
 const form=document.getElementById('form');
 button.addEventListener('click',function(){
@@ -85,15 +86,19 @@ button.addEventListener('click',function(){
             behavior: "smooth", block: "center", inline: "start"
         }
     )
-    comments_label.value=""
-})
+});
+
+const comments_label=document.getElementById('comments')
+
 const standardComments=[
     "Добрый день,хочу получить консультацию по групповым тренировкам.",
     "Добрый день,хочу получить консультацию по персональным тренировкам.",
     "Добрый день,хочу получить консультацию по детским секциям."];
-let buttons=document.querySelectorAll('.item-offer .button');
-const comments_label=document.getElementById('comments')
+
 comments_label.value=""
+
+const buttons=document.querySelectorAll('.item-offer .button');
+
 buttons.forEach(
     (item,index)=>{
         item.addEventListener('click',function(){
@@ -106,27 +111,40 @@ buttons.forEach(
         });
 }
 )
-  const showDialogBtn = document.querySelector('form button');
-  const myDialog = document.querySelector('#my-dialog');
-  const closeDialogBtn = document.querySelector('#close-dialog-btn');
+const url=new URLSearchParams(window.location.search);
 
-  showDialogBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    
-    const nameValue = form.querySelector('input[type="text"]').value.trim();
-    const phoneValue = form.querySelector('input[type="tel"]').value.trim();
-    
-    if (!nameValue || !phoneValue) {
-        alert('Заполните имя и телефон!');
-        return;
+const trainer=url.get('trainer');
+if(trainer!=null)
+{
+    comments_label.value='Добрый день,хочу проконсультироваться с тренером ' + trainer + ' насчет индивидуальной тренировки';
+    form.scrollIntoView(
+    {
+        behavior: "smooth", block: "center", inline: "start"
     }
-    myDialog.classList.add('animation');
-    myDialog.showModal();
-    form.reset();
-  });
+    );
+}
 
-  closeDialogBtn.addEventListener('click', () => {
-    myDialog.close();
-    myDialog.classList.remove('animation');
-  });
+const showDialogBtn = document.querySelector('form button');
 
+const myDialog = document.querySelector('#my-dialog');
+
+const closeDialogBtn = document.querySelector('#close-dialog-btn');
+
+showDialogBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  
+  const nameValue = form.querySelector('input[type="text"]').value.trim();
+  const phoneValue = form.querySelector('input[type="tel"]').value.trim();
+  
+  if (!nameValue || !phoneValue) {
+      alert('Заполните имя и телефон!');
+      return;
+  }
+  myDialog.classList.add('animation');
+  myDialog.showModal();
+  form.reset();
+});
+closeDialogBtn.addEventListener('click', () => {
+  myDialog.close();
+  myDialog.classList.remove('animation');
+});

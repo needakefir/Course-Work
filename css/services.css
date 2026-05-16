@@ -39,12 +39,27 @@ main .training .offers-containter {
 }
 main .training .offers-containter .offer {
   background: linear-gradient(rgba(200, 10, 44, 0) 15%, rgba(200, 10, 44, 0.3) 85%, rgba(200, 10, 44, 0.5) 100%);
-  border: 2px solid rgb(255, 128, 130);
+  border: 5px solid rgb(255, 128, 130);
   border-radius: 25px;
   margin-bottom: 5%;
-  width: 90%;
+}
+@media (min-width: 769px) {
+  main .training .offers-containter .offer {
+    width: 90%;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+main .training .offers-containter .offer {
   display: grid;
-  grid-template-columns: 4fr 6fr;
+}
+@media (max-width: 768px) {
+  main .training .offers-containter .offer {
+    width: 70%;
+    grid-column: auto;
+    justify-content: center;
+  }
+}
+main .training .offers-containter .offer {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -52,6 +67,12 @@ main .training .offers-containter .offer {
 main .training .offers-containter .offer.square-animation {
   opacity: 1;
   transform: translateY(0);
+}
+main .training .offers-containter .offer .name {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 main .training .offers-containter .offer .name img {
   margin: 2% 0% 0% 2%;
@@ -61,22 +82,12 @@ main .training .offers-containter .offer .name img {
 main .training .offers-containter .offer .name > .text {
   margin: 0;
   text-align: left;
-  position: relative;
-  left: 25%;
 }
 main .training .offers-containter .offer .text {
   align-self: center;
 }
 @media (min-width: 1281px) {
   main .training .offers-containter .offer .text {
-    font-size: 1.3em;
-  }
-}
-main .training .offers-containter .offer {
-  align-self: center;
-}
-@media (min-width: 1281px) {
-  main .training .offers-containter .offer {
     font-size: 1.3em;
   }
 }/*# sourceMappingURL=services.css.map */
