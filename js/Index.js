@@ -83,7 +83,7 @@ const form=document.getElementById('form');
 button.addEventListener('click',function(){
     form.scrollIntoView(
         {
-            behavior: "smooth", block: "center", inline: "start"
+            behavior: "smooth", block: "end", inline: "center"
         }
     )
 });
@@ -117,16 +117,16 @@ const trainer=url.get('trainer');
 if(trainer!=null)
 {
     comments_label.value='Добрый день,хочу проконсультироваться с тренером ' + trainer + ' насчет индивидуальной тренировки';
-    form.scrollIntoView(
+    document.querySelector('form input[type=tel]').scrollIntoView(
     {
-        behavior: "smooth", block: "center", inline: "start"
+        behavior: "smooth", block: "start", inline: "start"
     }
     );
 }
 
 const showDialogBtn = document.querySelector('form button');
 
-const myDialog = document.querySelector('#my-dialog');
+const dialog= document.querySelector('#my-dialog');
 
 const closeDialogBtn = document.querySelector('#close-dialog-btn');
 
@@ -140,11 +140,11 @@ showDialogBtn.addEventListener('click', (e) => {
       alert('Заполните имя и телефон!');
       return;
   }
-  myDialog.classList.add('animation');
-  myDialog.showModal();
+  dialog.classList.add('animation');
+  dialog.showModal();
   form.reset();
 });
 closeDialogBtn.addEventListener('click', () => {
-  myDialog.close();
-  myDialog.classList.remove('animation');
+  dialog.close();
+  dialog.classList.remove('animation');
 });

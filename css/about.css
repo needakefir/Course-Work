@@ -379,4 +379,43 @@ main .trainers .swiper .swiper-wrapper .swiper-slide .line {
 }
 main .trainers .swiper .swiper-button-next, main .trainers .swiper .swiper-button-prev, main .trainers .swiper .swiper-pagination-bullet-active {
   color: white;
+}
+main dialog {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 5px solid #B40A1B;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  main dialog {
+    width: 80%;
+    height: 60vh;
+  }
+}
+@media (min-width: 769px) {
+  main dialog {
+    width: 60%;
+    height: 45%;
+  }
+}
+main dialog.animation {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+main dialog.animation::backdrop {
+  backdrop-filter: blur(5px);
+}
+main dialog p {
+  font-size: 2.5em;
+}
+main dialog button {
+  border: 0px;
+  font-family: "RussianRail GPro";
+  color: white;
+  border-radius: 25px/25px;
+  background-color: rgba(220, 20, 60, 0.7);
+  padding: 3% 6%;
+  cursor: pointer;
+  font-size: 1.5em;
 }/*# sourceMappingURL=about.css.map */

@@ -19,7 +19,7 @@ body {
 
 @font-face {
   font-family: "NT Comic";
-  src: url("fonts/NTSomic-Semibold.otf") format(opentype);
+  src: url("../fonts/NTSomic-Semibold.otf") format(opentype);
 }
 :root {
   --swiper-navigation-sides-offset:-10px !important;
@@ -38,7 +38,7 @@ body {
 }
 @media (max-width: 1024px) {
   main .main {
-    background: url("res/Person-semiopacity.png") 50% 50%;
+    background: url("../res/Person-semiopacity.png") 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -119,7 +119,7 @@ main .main .left button {
 }
 @media (min-width: 1025px) {
   main .main .right {
-    background: url("res/Person-mobile.png") 30% 100%;
+    background: url("../res/Person-mobile.png") 30% 100%;
     width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
@@ -131,7 +131,7 @@ main .main .left button {
   }
 }
 main .training {
-  background: url("res/back/Back1.png");
+  background: url("../res/back/Back1.png");
   display: flex;
   justify-content: center;
 }
@@ -568,8 +568,18 @@ main dialog {
   background-color: rgba(0, 0, 0, 0.7);
   border: 5px solid #B40A1B;
   border-radius: 10px;
-  width: 60%;
-  height: 45%;
+}
+@media (max-width: 768px) {
+  main dialog {
+    width: 80%;
+    height: 60vh;
+  }
+}
+@media (min-width: 769px) {
+  main dialog {
+    width: 60%;
+    height: 45%;
+  }
 }
 main dialog.animation {
   display: flex;

@@ -306,5 +306,37 @@ main{
                 color:white;
             }
         }
+        
+    }
+    & dialog{
+        background-color: rgba(0,0,0,0.7);
+        border: 5px solid #B40A1B;
+        border-radius:10px;
+        @media (max-width:768px)
+        {   
+            width:80%;
+            height:60vh;
+        }
+        @media (min-width:769px)
+        {
+            width:60%;
+            height:45%;
+        }
+        &.animation{
+            @include extensions.flex-mixin(center);
+            flex-direction: column;            
+            align-items: center;
+            &::backdrop{
+                backdrop-filter: blur(5px);
+            }
+            
+        }
+        & p{
+            font-size:2.5em;
+        }
+        & button{
+            @include coolButton.button-setup(3%,6%);
+            font-size:1.5em;
+        }
     }
 }

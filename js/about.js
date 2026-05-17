@@ -1,4 +1,4 @@
-//TODO: FIX LOADING TRAINERS
+let FIO_trainer=null;
 async function loadTrainers()
 {
     const wrapper_trainers=document.querySelector('.swiper-wrapper');
@@ -39,8 +39,12 @@ async function loadTrainers()
 
         button.textContent="Выбрать";
 
+        const dialog=document.querySelector('dialog');
+
         button.addEventListener('click',function(){
-            window.location.href='../index.html?trainer='+trainer.children.item(2).textContent;
+            FIO_trainer=trainer.children.item(2).textContent;
+            dialog.classList.add('animation');
+            dialog.showModal();
         });
 
         const line=document.createElement('div');
@@ -55,4 +59,8 @@ async function loadTrainers()
     )
 }
 loadTrainers();
+const buttonDialog=document.querySelector('dialog button');
+buttonDialog?.addEventListener('click',function(){
+    window.location.href='../index.html?trainer='+FIO_trainer;
+})
 
