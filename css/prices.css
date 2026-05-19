@@ -104,7 +104,7 @@ main .prices .container .item-card .card-header {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding: 4% 0%;
-  height: 10vh;
+  min-height: 10vh;
 }
 main .prices .container .item-card .card-header .description {
   font-size: 1.5em;
@@ -122,7 +122,7 @@ main .prices .container .item-card .card-header .after-description {
 }
 @media (max-width: 768px) {
   main .prices .container .item-card .card-main {
-    height: 30vh;
+    min-height: 25vh;
   }
 }
 @media (min-width: 769px) {

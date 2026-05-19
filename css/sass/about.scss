@@ -159,17 +159,14 @@ main{
                 @media(min-width:769px) and (max-width:1024px)
                 {
                     width:40vw;
-                    height:33vh;
                 }
                 @media(max-width:768px) and (min-width:481px)
                 {
                     width:60vw;
-                    height:30vh;
                 }
                 @media(max-width:480px)
                 {
                     width:80vw;
-                    height:30vh;
                 }
                 @media (max-width:1024px)
                 {
@@ -214,10 +211,6 @@ main{
 }
     & .trainers{
         padding:2.5% 0% 0% 0%;
-        @media(min-width:1025px)
-        {
-            height:80vh;
-        }
         background:url("../res/back/back2.png");
         & > .text{
             color:transparent;

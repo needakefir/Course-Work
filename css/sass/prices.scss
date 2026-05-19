@@ -71,7 +71,7 @@ main{
                     border-top-left-radius: 10px;
                     border-top-right-radius: 10px;
                     padding:4% 0%;
-                    height:10vh;
+                    min-height:10vh;
                     & .description{
                         font-size:1.5em;
                         margin-bottom:0;
@@ -88,7 +88,7 @@ main{
                 & .card-main{
                     @media (max-width:768px)
                     {
-                        height:30vh;
+                        min-height:25vh;
                     }
                     @media (min-width:769px)
                     {

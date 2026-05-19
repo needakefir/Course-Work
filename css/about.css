@@ -218,19 +218,16 @@ main .about .container .item-card {
 @media (min-width: 769px) and (max-width: 1024px) {
   main .about .container .item-card {
     width: 40vw;
-    height: 33vh;
   }
 }
 @media (max-width: 768px) and (min-width: 481px) {
   main .about .container .item-card {
     width: 60vw;
-    height: 30vh;
   }
 }
 @media (max-width: 480px) {
   main .about .container .item-card {
     width: 80vw;
-    height: 30vh;
   }
 }
 @media (max-width: 1024px) {
@@ -279,13 +276,6 @@ main .about .container .item-card .main-text .text {
 }
 main .trainers {
   padding: 2.5% 0% 0% 0%;
-}
-@media (min-width: 1025px) {
-  main .trainers {
-    height: 80vh;
-  }
-}
-main .trainers {
   background: url("../res/back/back2.png");
 }
 main .trainers > .text {
