@@ -19,7 +19,7 @@ body {
 
 @font-face {
   font-family: "NT Comic";
-  src: url("fonts/NTSomic-Semibold.otf") format(opentype);
+  src: url("../fonts/NTSomic-Semibold.otf") format(opentype);
 }
 :root {
   --swiper-navigation-sides-offset:-10px !important;
